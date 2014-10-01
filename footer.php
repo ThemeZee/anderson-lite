@@ -1,6 +1,4 @@
 		
-	<?php get_sidebar('footer'); ?>
-	
 	<?php // Get Theme Options from Database
 		$theme_options = anderson_theme_options();
 	?>

@@ -11,8 +11,7 @@ require( get_template_directory() . '/inc/customizer/functions/sanitize-function
 // Load Customizer Settings
 require( get_template_directory() . '/inc/customizer/customizer-header.php' );
 require( get_template_directory() . '/inc/customizer/customizer-post.php' );
-require( get_template_directory() . '/inc/customizer/customizer-colors.php' );
-require( get_template_directory() . '/inc/customizer/customizer-fonts.php' );
+require( get_template_directory() . '/inc/customizer/customizer-upgrade.php' );
 
 
 // Add Theme Options section to Customizer
@@ -25,7 +24,7 @@ function anderson_customize_register_options( $wp_customize ) {
 		'priority'       => 180,
 		'capability'     => 'edit_theme_options',
 		'theme_supports' => '',
-		'title'          => __( 'Theme Options', 'dynamicnews' ),
+		'title'          => __( 'Theme Options', 'anderson-lite' ),
 		'description'    => '',
 	) );
 	
@@ -75,21 +74,6 @@ function anderson_customize_register_options( $wp_customize ) {
 		'priority' => 3
 		)
 	);
-	$wp_customize->add_setting( 'anderson_theme_options[credit_link]', array(
-        'default'           => true,
-		'type'           	=> 'option',
-        'transport'         => 'refresh',
-        'sanitize_callback' => 'anderson_sanitize_checkbox'
-		)
-	);
-    $wp_customize->add_control( 'anderson_control_credit_link', array(
-        'label'    => __( 'Display Credit Link to ThemeZee on footer line.', 'anderson-lite' ),
-        'section'  => 'anderson_section_options',
-        'settings' => 'anderson_theme_options[credit_link]',
-        'type'     => 'checkbox',
-		'priority' => 4
-		)
-	);
 	
 	// Add postMessage support for site title and description.
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
@@ -115,20 +99,6 @@ function anderson_customize_register_options( $wp_customize ) {
 		'priority' => 99
 		)
 	);
-	
-	// Add Site Logo option & image uploader.
-	$wp_customize->add_setting( 'site_logo', array(
-		'default' => array('url' => false, 'id' => 0 ),
-		'type'       => 'option',
-		'capability' => 'manage_options',
-		'transport'  => 'refresh'
-	) );
-	$wp_customize->add_control( new Anderson_Site_Logo_Control( $wp_customize, 'site_logo', array(
-	    'label'    => __( 'Site Logo', 'anderson-lite' ),
-	    'section'  => 'title_tagline',
-	    'settings' => 'site_logo',
-		'priority' => 100
-	) ) );
 }
 
 

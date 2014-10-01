@@ -15,7 +15,11 @@ function anderson_enqueue_scripts() {
 	wp_enqueue_style('anderson-lite-genericons', get_template_directory_uri() . '/css/genericons.css');
 
 	// Register and enqueue navigation.js
-	wp_enqueue_script('anderson-lite-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery'));
+	wp_enqueue_script('anderson-lite-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery'));
+	
+	// Register and Enqueue Fonts
+	wp_enqueue_style('anderson-lite-default-font', '//fonts.googleapis.com/css?family=Carme');
+	wp_enqueue_style('anderson-lite-default-title-font', '//fonts.googleapis.com/css?family=Share');
 
 }
 endif;
@@ -86,9 +90,6 @@ function anderson_add_image_sizes() {
 	
 	// Add Post Thumbnail Size
 	add_image_size( 'frontpage-intro', 750, 450, true);
-	
-	// Add Site Logo Size
-	add_image_size( 'site-logo', 1340, 250);
 
 }
 endif;
@@ -176,43 +177,6 @@ function anderson_register_sidebars() {
 		'after_title' => '</h3>',
 	));
 
-	//Register Footer Widgets
-	register_sidebar( array(
-		'name' => __( 'Footer Left', 'anderson-lite' ),
-		'id' => 'footer-left',
-		'description' => __( 'Appears on footer on the left hand side.', 'anderson-lite' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h3 class="widgettitle">',
-		'after_title' => '</h3>',
-	));
-	register_sidebar( array(
-		'name' => __( 'Footer Center Left', 'anderson-lite' ),
-		'id' => 'footer-center-left',
-		'description' => __( 'Appears on footer on center left position.', 'anderson-lite' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h3 class="widgettitle">',
-		'after_title' => '</h3>',
-	));
-	register_sidebar( array(
-		'name' => __( 'Footer Center Right', 'anderson-lite' ),
-		'id' => 'footer-center-right',
-		'description' => __( 'Appears on footer on center right position.', 'anderson-lite' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h3 class="widgettitle">',
-		'after_title' => '</h3>',
-	));
-	register_sidebar( array(
-		'name' => __( 'Footer Right', 'anderson-lite' ),
-		'id' => 'footer-right',
-		'description' => __( 'Appears on footer on the right hand side.', 'anderson-lite' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h3 class="widgettitle">',
-		'after_title' => '</h3>',
-	));
 }
 endif;
 
@@ -253,17 +217,11 @@ function anderson_default_menu() {
 // Display Credit Link Function
 function anderson_credit_link() {
 	
-	// Get Theme Options from Database
-	$theme_options = anderson_theme_options();
-
-	if ( isset($theme_options['credit_link']) and $theme_options['credit_link'] == true ) :
-		
-		printf(__( 'Powered by %1$s and the %2$s.', 'anderson-lite' ), 
-				sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'anderson-lite' ) ),
-				sprintf( '<a href="http://themezee.com/themes/anderson/" title="Anderson WordPress Theme">%s</a>', __( 'Anderson Theme', 'anderson-lite' ) )
-			);
-		
-	endif;
+	printf(__( 'Powered by %1$s and the %2$s.', 'anderson-lite' ), 
+			sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'anderson-lite' ) ),
+			sprintf( '<a href="http://themezee.com/themes/anderson/" title="Anderson WordPress Theme">%s</a>', __( 'Anderson Theme', 'anderson-lite' ) )
+		);
+	
 }
 
 // Change Excerpt Length
@@ -336,10 +294,7 @@ require( get_template_directory() . '/inc/customizer/customizer.php' );
 require( get_template_directory() . '/inc/customizer/default-options.php' );
 
 // include Customization Files
-require( get_template_directory() . '/inc/customizer/frontend/custom-colors.php' );
-require( get_template_directory() . '/inc/customizer/frontend/custom-fonts.php' );
 require( get_template_directory() . '/inc/customizer/frontend/custom-layout.php' );
-require( get_template_directory() . '/inc/customizer/frontend/custom-jscript.php' );
 
 // include Template Functions
 require( get_template_directory() . '/inc/template-tags.php' );

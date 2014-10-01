@@ -31,18 +31,13 @@ function anderson_default_options() {
 	$default_options = array(
 		'layout' 							=> 'right-sidebar',
 		'footer_content'					=> __('Place your footer content here', 'anderson-lite'),
-		'credit_link' 						=> true,
 		'header_icons' 						=> false,
 		'header_phone' 						=> '',
 		'header_email' 						=> '',
 		'header_address' 					=> '',
 		'posts_length' 						=> 'excerpt',
 		'post_thumbnails_index'				=> true,
-		'post_thumbnails_single' 			=> true,
-		'text_font' 						=> 'Carme',
-		'title_font' 						=> 'Share',
-		'navi_font' 						=> 'Share',
-		'widget_title_font' 				=> 'Share'
+		'post_thumbnails_single' 			=> true
 	);
 	
 	return $default_options;
