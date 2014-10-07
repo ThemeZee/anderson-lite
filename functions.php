@@ -17,6 +17,23 @@ function anderson_enqueue_scripts() {
 	// Register and enqueue navigation.js
 	wp_enqueue_script('anderson-lite-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery'));
 	
+	// Get Theme Options from Database
+	$theme_options = anderson_theme_options();
+	
+	// Register and Enqueue FlexSlider JS and CSS if necessary
+	if ( ( isset($theme_options['slider_active']) and $theme_options['slider_active'] == true ) ) :
+
+		// FlexSlider CSS
+		wp_enqueue_style('anderson-lite-flexslider', get_template_directory_uri() . '/css/flexslider.css');
+
+		// FlexSlider JS
+		wp_enqueue_script('anderson-lite-flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array('jquery'));
+
+		// Register and enqueue slider.js
+		wp_enqueue_script('anderson-lite-post-slider', get_template_directory_uri() .'/js/slider.js', array('anderson-lite-flexslider'));
+
+	endif;
+	
 	// Register and Enqueue Fonts
 	wp_enqueue_style('anderson-lite-default-font', '//fonts.googleapis.com/css?family=Carme');
 	wp_enqueue_style('anderson-lite-default-title-font', '//fonts.googleapis.com/css?family=Share');
@@ -63,6 +80,13 @@ function anderson_setup() {
 		'width'	=> 1340,
 		'height' => 250,
 		'flex-height' => true));
+		
+	// Add theme support for Jetpack Featured Content
+	add_theme_support( 'featured-content', array(
+		'featured_content_filter' => 'anderson_get_featured_content',
+		'max_posts'  => 4
+		)
+	);
 
 	// Register Navigation Menus
 	register_nav_menu( 'primary', __('Main Navigation', 'anderson-lite') );
@@ -88,8 +112,8 @@ function anderson_add_image_sizes() {
 	// Add Custom Header Image Size
 	add_image_size( 'custom-header-image', 1340, 250, true);
 	
-	// Add Post Thumbnail Size
-	add_image_size( 'frontpage-intro', 750, 450, true);
+	// Add Slider Image Size
+	add_image_size( 'slider-image', 840, 440, true);
 
 }
 endif;
@@ -110,71 +134,6 @@ function anderson_register_sidebars() {
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widgettitle"><span>',
 		'after_title' => '</span></h3>',
-	));
-
-	// Register Frontpage Template Widgets
-	register_sidebar( array(
-		'name' => __( 'Front Page Fullwidth Top', 'anderson-lite' ),
-		'id' => 'frontpage-fullwidth-top',
-		'description' => __( 'Top fullwidth widget area displayed on front page template.', 'anderson-lite' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widgettitle">',
-		'after_title' => '</h3>',
-	));
-	register_sidebar( array(
-		'name' => __( 'Front Page First Row (4 col)', 'anderson-lite' ),
-		'id' => 'frontpage-first-row',
-		'description' => __( 'Four column horizontal widget area on front page template.', 'anderson-lite' ),
-		'before_widget' => '<div class="widget-col"><div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div></div>',
-		'before_title' => '<h3 class="widgettitle">',
-		'after_title' => '</h3>',
-	));
-	register_sidebar( array(
-		'name' => __( 'Front Page Second Row (3 col)', 'anderson-lite' ),
-		'id' => 'frontpage-second-row',
-		'description' => __( 'Three column horizontal widget area on front page template.', 'anderson-lite' ),
-		'before_widget' => '<div class="widget-col"><div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div></div>',
-		'before_title' => '<h3 class="widgettitle">',
-		'after_title' => '</h3>',
-	));
-	register_sidebar( array(
-		'name' => __( 'Front Page Fullwidth Middle', 'anderson-lite' ),
-		'id' => 'frontpage-fullwidth-middle',
-		'description' => __( 'Middle fullwidth widget area displayed on front page template.', 'anderson-lite' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widgettitle">',
-		'after_title' => '</h3>',
-	));
-	register_sidebar( array(
-		'name' => __( 'Front Page Left', 'anderson-lite' ),
-		'id' => 'frontpage-left-column',
-		'description' => __( 'Left column widget area displayed on  front page template.', 'anderson-lite' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widgettitle">',
-		'after_title' => '</h3>',
-	));
-	register_sidebar( array(
-		'name' => __( 'Front Page Right', 'anderson-lite' ),
-		'id' => 'frontpage-right-column',
-		'description' => __( 'Right column widget area displayed on  front page template.', 'anderson-lite' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widgettitle">',
-		'after_title' => '</h3>',
-	));
-	register_sidebar( array(
-		'name' => __( 'Front Page Fullwidth Bottom', 'anderson-lite' ),
-		'id' => 'frontpage-fullwidth-bottom',
-		'description' => __( 'Bottom fullwidth widget area displayed on front page template.', 'anderson-lite' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widgettitle">',
-		'after_title' => '</h3>',
 	));
 
 }
@@ -214,6 +173,18 @@ function anderson_default_menu() {
 }
 
 
+// Get Featured Posts
+function anderson_get_featured_content() {
+	return apply_filters( 'anderson_get_featured_content', false );
+}
+
+
+// Check if featured posts exists
+function anderson_has_featured_content() {
+	return ! is_paged() && (bool) anderson_get_featured_content();
+}
+
+
 // Display Credit Link Function
 function anderson_credit_link() {
 	
@@ -221,7 +192,7 @@ function anderson_credit_link() {
 			sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'anderson-lite' ) ),
 			sprintf( '<a href="http://themezee.com/themes/anderson/" title="Anderson WordPress Theme">%s</a>', __( 'Anderson Theme', 'anderson-lite' ) )
 		);
-	
+
 }
 
 // Change Excerpt Length
@@ -234,6 +205,13 @@ function anderson_excerpt_length($length) {
 add_filter('excerpt_more', 'anderson_excerpt_more');
 function anderson_excerpt_more($more) {
     return '';
+}
+
+
+// Change Excerpt Length for Featured Content
+add_filter('excerpt_length', 'anderson_excerpt_length');
+function anderson_slideshow_excerpt_length($length) {
+    return 28;
 }
 
 
@@ -295,12 +273,17 @@ require( get_template_directory() . '/inc/customizer/default-options.php' );
 
 // include Customization Files
 require( get_template_directory() . '/inc/customizer/frontend/custom-layout.php' );
+require( get_template_directory() . '/inc/customizer/frontend/custom-slider.php' );
 
 // include Template Functions
 require( get_template_directory() . '/inc/template-tags.php' );
 
 // include Widget Files
-require( get_template_directory() . '/inc/widgets/widget-frontpage-services.php' );
 require( get_template_directory() . '/inc/widgets/widget-social-icons.php' );
+
+// Include Featured Content class in case it does not exist yet (e.g. user has not Jetpack installed)
+if ( ! class_exists( 'Featured_Content' ) && 'plugins.php' !== $GLOBALS['pagenow'] ) {
+	require get_template_directory() . '/inc/featured-content.php';
+}
 
 ?>

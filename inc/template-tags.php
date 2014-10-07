@@ -8,13 +8,32 @@
  */
 	
 // Display Custom Header
+if ( ! function_exists( 'anderson_display_header_banner' ) ):
+	
+	function anderson_display_header_banner() {
+	
+		// Get Theme Options from Database
+		$theme_options = anderson_theme_options();
+
+		// Display Header Banner Ad
+		if ( isset($theme_options['header_ad_code']) and $theme_options['header_ad_code'] <> '' ) : ?>
+
+			<div id="header-banner" class="clearfix">
+				<?php echo do_shortcode(wp_kses_post($theme_options['header_ad_code'])); ?>
+			</div>
+
+		<?php
+		endif;
+	
+	}
+	
+endif;
+
+
+// Display Custom Header
 if ( ! function_exists( 'anderson_display_custom_header' ) ):
 	
 	function anderson_display_custom_header() {
-			
-		// Don't display header image on template-frontpage.php
-		if( is_page_template('template-frontpage.php') )
-			return;
 			
 		// Check if page is displayed and featured header image is used
 		if( is_page() && has_post_thumbnail() ) :
@@ -66,17 +85,33 @@ endif;
 
 
 // Display Post Thumbnail on Archive Pages
-function anderson_display_thumbnail_index() {
+function anderson_display_thumbnail_and_categories_index() {
 	
 	// Get Theme Options from Database
 	$theme_options = anderson_theme_options();
 	
-	// Display Post Thumbnail if activated
-	if ( isset($theme_options['post_thumbnails_index']) and $theme_options['post_thumbnails_index'] == true ) : ?>
+	// Display Post Thumbnail if it exists and feature is activated
+	if ( has_post_thumbnail() and 
+		(isset($theme_options['post_thumbnails_index']) and $theme_options['post_thumbnails_index'] == true ) ) : ?>
 
-		<a href="<?php esc_url(the_permalink()) ?>" rel="bookmark">
-			<?php the_post_thumbnail('post-thumbnail', array('class' => 'alignleft')); ?>
-		</a>
+		<div class="post-image">
+		
+			<a href="<?php esc_url(the_permalink()) ?>" rel="bookmark">
+				<?php the_post_thumbnail('post-thumbnail', array('class' => 'alignleft')); ?>
+			</a>
+			
+			<div class="image-post-categories post-categories">
+				<?php echo get_the_category_list(''); ?>
+			</div>
+			
+		</div>
+		
+<?php // Otherwise only display Categories
+	else: ?>
+	
+		<div class="single-post-categories post-categories clearfix">
+			<?php echo get_the_category_list(''); ?>
+		</div>
 
 <?php
 	endif;
@@ -85,42 +120,36 @@ function anderson_display_thumbnail_index() {
 
 
 // Display Post Thumbnail on single posts
-function anderson_display_thumbnail_single() {
+function anderson_display_thumbnail_and_categories_single() {
 	
 	// Get Theme Options from Database
 	$theme_options = anderson_theme_options();
 	
-	// Display Post Thumbnail if activated
-	if ( isset($theme_options['post_thumbnails_single']) and $theme_options['post_thumbnails_single'] == true ) :
+	// Display Post Thumbnail if it exists and feature is activated
+	if ( has_post_thumbnail() and 
+		(isset($theme_options['post_thumbnails_single']) and $theme_options['post_thumbnails_single'] == true ) ) : ?>
 
-		the_post_thumbnail('post-thumbnail', array('class' => 'alignleft'));
+		<div class="post-image">
+		
+			<?php the_post_thumbnail('post-thumbnail', array('class' => 'alignleft')); ?>
 
+			<div class="image-post-categories post-categories">
+				<?php echo get_the_category_list(''); ?>
+			</div>
+			
+		</div>
+		
+<?php // Otherwise only display Categories
+	else: ?>
+	
+		<div class="single-post-categories post-categories clearfix">
+			<?php echo get_the_category_list(''); ?>
+		</div>
+
+<?php
 	endif;
 
 }
-
-
-// Display Postinfo Data on Archive Pages
-if ( ! function_exists( 'anderson_display_postinfo' ) ):
-	
-	function anderson_display_postinfo() { ?>
-		
-		<span class="meta-category">
-			<?php printf(__('Category: %1$s', 'anderson-lite'), get_the_category_list(' ')); ?>
-		</span>
-	
-	<?php
-		$tag_list = get_the_tag_list('', ' ');
-		if ( $tag_list ) : ?>
-			<span class="meta-tags sep">
-					<?php printf(__('Tags: %1$s', 'anderson-lite'), $tag_list); ?>
-			</span>
-<?php endif; 	
-	
-	}
-	
-endif;
-
 	
 // Display Content Pagination
 if ( ! function_exists( 'anderson_display_pagination' ) ):

@@ -12,7 +12,7 @@ function anderson_customize_register_upgrade_settings( $wp_customize ) {
 	// Add Sections for Post Settings
 	$wp_customize->add_section( 'anderson_section_upgrade', array(
         'title'    => __( 'PRO Version', 'andersonlite' ),
-        'priority' => 70,
+        'priority' => 60,
 		'panel' => 'anderson_panel_options' 
 		)
 	);

@@ -1,7 +1,7 @@
 		
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		
-		<?php anderson_display_thumbnail_index(); ?>
+		<?php anderson_display_thumbnail_and_categories_index(); ?>
 		
 		<div class="post-content">
 

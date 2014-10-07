@@ -1,8 +1,8 @@
-Anderson Lite WordPress Theme, Copyright 2014 ThemeZee.com
-Anderson Lite is distributed under the terms of the GNU GPL
+Anderson WordPress Theme, Copyright 2014 ThemeZee.com
+Anderson is distributed under the terms of the GNU GPL
 
 ===================================
-Thanks for Downloading Anderson Lite
+Thanks for Downloading Anderson
 ===================================
 
 Thank you for downloading my theme. 
@@ -51,7 +51,7 @@ To find out more about installing WordPress themes please also see http://themez
 C) Theme Options
 ===================================
 
-Anderson Lite supports the awesome Theme Customizer for all theme settings. 
+Anderson supports the awesome Theme Customizer for all theme settings. 
 Go to WP-Admin > Appearance > Customize to open the Customizer.
 
 ===================================
@@ -59,7 +59,7 @@ D) Theme Documentation
 ===================================
 
 Need any help to setup and configure this theme? We got you covered with an extensive theme documentation on our website.
-http://themezee.com/docs/anderson-documentation/
+http://themezee.com/docs/anderson-lite-documentation/
 
 ===================================
 E) Page Templates
@@ -77,7 +77,7 @@ I have included a few, nice page templates for advanced content presentation.
 F) Theme License
 ===================================
 
-Anderson Lite is released under the GNU general public license. 
+Anderson is released under the GNU general public license. 
 That means you can use this theme on all of your websites - for personal or commercial purposes!
 
 ===================================
@@ -90,7 +90,7 @@ G) Licenses of bundled resources
 	License of Genericon Icon font: http://www.gnu.org/licenses/gpl.html
 
 	2. Dashicons Icon Picker, Copyright 2013 Themergency.com
-	Anderson Lite uses the Dashicons Icon Picker for the Front Page Services widgets, released under GPL v2.
+	Anderson uses the Dashicons Icon Picker for the Front Page Services widgets, released under GPL v2.
 	Source URL: https://github.com/bradvin/dashicons-picker , http://themergency.com/dashicon-picker-jquery-plugin/
 	License URL: http://www.gnu.org/licenses/gpl.html
 

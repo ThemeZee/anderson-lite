@@ -44,9 +44,8 @@
 			
 			</div>
 			
-			<div id="header-content" class="clearfix">
-				<?php locate_template('/inc/header-content.php', true); ?>
-			</div>
+			<?php // Display Header Banner Ad
+				anderson_display_header_banner(); ?>
 
 		</header>
 	

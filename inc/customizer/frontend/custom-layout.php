@@ -13,7 +13,7 @@ function anderson_css_layout() {
 				#content {
 					float: right;
 					padding-right: 0;
-					padding-left: 3em;
+					padding-left: 2em;
 				}
 				#sidebar {
 					float: left;
@@ -34,6 +34,22 @@ function anderson_css_layout() {
 					float: none;
 					padding: 0;
 					width: 100%;
+				}
+		</style>';
+	
+	endif;
+	
+	
+	// Turn off Grayscale Image Filter
+	if ( isset($theme_options['image_grayscale']) and $theme_options['image_grayscale'] == true ) :
+	
+		echo '<style type="text/css">
+				.wp-post-image, #post-slider-wrap img {
+					-moz-filter: none; 
+					-ms-filter: none; 
+					-o-filter: none; 
+					-webkit-filter: none; 
+					filter: none;
 				}
 		</style>';
 	
