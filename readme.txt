@@ -1,15 +1,15 @@
-Anderson WordPress Theme, Copyright 2014 ThemeZee.com
-Anderson is distributed under the terms of the GNU GPL
+Anderson Lite WordPress Theme, Copyright 2014 ThemeZee.com
+Anderson Lite is distributed under the terms of the GNU GPL
 
 ===================================
-Thanks for Downloading Anderson
+Thanks for Downloading Anderson Lite
 ===================================
 
 Thank you for downloading my theme. 
 If you have any questions that are beyond the scope of this help file, 
 please visit themezee.com. Thanks so much!
 
-It is completely optional, but if you like the Theme I would appreciate it if 
+It is completely optional, but if you like the Theme we would appreciate it if 
 you keep the credit link at the bottom.
 
 -----------------------------------
@@ -51,7 +51,7 @@ To find out more about installing WordPress themes please also see http://themez
 C) Theme Options
 ===================================
 
-Anderson supports the awesome Theme Customizer for all theme settings. 
+Anderson Lite supports the awesome Theme Customizer for all theme settings. 
 Go to WP-Admin > Appearance > Customize to open the Customizer.
 
 ===================================
@@ -59,25 +59,25 @@ D) Theme Documentation
 ===================================
 
 Need any help to setup and configure this theme? We got you covered with an extensive theme documentation on our website.
-http://themezee.com/docs/anderson-lite-documentation/
+http://themezee.com/docs/anderson-documentation/
 
 ===================================
 E) Page Templates
 ===================================
 
-I have included a few, nice page templates for advanced content presentation.
+We have included a few, nice page templates for advanced content presentation.
 
 	1. Fullwidth Template 
 	This template shows a static page without the blog sidebar.
 	
-	2. Frontpage Template
-	Displays the business homepage with welcome area and widgetized content below.
+	2. Magazine Frontpage Template
+	coming soon with the next updates
 
 ===================================
 F) Theme License
 ===================================
 
-Anderson is released under the GNU general public license. 
+Anderson Lite is released under the GNU general public license. 
 That means you can use this theme on all of your websites - for personal or commercial purposes!
 
 ===================================
@@ -89,15 +89,24 @@ G) Licenses of bundled resources
 	Source URL: http://genericons.com
 	License of Genericon Icon font: http://www.gnu.org/licenses/gpl.html
 
-	2. Dashicons Icon Picker, Copyright 2013 Themergency.com
-	Anderson uses the Dashicons Icon Picker for the Front Page Services widgets, released under GPL v2.
-	Source URL: https://github.com/bradvin/dashicons-picker , http://themergency.com/dashicon-picker-jquery-plugin/
-	License URL: http://www.gnu.org/licenses/gpl.html
+	2. Bundled Images, Copyright 2014 ThemeZee.com
+	Images such as the default slider image and ad block image included in this theme package are created by myself and licensed under GNU GPL.
+	License URL of Logo / Background images: http://www.gnu.org/licenses/gpl.html
 
 	3. Default Fonts (Share, Carme)
 	Default Fonts used in the theme are from the Google Font API and are GPL-compatible licensed (SIL Open Font License (OFL))
 	https://www.google.com/fonts/specimen/Carme
 	http://www.google.com/fonts/specimen/Share
+	
+	4. Screenshot Photography (used on screenshot.png)
+	We only use verified images from Pixabay for the screenshot.png, which are licensed under CC0 (GPL compatible).
+	Source URL: http://pixabay.com
+	Image 1: http://pixabay.com/en/jet-engine-turbine-jet-airplane-371412/
+	Image 2: http://pixabay.com/en/by-wlodek-old-close-hack-closed-428549/
+	Image 3: http://pixabay.com/en/typewriter-letters-keyboard-keys-472850/
+	Image 4: http://pixabay.com/en/toothed-belt-drive-details-209677/
+	Image 5: http://pixabay.com/en/rusty-metal-old-machine-185531/
+	License URL: http://creativecommons.org/publicdomain/zero/1.0/deed.de
 
 ===================================
 Enjoy!

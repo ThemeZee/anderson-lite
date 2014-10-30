@@ -43,6 +43,7 @@ function anderson_customize_register_post_settings( $wp_customize ) {
         'default'           => '',
 		'type'           	=> 'option',
         'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_attr'
         )
     );
     $wp_customize->add_control( new Anderson_Customize_Header_Control(
@@ -86,33 +87,34 @@ function anderson_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 	
-	// Add Image Grayscale Headline
-	$wp_customize->add_setting( 'anderson_theme_options[image_grayscale_headline]', array(
+	// Add Excerpt Text setting
+	$wp_customize->add_setting( 'anderson_theme_options[excerpt_text_headline]', array(
         'default'           => '',
 		'type'           	=> 'option',
         'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_attr'
         )
     );
     $wp_customize->add_control( new Anderson_Customize_Header_Control(
-        $wp_customize, 'anderson_control_image_grayscale_headline', array(
-            'label' => __( 'Image Grayscale', 'anderson-lite' ),
+        $wp_customize, 'anderson_control_excerpt_text_headline', array(
+            'label' => __( 'Excerpt More Text', 'anderson' ),
             'section' => 'anderson_section_post',
-            'settings' => 'anderson_theme_options[image_grayscale_headline]',
+            'settings' => 'anderson_theme_options[excerpt_text_headline]',
             'priority' => 5
             )
         )
     );
-	$wp_customize->add_setting( 'anderson_theme_options[image_grayscale]', array(
+	$wp_customize->add_setting( 'anderson_theme_options[excerpt_text]', array(
         'default'           => false,
 		'type'           	=> 'option',
         'transport'         => 'refresh',
         'sanitize_callback' => 'anderson_sanitize_checkbox'
 		)
 	);
-    $wp_customize->add_control( 'anderson_control_image_grayscale', array(
-        'label'    => __( 'Turn off Grayscale filter for featured images.', 'anderson-lite' ),
+    $wp_customize->add_control( 'anderson_control_excerpt_text', array(
+        'label'    => __( 'Display [...] after text excerpts.', 'anderson' ),
         'section'  => 'anderson_section_post',
-        'settings' => 'anderson_theme_options[image_grayscale]',
+        'settings' => 'anderson_theme_options[excerpt_text]',
         'type'     => 'checkbox',
 		'priority' => 6
 		)

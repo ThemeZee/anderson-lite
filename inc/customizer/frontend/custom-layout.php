@@ -23,23 +23,6 @@ function anderson_css_layout() {
 	
 	endif;
 	
-	// Change Theme Layout to Fullwidth
-	if ( isset($theme_options['layout']) and $theme_options['layout'] == 'fullwidth' ) :
-	
-		echo '<style type="text/css">
-				#wrapper {
-					max-width: 1190px;
-				}
-				#content {
-					float: none;
-					padding: 0;
-					width: 100%;
-				}
-		</style>';
-	
-	endif;
-	
-	
 	// Turn off Grayscale Image Filter
 	if ( isset($theme_options['image_grayscale']) and $theme_options['image_grayscale'] == true ) :
 	
@@ -55,5 +38,7 @@ function anderson_css_layout() {
 	
 	endif;
 
-	
 }
+
+
+?>

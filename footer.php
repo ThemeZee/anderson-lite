@@ -16,13 +16,6 @@
 			
 			<div class="footer-content">
 				
-				<?php // Display Footer Content from Database
-					if ( isset( $theme_options['footer_content'] ) and $theme_options['footer_content'] <> '' ) :
-					
-						echo do_shortcode(wp_kses_post($theme_options['footer_content']));
-						
-					endif; ?>
-					
 				<div id="credit-link"><?php anderson_credit_link(); ?></div>
 
 			</div>

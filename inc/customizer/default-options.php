@@ -9,19 +9,20 @@
 // Return theme options
 function anderson_theme_options() {
     
-	// Get theme options from DB
-	$theme_options = get_option( 'anderson_theme_options' );
-
-	// Check if user has already configured theme options
-	if ( false === $theme_options ) :
-
-		// Set Default Options
-		$theme_options = anderson_default_options();
+	// Merge Theme Options Array from Database with Default Options Array
+	$theme_options = wp_parse_args( 
 		
-    endif;
-	
+		// Get saved theme options from WP database
+		get_option( 'anderson_theme_options', array() ), 
+		
+		// Merge with Default Options if setting was not saved yet
+		anderson_default_options() 
+		
+	);
+
 	// Return theme options
 	return $theme_options;
+	
 }
 
 
@@ -30,14 +31,13 @@ function anderson_default_options() {
 
 	$default_options = array(
 		'layout' 							=> 'right-sidebar',
-		'footer_content'					=> __('Place your footer content here', 'anderson-lite'),
-		'credit_link' 						=> true,
+		'image_grayscale' 					=> false,
 		'header_icons' 						=> false,
 		'header_ad_code' 					=> '',
 		'posts_length' 						=> 'excerpt',
 		'post_thumbnails_index'				=> true,
 		'post_thumbnails_single' 			=> true,
-		'image_grayscale' 					=> false
+		'excerpt_text' 						=> false
 	);
 	
 	return $default_options;

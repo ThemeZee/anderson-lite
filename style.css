@@ -1,7 +1,7 @@
 /*======================================
 Theme Name: Anderson Lite
 Theme URI: http://themezee.com/themes/anderson/
-Description: A clean and elegant business theme suitable for your personal or small company website. The theme comes with a fully responsive layout and a widgetized business front page template. The user-friendly and flexible theme options supporting the powerful Customizer allow you to display your phone number, email and location in the header area. 
+Description: A clean and elegant magazine theme suitable for any kind of content related website. The theme comes with a fully responsive layout and a sleek featured post slideshow. The user-friendly and flexible theme options supporting the powerful Customizer allow you to setup your magazine website in only a few minutes. 
 Version: 1.0
 Author: ThemeZee
 Author URI: http://themezee.com
@@ -60,7 +60,7 @@ body {
 	font-size: 0.95em;
 	border: 0;
 	color: #111;
-	background-color: #eee;
+	background-color: #777777;
 }
 
 /* Links */
@@ -147,7 +147,7 @@ input, textarea, select {
 #logo {
 	float: left;
 	max-width: 100%;
-	margin: 1.8em 1em;
+	margin: 1.2em 1em;
 }
 #logo .site-logo {
 	border: 0;
@@ -155,15 +155,21 @@ input, textarea, select {
 	height: auto;
 }
 #logo .site-title {
+	display: inline;
+	background: #00aa55;
+	color: #fff;
+	padding: 0.15em 0.3em;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
 	font-size: 2.5em;
-	color: #00aa55;
 	font-family: 'Share', Tahoma, Verdana, Arial;
+	line-height: 1.4em;
 }
 #logo a:hover {
 	text-decoration: none;
 }
 #logo a:hover .site-title {
-	color: #222;
+	background: #333;
 	text-decoration: none;
 }
 #logo .site-description {
@@ -593,11 +599,13 @@ input, textarea, select {
 
 /* Archives and Search Heading */
 .archive-title {
-	font-size: 1.5em;
-	font-weight: bold;
+	margin-bottom: 1.5em;
 	font-family: 'Share', Tahoma, Verdana, Arial;
-	margin-bottom: 1.2em;
 	color: #222;
+	line-height: 1.4em;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+    font-size: 1.4em;
 }
 .archive-title span{
 	color: #00aa55;
@@ -1228,16 +1236,12 @@ embed, iframe, object, video {
 #footer-wrap {
 	background: #fff;
 	border-top: 1px solid #ddd;
-	padding: 2.5em;
+	padding: 2em;
 	border-bottom: 1px dotted #ddd;
+	line-height: 1.5em;
 }
 #footer .footer-content {
-	float: left;
-}
-#footer-wrap #credit-link {
-	margin: 0.8em 0 -0.8em;
-	font-size: 0.85em;
-	color: #777;
+	font-size: 0.9em;
 }
 
 /* Footer Navigation Menu */
@@ -1498,7 +1502,6 @@ embed, iframe, object, video {
 		text-align: center;
 	}
 	#footer .footer-content {
-		float: none;
 		margin-top: 2em;
 	}
 	#footernav, #footernav-menu {

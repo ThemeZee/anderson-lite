@@ -72,7 +72,7 @@ function anderson_setup() {
 	add_editor_style();
 
 	// Add Custom Background
-	add_theme_support('custom-background', array('default-color' => 'eeeeee'));
+	add_theme_support('custom-background', array('default-color' => '777777'));
 
 	// Add Custom Header
 	add_theme_support('custom-header', array(
@@ -195,16 +195,27 @@ function anderson_credit_link() {
 
 }
 
+
 // Change Excerpt Length
 add_filter('excerpt_length', 'anderson_excerpt_length');
 function anderson_excerpt_length($length) {
     return 60;
 }
 
+
 // Change Excerpt More
 add_filter('excerpt_more', 'anderson_excerpt_more');
 function anderson_excerpt_more($more) {
-    return '';
+    
+	// Get Theme Options from Database
+	$theme_options = anderson_theme_options();
+
+	// Return Excerpt Text
+	if ( isset($theme_options['excerpt_text']) and $theme_options['excerpt_text'] == true ) :
+		return ' [...]';
+	else :
+		return '';
+	endif;
 }
 
 
@@ -277,9 +288,6 @@ require( get_template_directory() . '/inc/customizer/frontend/custom-slider.php'
 
 // include Template Functions
 require( get_template_directory() . '/inc/template-tags.php' );
-
-// include Widget Files
-require( get_template_directory() . '/inc/widgets/widget-social-icons.php' );
 
 // Include Featured Content class in case it does not exist yet (e.g. user has not Jetpack installed)
 if ( ! class_exists( 'Featured_Content' ) && 'plugins.php' !== $GLOBALS['pagenow'] ) {

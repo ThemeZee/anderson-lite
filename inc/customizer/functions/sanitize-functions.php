@@ -17,36 +17,14 @@ function anderson_sanitize_checkbox( $value ) {
 }
 
 
-// Sanitize the layout width value.
-function anderson_sanitize_design( $value ) {
-
-	if ( ! in_array( $value, array( 'boxed', 'wide' ) ) ) :
-        $value = 'boxed';
-	endif;
-
-    return $value;
-}
-
-
 // Sanitize the layout sidebar value.
 function anderson_sanitize_layout( $value ) {
 
-	if ( ! in_array( $value, array( 'left-sidebar', 'right-sidebar', 'fullwidth' ) ) ) :
+	if ( ! in_array( $value, array( 'left-sidebar', 'right-sidebar' ) ) ) :
         $value = 'right-sidebar';
 	endif;
 
     return $value;
-}
-
-
-// Sanitize footer content textarea
-function anderson_sanitize_footer_content( $value ) {
-
-	if ( current_user_can('unfiltered_html') ) :
-		return $value;
-	else :
-		return stripslashes( wp_filter_post_kses( addslashes($value) ) );
-	endif;
 }
 
 

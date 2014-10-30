@@ -1,6 +1,10 @@
 ===================================
-Anderson Changelog
+Anderson Lite Changelog
 ===================================
+
+Version 1.0.1
+-----------------------------------
+Magazine version of this theme
 
 Version 1.0
 -----------------------------------
