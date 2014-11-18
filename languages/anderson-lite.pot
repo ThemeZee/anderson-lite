@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Anderson\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-30 14:50+0100\n"
-"PO-Revision-Date: 2014-10-30 14:51+0100\n"
+"POT-Creation-Date: 2014-11-18 15:34+0100\n"
+"PO-Revision-Date: 2014-11-18 15:35+0100\n"
 "Last-Translator: Ulrich Pogson <grapplerulrich@gmail.com>\n"
 "Language-Team: ThemeZee <contact@themezee.com>\n"
 "MIME-Version: 1.0\n"
@@ -308,6 +308,10 @@ msgid ""
 "\"Customize Theme\" to open the Customizer now."
 msgstr ""
 
+#: inc/theme-info.php:79
+msgid "Customize Theme"
+msgstr ""
+
 #: inc/theme-info.php:84 inc/customizer/sections/customizer-upgrade.php:14
 msgid "PRO Version"
 msgstr ""
@@ -356,30 +360,30 @@ msgstr ""
 msgid "Right Sidebar"
 msgstr ""
 
-#: inc/customizer/sections/customizer-general.php:50
+#: inc/customizer/sections/customizer-general.php:51
 msgid "Image Grayscale"
 msgstr ""
 
-#: inc/customizer/sections/customizer-general.php:65
+#: inc/customizer/sections/customizer-general.php:66
 msgid "Turn off Grayscale filter for featured images."
 msgstr ""
 
 #: inc/customizer/sections/customizer-header.php:14
-#: inc/customizer/sections/customizer-header.php:29
+#: inc/customizer/sections/customizer-header.php:30
 msgid "Header Content"
 msgstr ""
 
-#: inc/customizer/sections/customizer-header.php:44
+#: inc/customizer/sections/customizer-header.php:46
 msgid ""
 "The Header Content will be displayed on the right hand side of the header "
 "area."
 msgstr ""
 
-#: inc/customizer/sections/customizer-header.php:61
+#: inc/customizer/sections/customizer-header.php:63
 msgid "Display Social Icons on header area"
 msgstr ""
 
-#: inc/customizer/sections/customizer-header.php:76
+#: inc/customizer/sections/customizer-header.php:78
 msgid "Ad Banner Code (768x90)"
 msgstr ""
 
@@ -399,23 +403,23 @@ msgstr ""
 msgid "Show post summaries (excerpt)"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:50
+#: inc/customizer/sections/customizer-post.php:51
 msgid "Post Images"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:65
+#: inc/customizer/sections/customizer-post.php:66
 msgid "Display featured images on archive pages"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:81
+#: inc/customizer/sections/customizer-post.php:82
 msgid "Display featured images on single posts"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:99
+#: inc/customizer/sections/customizer-post.php:100
 msgid "Excerpt More Text"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:114
+#: inc/customizer/sections/customizer-post.php:115
 msgid "Display [...] after text excerpts."
 msgstr ""
 
@@ -429,36 +433,36 @@ msgid ""
 "\"Featured Content\" section above."
 msgstr ""
 
-#: inc/customizer/sections/customizer-slider.php:30
+#: inc/customizer/sections/customizer-slider.php:31
 msgid "Activate Featured Post Slider"
 msgstr ""
 
-#: inc/customizer/sections/customizer-slider.php:46
+#: inc/customizer/sections/customizer-slider.php:47
 msgid "Display Slider above latest blog posts."
 msgstr ""
 
-#: inc/customizer/sections/customizer-slider.php:62
+#: inc/customizer/sections/customizer-slider.php:63
 msgid "Slider Animation"
 msgstr ""
 
-#: inc/customizer/sections/customizer-slider.php:68
+#: inc/customizer/sections/customizer-slider.php:69
 msgid "Horizontal Slider"
 msgstr ""
 
-#: inc/customizer/sections/customizer-slider.php:69
+#: inc/customizer/sections/customizer-slider.php:70
 msgid "Fade Slider"
 msgstr ""
 
-#: inc/customizer/sections/customizer-upgrade.php:29
+#: inc/customizer/sections/customizer-upgrade.php:30
 msgid "Need more features?"
 msgstr ""
 
-#: inc/customizer/sections/customizer-upgrade.php:44
+#: inc/customizer/sections/customizer-upgrade.php:46
 msgid ""
 "Check out the PRO version which comes with additional features and advanced "
 "customization options."
 msgstr ""
 
-#: inc/customizer/sections/customizer-upgrade.php:59
+#: inc/customizer/sections/customizer-upgrade.php:62
 msgid "Learn more about the PRO Version"
 msgstr ""

@@ -2,6 +2,11 @@
 Anderson Lite Changelog
 ===================================
 
+Version 1.0.3
+-----------------------------------
+[updated] theme language .pot file
+[removed] featured-image-header tag
+
 Version 1.0.2
 -----------------------------------
 [added] styling for sticky posts
