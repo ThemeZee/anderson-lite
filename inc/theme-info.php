@@ -40,7 +40,7 @@ function anderson_display_theme_info_page() {
 		<div class="important-links clearfix">
 			<p><strong><?php _e('Important Links:', 'anderson-lite'); ?></strong>
 				<a href="http://themezee.com/themes/anderson/" target="_blank"><?php _e('Theme Info Page', 'anderson-lite'); ?></a>
-				<a href="<?php echo get_template_directory_uri(); ?>/changelog.txt" target="_blank"><?php _e('Changelog', 'anderson'); ?></a>
+				<a href="<?php echo get_template_directory_uri(); ?>/changelog.txt" target="_blank"><?php _e('Changelog', 'anderson-lite'); ?></a>
 				<a href="http://preview.themezee.com/anderson/" target="_blank"><?php _e('Theme Demo', 'anderson-lite'); ?></a>
 				<a href="http://themezee.com/docs/anderson-documentation/" target="_blank"><?php _e('Theme Documentation', 'anderson-lite'); ?></a>
 				<a href="http://wordpress.org/support/view/theme-reviews/anderson-lite?filter=5" target="_blank"><?php _e('Rate this theme', 'anderson-lite'); ?></a>

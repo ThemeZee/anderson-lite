@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Anderson\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-18 15:34+0100\n"
-"PO-Revision-Date: 2014-11-18 15:35+0100\n"
+"POT-Creation-Date: 2015-01-03 12:56+0100\n"
+"PO-Revision-Date: 2015-01-03 12:56+0100\n"
 "Last-Translator: Ulrich Pogson <grapplerulrich@gmail.com>\n"
 "Language-Team: ThemeZee <contact@themezee.com>\n"
 "MIME-Version: 1.0\n"
@@ -84,66 +84,77 @@ msgid ""
 "are tagged with that keyword."
 msgstr ""
 
-#: functions.php:92
+#: functions.php:93
 msgid "Main Navigation"
 msgstr ""
 
-#: functions.php:93
+#: functions.php:94
 msgid "Top Navigation"
 msgstr ""
 
-#: functions.php:94
+#: functions.php:95
 msgid "Footer Navigation"
 msgstr ""
 
-#: functions.php:97
+#: functions.php:98
 msgid "Social Icons"
 msgstr ""
 
-#: functions.php:130
+#: functions.php:135
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:132
-msgid "Appears on posts and pages except front page and fullwidth template."
+#: functions.php:137
+msgid ""
+"Appears on posts and pages except Magazine Homepage and Fullwidth template."
 msgstr ""
 
-#: functions.php:164
+#: functions.php:146
+msgid "Magazine Homepage"
+msgstr ""
+
+#: functions.php:148
+msgid ""
+"Appears on \"Magazine Homepage\" page template only. You can use the "
+"Category Posts widgets here."
+msgstr ""
+
+#: functions.php:180
 #, php-format
 msgid "Page %s"
 msgstr ""
 
-#: functions.php:191
+#: functions.php:207
 #, php-format
 msgid "Powered by %1$s and the %2$s."
 msgstr ""
 
-#: functions.php:192
+#: functions.php:208
 msgid "WordPress"
 msgstr ""
 
-#: functions.php:193
+#: functions.php:209
 msgid "Anderson Theme"
 msgstr ""
 
-#: functions.php:238
+#: functions.php:261
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:239 functions.php:259
+#: functions.php:262 functions.php:282
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:250
+#: functions.php:273
 #, php-format
 msgid "<span class=\"fn\">%s</span>"
 msgstr ""
 
-#: functions.php:254
+#: functions.php:277
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:258
+#: functions.php:281
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
@@ -198,6 +209,14 @@ msgstr ""
 msgid "Tag Archives: %s"
 msgstr ""
 
+#: template-magazine.php:36
+msgid ""
+"There are no widgets to be displayed. Please go to Appearance → Widgets and "
+"add at least one widget to the \"Magazine Homepage\" widget area. You can "
+"use the three Category Posts widgets to set up the theme like the demo "
+"website."
+msgstr ""
+
 #: inc/featured-content.php:419
 msgid "Featured Content"
 msgstr ""
@@ -222,19 +241,26 @@ msgstr ""
 msgid "Don&rsquo;t display tag on front end."
 msgstr ""
 
-#: inc/template-tags.php:65
+#: inc/template-tags.php:65 inc/widgets/widget-category-posts-boxed.php:187
+#: inc/widgets/widget-category-posts-columns.php:211
+#: inc/widgets/widget-category-posts-grid.php:210
+#: inc/widgets/widget-category-posts-horizontal.php:158
 #, php-format
 msgid ""
 "Posted on <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time datetime="
 "\"%3$s\">%4$s</time></a>"
 msgstr ""
 
-#: inc/template-tags.php:74
+#: inc/template-tags.php:74 inc/widgets/widget-category-posts-boxed.php:196
+#: inc/widgets/widget-category-posts-columns.php:220
+#: inc/widgets/widget-category-posts-grid.php:219
 #, php-format
 msgid "by <a href=\"%1$s\" title=\"%2$s\" rel=\"author\">%3$s</a>"
 msgstr ""
 
-#: inc/template-tags.php:76
+#: inc/template-tags.php:76 inc/widgets/widget-category-posts-boxed.php:198
+#: inc/widgets/widget-category-posts-columns.php:222
+#: inc/widgets/widget-category-posts-grid.php:221
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
@@ -442,14 +468,18 @@ msgid "Display Slider above latest blog posts."
 msgstr ""
 
 #: inc/customizer/sections/customizer-slider.php:63
+msgid "Display Slider on Magazine Homepage template."
+msgstr ""
+
+#: inc/customizer/sections/customizer-slider.php:79
 msgid "Slider Animation"
 msgstr ""
 
-#: inc/customizer/sections/customizer-slider.php:69
+#: inc/customizer/sections/customizer-slider.php:85
 msgid "Horizontal Slider"
 msgstr ""
 
-#: inc/customizer/sections/customizer-slider.php:70
+#: inc/customizer/sections/customizer-slider.php:86
 msgid "Fade Slider"
 msgstr ""
 
@@ -465,4 +495,107 @@ msgstr ""
 
 #: inc/customizer/sections/customizer-upgrade.php:62
 msgid "Learn more about the PRO Version"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:11
+msgid ""
+"Display latest posts from category in boxed layout. Please use this widget "
+"ONLY on Magazine Homepage widget area."
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:13
+msgid "Category Posts Boxed (Anderson)"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:260
+#: inc/widgets/widget-category-posts-grid.php:285
+#: inc/widgets/widget-category-posts-horizontal.php:224
+msgid "Title:"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:266
+#: inc/widgets/widget-category-posts-grid.php:291
+#: inc/widgets/widget-category-posts-horizontal.php:230
+msgid "Category:"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:269
+#: inc/widgets/widget-category-posts-columns.php:297
+#: inc/widgets/widget-category-posts-columns.php:317
+#: inc/widgets/widget-category-posts-grid.php:294
+#: inc/widgets/widget-category-posts-horizontal.php:233
+msgid "All Categories"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:282
+#: inc/widgets/widget-category-posts-grid.php:321
+#: inc/widgets/widget-category-posts-horizontal.php:246
+msgid "Link Widget Title to Category Archive page"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:11
+msgid ""
+"Display latest posts from two specified categories. Please use this widget "
+"ONLY on Magazine Homepage widget area."
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:13
+msgid "Category Posts Columns (Anderson)"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:288
+msgid "Left Category Title:"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:294
+msgid "Left Category:"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:308
+msgid "Right Category Title:"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:314
+msgid "Right Category:"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:328
+#: inc/widgets/widget-category-posts-grid.php:305
+msgid "Number of posts:"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:336
+msgid "Highlight First Post (Image Overlay)"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-columns.php:343
+msgid "Link Category Titles to Category Archive pages"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-grid.php:11
+msgid ""
+"Display latest posts from category in a grid layout. Please use this widget "
+"ONLY on Magazine Homepage widget area."
+msgstr ""
+
+#: inc/widgets/widget-category-posts-grid.php:13
+msgid "Category Posts Grid (Anderson)"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-grid.php:307
+msgid "Please chose an even number (2, 4, 6, 8)."
+msgstr ""
+
+#: inc/widgets/widget-category-posts-grid.php:314
+msgid "Display as small posts grid with thumbnails"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-horizontal.php:11
+msgid ""
+"Display the latest 3 posts from a category in a horizontal line. Please use "
+"this widget ONLY on Magazine Homepage widget area."
+msgstr ""
+
+#: inc/widgets/widget-category-posts-horizontal.php:13
+msgid "Category Posts Horizontal (Anderson)"
 msgstr ""

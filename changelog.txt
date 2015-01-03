@@ -2,6 +2,12 @@
 Anderson Lite Changelog
 ===================================
 
+Version 1.0.4
+-----------------------------------
+[added] magazine homepage page template
+[added] 4 Category Posts Widgets for Magazine Homepage
+[added] setting to display post slider on magazine homepage template
+
 Version 1.0.3
 -----------------------------------
 [updated] theme language .pot file

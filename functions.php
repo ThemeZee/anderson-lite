@@ -21,7 +21,8 @@ function anderson_enqueue_scripts() {
 	$theme_options = anderson_theme_options();
 	
 	// Register and Enqueue FlexSlider JS and CSS if necessary
-	if ( ( isset($theme_options['slider_active']) and $theme_options['slider_active'] == true ) ) :
+	if ( ( isset($theme_options['slider_active']) and $theme_options['slider_active'] == true )
+		|| ( isset($theme_options['slider_active_magazine']) and $theme_options['slider_active_magazine'] == true ) ) :
 
 		// FlexSlider CSS
 		wp_enqueue_style('anderson-lite-flexslider', get_template_directory_uri() . '/css/flexslider.css');
@@ -112,6 +113,10 @@ function anderson_add_image_sizes() {
 	// Add Custom Header Image Size
 	add_image_size( 'custom-header-image', 1340, 250, true);
 	
+	// Add Category Post Widget image sizes
+	add_image_size( 'category-posts-widget-small', 95, 95, true);
+	add_image_size( 'category-posts-widget-big', 460, 325, true);
+	
 	// Add Slider Image Size
 	add_image_size( 'slider-image', 840, 440, true);
 
@@ -125,13 +130,24 @@ add_action( 'widgets_init', 'anderson_register_sidebars' );
 if ( ! function_exists( 'anderson_register_sidebars' ) ):
 function anderson_register_sidebars() {
 
-	// Register Sidebars
+	// Register Sidebar
 	register_sidebar( array(
 		'name' => __( 'Sidebar', 'anderson-lite' ),
 		'id' => 'sidebar',
-		'description' => __( 'Appears on posts and pages except front page and fullwidth template.', 'anderson-lite' ),
+		'description' => __( 'Appears on posts and pages except Magazine Homepage and Fullwidth template.', 'anderson-lite' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="widgettitle"><span>',
+		'after_title' => '</span></h3>',
+	));
+	
+	// Register Magazine Homepage Widgets
+	register_sidebar( array(
+		'name' => __( 'Magazine Homepage', 'anderson-lite' ),
+		'id' => 'magazine-homepage',
+		'description' => __( 'Appears on "Magazine Homepage" page template only. You can use the Category Posts widgets here.', 'anderson-lite' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widgettitle"><span>',
 		'after_title' => '</span></h3>',
 	));
@@ -226,6 +242,13 @@ function anderson_slideshow_excerpt_length($length) {
 }
 
 
+// Change Excerpt Length for Featured Content
+add_filter('excerpt_length', 'anderson_excerpt_length');
+function anderson_category_posts_widgets_excerpt_length($length) {
+    return 12;
+}
+
+
 // Custom Template for comments and pingbacks.
 if ( ! function_exists( 'anderson_list_comments' ) ):
 function anderson_list_comments($comment, $args, $depth) {
@@ -288,6 +311,12 @@ require( get_template_directory() . '/inc/customizer/frontend/custom-slider.php'
 
 // include Template Functions
 require( get_template_directory() . '/inc/template-tags.php' );
+
+// include Widget Files
+require( get_template_directory() . '/inc/widgets/widget-category-posts-boxed.php' );
+require( get_template_directory() . '/inc/widgets/widget-category-posts-columns.php' );
+require( get_template_directory() . '/inc/widgets/widget-category-posts-grid.php' );
+require( get_template_directory() . '/inc/widgets/widget-category-posts-horizontal.php' );
 
 // Include Featured Content class in case it does not exist yet (e.g. user has not Jetpack installed)
 if ( ! class_exists( 'Featured_Content' ) && 'plugins.php' !== $GLOBALS['pagenow'] ) {

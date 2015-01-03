@@ -97,7 +97,7 @@ function anderson_customize_register_post_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Anderson_Customize_Header_Control(
         $wp_customize, 'anderson_control_excerpt_text_headline', array(
-            'label' => __( 'Excerpt More Text', 'anderson' ),
+            'label' => __( 'Excerpt More Text', 'anderson-lite' ),
             'section' => 'anderson_section_post',
             'settings' => 'anderson_theme_options[excerpt_text_headline]',
             'priority' => 5
@@ -112,7 +112,7 @@ function anderson_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'anderson_control_excerpt_text', array(
-        'label'    => __( 'Display [...] after text excerpts.', 'anderson' ),
+        'label'    => __( 'Display [...] after text excerpts.', 'anderson-lite' ),
         'section'  => 'anderson_section_post',
         'settings' => 'anderson_theme_options[excerpt_text]',
         'type'     => 'checkbox',

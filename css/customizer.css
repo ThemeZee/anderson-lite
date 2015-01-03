@@ -3,7 +3,7 @@
  *
  */
 
-#customize-control-anderson_control_slider_activated,
+#customize-control-anderson_control_slider_active_header,
 #customize-control-anderson_control_footer_text,
 #customize-control-anderson_control_post_images,
 #customize-control-anderson_control_excerpt_text_headline, 
@@ -15,61 +15,10 @@
 #customize-control-anderson_control_post_images,
 #customize-control-anderson_control_excerpt_text_headline,
 #customize-control-anderson_control_image_grayscale_headline,
-#customize-control-anderson_control_slider_activated {
+#customize-control-anderson_control_slider_active_header {
 	margin-bottom: 0;
 }
 
 #customize-control-anderson_control_footer_text textarea {
 	height: 4em;
-}
-
-/* Site Logo CSS */
-#customize-control-site_logo {
-	margin-top: 12px;
-	border-top: 1px solid #eee;
-	padding-top: 12px;
-}
-#customize-control-site_logo .description {
-	display: block;
-	margin-bottom: 12px;
-}
-#customize-control-site_logo .current {
-	margin-bottom: 6px;
-}
-
-#customize-control-site_logo .current span {
-	border: 1px solid #eee;
-	-webkit-border-radius: 2px;
-	border-radius:         2px;
-	color: #555;
-	display: block;
-	overflow: hidden;
-	line-height: 40px;
-	min-height: 40px;
-	padding: 0 6px;
-	text-align: center;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-}
-
-#customize-control-site_logo .current img {
-	max-width: 100%;
-}
-
-#customize-control-site_logo button.new,
-#customize-control-site_logo button.change,
-#customize-control-site_logo button.remove {
-	height: auto;
-	width: 48%;
-	white-space: normal;
-}
-
-#customize-control-site_logo .remove {
-	float: left;
-	margin-right: 3px;
-}
-
-#customize-control-site_logo .new,
-#customize-control-site_logo .change {
-	float: right;
 }

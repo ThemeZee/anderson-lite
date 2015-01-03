@@ -106,6 +106,10 @@ G) Licenses of bundled resources
 	Image 3: http://pixabay.com/en/typewriter-letters-keyboard-keys-472850/
 	Image 4: http://pixabay.com/en/toothed-belt-drive-details-209677/
 	Image 5: http://pixabay.com/en/rusty-metal-old-machine-185531/
+	Image 6: http://pixabay.com/en/microscope-research-lab-laboratory-385364/
+	Image 7: http://pixabay.com/en/glass-facade-colorful-architecture-200888/
+	Image 8: http://pixabay.com/en/board-electronics-computer-453758/
+	Image 9: http://pixabay.com/en/microscope-research-lab-laboratory-385364/
 	License URL: http://creativecommons.org/publicdomain/zero/1.0/deed.de
 
 ===================================

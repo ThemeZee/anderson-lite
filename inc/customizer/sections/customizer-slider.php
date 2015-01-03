@@ -19,7 +19,7 @@ function anderson_customize_register_slider_settings( $wp_customize ) {
 	);
 
 	// Add settings and controls for Post Slider
-	$wp_customize->add_setting( 'anderson_theme_options[slider_activated]', array(
+	$wp_customize->add_setting( 'anderson_theme_options[slider_active_header]', array(
         'default'           => '',
 		'type'           	=> 'option',
         'transport'         => 'refresh',
@@ -27,10 +27,10 @@ function anderson_customize_register_slider_settings( $wp_customize ) {
         )
     );
     $wp_customize->add_control( new Anderson_Customize_Header_Control(
-        $wp_customize, 'anderson_control_slider_activated', array(
+        $wp_customize, 'anderson_control_slider_active_header', array(
             'label' => __( 'Activate Featured Post Slider', 'anderson-lite' ),
             'section' => 'anderson_section_slider',
-            'settings' => 'anderson_theme_options[slider_activated]',
+            'settings' => 'anderson_theme_options[slider_active_header]',
             'priority' => 	1
             )
         )
@@ -51,6 +51,22 @@ function anderson_customize_register_slider_settings( $wp_customize ) {
 		'priority' => 2
 		)
 	);
+	
+	$wp_customize->add_setting( 'anderson_theme_options[slider_active_magazine]', array(
+        'default'           => false,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'anderson_sanitize_checkbox'
+		)
+	);
+    $wp_customize->add_control( 'anderson_control_slider_active_magazine', array(
+        'label'    => __( 'Display Slider on Magazine Homepage template.', 'anderson-lite' ),
+        'section'  => 'anderson_section_slider',
+        'settings' => 'anderson_theme_options[slider_active_magazine]',
+        'type'     => 'checkbox',
+		'priority' => 3
+		)
+	);
 
 	$wp_customize->add_setting( 'anderson_theme_options[slider_animation]', array(
         'default'           => 'horizontal',
@@ -64,7 +80,7 @@ function anderson_customize_register_slider_settings( $wp_customize ) {
         'section'  => 'anderson_section_slider',
         'settings' => 'anderson_theme_options[slider_animation]',
         'type'     => 'radio',
-		'priority' => 3,
+		'priority' => 4,
         'choices'  => array(
             'horizontal' => __( 'Horizontal Slider', 'anderson-lite' ),
             'fade' => __( 'Fade Slider', 'anderson-lite' )

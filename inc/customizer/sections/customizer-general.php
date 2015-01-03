@@ -11,7 +11,7 @@ function anderson_customize_register_general_settings( $wp_customize ) {
 
 	// Add Section for Theme Options
 	$wp_customize->add_section( 'anderson_section_general', array(
-        'title'    => __( 'General Settings', 'anderson' ),
+        'title'    => __( 'General Settings', 'anderson-lite' ),
         'priority' => 10,
 		'panel' => 'anderson_panel_options' 
 		)
