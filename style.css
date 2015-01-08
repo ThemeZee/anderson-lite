@@ -2,7 +2,7 @@
 Theme Name: Anderson Lite
 Theme URI: http://themezee.com/themes/anderson/
 Description: A clean and elegant magazine theme suitable for any kind of content related website. The theme comes with a fully responsive layout and a sleek featured post slideshow. The user-friendly and flexible theme options supporting the powerful Customizer allow you to setup your magazine website in only a few minutes. 
-Version: 1.0.5
+Version: 1.0.6
 Author: ThemeZee
 Author URI: http://themezee.com
 Tags: two-columns, light, green, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, silver, white, gray
@@ -793,11 +793,8 @@ blockquote {
 	border: 1px solid #ddd;
 	box-shadow: inset 0 0 0 1px #fff;
 	border-left: 3px solid #00aa55;
-	margin: 1.5em 0;
-	padding: 1em 1.5em;
-}
-blockquote p {
-	display:inline;
+	margin: 1.2em 0;
+	padding: 0.3em 1.2em;
 }
 blockquote cite {
 	display: block;
@@ -1029,10 +1026,12 @@ embed, iframe, object, video {
 .social-icons-menu li a[href*="polldaddy.com"]:before { content: '\f217'; }
 .social-icons-menu li a[href*="getpocket.com"]:before { content: '\f224'; }
 .social-icons-menu li a[href*="reddit.com"]:before { content: '\f222'; }
+.social-icons-menu li a[href*="spotify.com"]:before { content: '\f515'; }
 .social-icons-menu li a[href*="skype.com"]:before,
 .social-icons-menu li a[href*="skype:"]:before { content: '\f220'; }
 .social-icons-menu li a[href*="stumbleupon.com"]:before { content: '\f223'; }
 .social-icons-menu li a[href*="tumblr.com"]:before { content: '\f214'; }
+.social-icons-menu li a[href*="twitch.tv"]:before { content: '\f516'; }
 .social-icons-menu li a[href*="twitter.com"]:before { content: '\f202'; }
 .social-icons-menu li a[href*="vimeo.com"]:before  { content: '\f212'; }
 .social-icons-menu li a[href*="wordpress.org"]:before,
