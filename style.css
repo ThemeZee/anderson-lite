@@ -117,9 +117,10 @@ input, textarea, select {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	background: #fff;
 }
 #header {
-	padding: 1.5em;
+	padding: 1.5em 2em;
 	background: #fff;
 }
 #wrap {
@@ -127,7 +128,6 @@ input, textarea, select {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	background: #fff;
 }
 #content {
 	float: left;
@@ -147,7 +147,7 @@ input, textarea, select {
 #logo {
 	float: left;
 	max-width: 100%;
-	margin: 1.2em 1em;
+	margin: 1.2em 0;
 }
 #logo .site-logo {
 	border: 0;
@@ -187,10 +187,10 @@ input, textarea, select {
 
 /* Custom Header Image */
 #custom-header {
-	margin: 0;
+	margin: 1.5em 2em 0;
 }
 #custom-header img {
-	max-width: 1340px;
+	max-width: 1300px;
 	vertical-align: top;
 	width: 100%;
 	height: auto;
@@ -199,8 +199,7 @@ input, textarea, select {
 /* Top Navigation Menu
 -------------------------------------------------------------- */
 #topheader {
-	background: #f4f4f4;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid #ccc;
 }
 #topnav-icon {
 	display: none;
@@ -228,16 +227,15 @@ input, textarea, select {
 
 /* Navigation Menu
 -------------------------------------------------------------- */
+#navigation-wrap {
+	padding: 0 2em;
+}
 #mainnav-icon {
 	display: none;
 }
 #mainnav {
-	border-top: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
-	background: #f4f4f4;
-	box-shadow: 
-        inset 0 2px 0 -1px #fff,
-        inset 0 -2px 0 -1px #fff;
+	border-top: 1px solid #222;
+	border-bottom: 2px solid #222;
 }
 #mainnav-menu {
 	float: left;
@@ -246,12 +244,12 @@ input, textarea, select {
 	position: relative;
 }
 #mainnav-menu li {
-	float:left;
+	float: left;
 	position: relative;
 }
 #mainnav-menu a {
 	display: block;
-	padding: 1.5em 1.8em;
+	padding: 1.3em 1.4em;
 	text-decoration: none;
 	font-size: 1.15em;
 	text-transform: uppercase;
@@ -268,10 +266,8 @@ input, textarea, select {
 	position: absolute;
 	display: none;
 	z-index: 99;
-	padding: 7px 0;
-	border: 1px solid #ddd;
-	background: #fdfdfd;
-	box-shadow: inset 0 0 0 1px #fff;
+	padding: 2px 0 0;
+	background: #222;
 }
 #mainnav-menu ul li{
 	margin: 0;
@@ -280,29 +276,29 @@ input, textarea, select {
 #mainnav-menu ul a {
 	width: 250px;
 	width: 16rem;
-	padding: 0.8em 1em;
+	padding: 1.2em 1.4em;
 	float: left;
 	font-family: 'Carme', Tahoma, Verdana, Arial;
 	font-weight: normal;
 	letter-spacing: 0;
 	text-transform: none;
-	color: #00aa55;
+	color: #fff;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 #mainnav-menu ul a:link, #mainnav-menu ul a:visited {
-	color: #00aa55;
+	color: #fff;
 	font-size: 0.95em;
 	text-decoration: none;
 }
 #mainnav-menu ul a:hover, #mainnav-menu ul a:active {
-	color: #222;
+	background: #00aa55; 
 }
 #mainnav-menu li ul ul {
-	margin-top: -8px;
 	margin-left: 250px;
 	margin-left: 16rem;
+	padding-top: 0;
 }
 #mainnav-menu li:hover ul ul, #mainnav-menu li:hover ul ul ul, #mainnav-menu li:hover ul ul ul ul{
 	display:none;
@@ -313,14 +309,15 @@ input, textarea, select {
 #mainnav-menu li.current_page_item a, #mainnav-menu li.current-menu-item a {
 	color: #00aa55;
 }
-#mainnav-menu li.current_page_item ul li a:hover, #mainnav-menu li.current-menu-item ul li a:hover {
-	color: #222;
+#mainnav-menu li.current_page_item ul li a, #mainnav-menu li.current-menu-item ul li a {
+	color: #fff;
 }
 #mainnav-menu ul li.current_page_item a, #mainnav-menu ul li.current-menu-item a {
-	color: #222;
+	color: #fff;
+	text-decoration: underline;
 }
 #mainnav-menu ul li.current_page_item ul li a, #mainnav-menu ul li.current-menu-item ul li a {
-	color: #00aa55;
+	text-decoration: none;
 }
 
 /* Add Menu Icons */
@@ -356,20 +353,23 @@ input, textarea, select {
 -------------------------------------------------------------- */
 .widget {
 	margin-bottom: 2em;
-	padding: 1.5em;
-	border: 1px solid #ddd;
-	background: #f4f4f4;
-	box-shadow: inset 0 0 0 1px #fff;
+	padding: 0.5em;
 	max-width: 100%;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
 .widgettitle {
-	margin-bottom: 1.2em;
-	font-size: 1.2em;
+	margin: -0.5em -0.5em 1em;
+	border-top: 1px solid #222;
+	border-bottom: 1px solid #222;
+}
+.widgettitle span {
+	display: inline-block;
 	font-family: 'Share', Tahoma, Verdana, Arial;
-	text-transform: uppercase;
+	font-size: 1.15em;
+	line-height: 1.4em;
 	color: #222;
+	padding: 0.4em 0.5em;
 }
 .widget .textwidget {
 	line-height: 1.5em;
@@ -410,12 +410,10 @@ input, textarea, select {
 
 /* Category, Archives, Meta Widget */
 .widget_archive ul, .widget_categories ul, .widget_meta ul {
-	border-top: 1px solid #eee;
 	list-style: none inside;
 }
 .widget_archive ul li, .widget_categories ul li, .widget_meta ul li {
 	padding: 0.25em 0;
-	border-bottom: 1px solid #eee;
 }
 .widget_archive ul li:before, .widget_categories ul li:before, .widget_meta ul li:before {
 	display: inline-block;
@@ -503,10 +501,9 @@ input, textarea, select {
 }
 .sticky {
 	margin: 0 0 2.5em;
-	padding: 2em 1.5em 1em;
-	border: 1px solid #ddd;
-	background: #f4f4f4;
-	box-shadow: inset 0 0 0 1px #fff;
+	padding: 2em 0 0;
+	border-top: 1px solid #222;
+	border-bottom: 2px solid #222;
 }
 
 /* Page Links | wp_link_pages() */
@@ -612,12 +609,14 @@ input, textarea, select {
 /* Archives and Search Heading */
 .archive-title {
 	margin-bottom: 2em;
-	padding: 0.5em 0.1em;
+	padding: 0.4em 0.5em;
 	font-family: 'Share', Tahoma, Verdana, Arial;
-	font-size: 1.2em;
+	font-size: 1.15em;
 	line-height: 1.4em;
+	color: #222;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
+	border-top: 1px solid #222;
 	border-bottom: 1px solid #222;
 }
 .archive-title span{
@@ -627,18 +626,15 @@ input, textarea, select {
 /* Content Pagination */
 .post-pagination {
 	margin-bottom: 2em;
+	font-family: 'Share', Tahoma, Verdana, Arial;
+	font-size: 1.15em;
+	line-height: 1.4em;
 	color: #222;
-	padding: 0.8em;
-	border-top: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
-	background: #f4f4f4;
-	box-shadow: 
-        inset 0 2px 0 -1px #fff,
-        inset 0 -2px 0 -1px #fff;
+	border-top: 1px solid #222;
+	border-bottom: 1px solid #222;
 }
 .post-pagination a {
-	padding: 0.2em 0.6em;
-	margin-right: 0.2em;
+	padding: 0.4em 0.6em;
 	display: inline-block;
     text-align: center;
 	text-decoration: none;
@@ -651,8 +647,7 @@ input, textarea, select {
 	color: #00aa55;
 }
 .post-pagination .current {
-	padding: 0.2em 0.6em;
-	margin-right: 0.2em;
+	padding: 0.4em 0.6em;
 	color: #00aa55;
 }
 
@@ -790,8 +785,7 @@ sub {
 }
 blockquote {
 	background: #f4f4f4;
-	border: 1px solid #ddd;
-	box-shadow: inset 0 0 0 1px #fff;
+	border: 1px solid #ccc;
 	border-left: 3px solid #00aa55;
 	margin: 1.2em 0;
 	padding: 0.3em 1.2em;
@@ -1071,7 +1065,6 @@ embed, iframe, object, video {
 	padding: 0.6em 0.8em 0.4em;
 	background: none;
 	border: none;
-	box-shadow: none;
 }
 #header-social-icons .social-icons-menu li a:before {
 	color: #222;
@@ -1224,33 +1217,24 @@ embed, iframe, object, video {
 /* Category Posts Widgets */
 #magazine-homepage-widgets .widget {
 	padding: 0;
-	border: none;
-	background: none;
-	box-shadow: none;
 }
 #magazine-homepage-widgets .widgettitle {
-	text-transform: none;
-	margin-bottom: 1em;
-	line-height: 1.4em;
-    font-size: 1.2em;
-	padding: 0.2em 0.1em 0.5em;
-	border-bottom: 1px solid #222;
+	margin: 0 0 1em 0;
 }
 #magazine-homepage-widgets .widgettitle a:link, #magazine-homepage-widgets .widgettitle a:visited  {
 	text-decoration: none;
 	color: #222;
 }
 #magazine-homepage-widgets .widgettitle a:hover, #magazine-homepage-widgets .widgettitle a:active {
-	color: #00aa55;
+	text-decoration: underline;
 }
 .widget-category-posts {
-	margin: 0 0 -1.5em 0;
+	margin: 0 0 -1em 0;
 }
 .widget-category-posts .type-post {
 	margin: 0;
 	padding: 0;
 	border: none;
-	box-shadow: none;
 }
 .widget-category-posts .big-post {
 	margin-bottom: 1.5em;
@@ -1375,9 +1359,8 @@ embed, iframe, object, video {
 -------------------------------------------------------------- */
 #footer-wrap {
 	background: #fff;
-	border-top: 1px solid #ddd;
+	border-top: 1px solid #ccc;
 	padding: 2em;
-	border-bottom: 1px dotted #ddd;
 	line-height: 1.5em;
 }
 #footer .footer-content {
@@ -1445,38 +1428,24 @@ embed, iframe, object, video {
 	#mainnav-menu a {
 		font-size: 1.05em;
 	}
+	#header-banner {
+		max-width: 80%;
+	}
 }
 /* Smaller screens | <1120px */
 @media only screen and (max-width: 65em) {
 	#wrapper {
 		width: 96%;
 	}
-	#wrap {
-		padding: 2em 2em 0;
-	}
 	.type-post, .type-page, .type-attachment, .widget, #comments {
 		margin-bottom: 2em;
 	}
 	#header {
-		padding: 1em;
-	}
-	#logo {
-		margin: 1.8em 0.5em;
+		padding: 1.5em;
 	}
 	#mainnav-menu a {
 		font-size: 1.0em;
 		padding: 1.5em 1.6em;
-	}
-	
-	#footer-widgets {
-		padding: 2em 0 0 2em;
-	}
-	.footer-widget-column {
-		width: 50%;
-		padding-right: 2em;
-	}
-	#footer-widget-three {
-		clear: left;
 	}
 }
 /* Tablets (landscape) | <960px */
@@ -1500,12 +1469,13 @@ embed, iframe, object, video {
 		float: none;
 		width: 100%;
 		text-align: center;
-		margin: 1em 0;
+		margin: 0.5em 0 0;
 	}
 	#header-banner {
 		float: none;
 		margin-top: 2em;
 		text-align: center;
+		max-width: 100%;
 	}
 	
 	/* Mobile Top Navigation */
@@ -1552,7 +1522,7 @@ embed, iframe, object, video {
 	#topnav-menu {
 		width: 100%;
 		display: none;
-		background: #f4f4f4;
+		background: #fbfbfb;
 	}
 	#topnav-menu a {
 		display: block;
@@ -1593,16 +1563,12 @@ embed, iframe, object, video {
 	}
 	#mainnav-icon {
 		display: block;
-		padding: 1.5em 1.6em;
+		padding: 1.3em 1.4em;
 		text-decoration: none;
-		font-size: 1.0em;
-		text-transform: uppercase;
+		font-size: 1.15em;
 		font-family: 'Share', Tahoma, Verdana, Arial;
-		letter-spacing: 0.05em;
-		border-top: 1px solid #ddd;
-		border-bottom: 1px solid #ddd;
-		background: #f4f4f4;
-		box-shadow: inset 0 0 0 1px #fff;
+		border-top: 1px solid #222;
+		border-bottom: 2px solid #222;
 	}
 	#mainnav-icon:hover {
 		cursor: pointer;
@@ -1625,11 +1591,11 @@ embed, iframe, object, video {
 	}
 	#mainnav-menu a {
 		display: block;
-		padding: 1.2em 1.8em;
+		padding: 1.3em 1.4em;
 		color: #222;
 		text-decoration: none;
-		font-size: 1.0em;
-		border-bottom: 1px solid #ddd;
+		font-size: 1.05em;
+		border-bottom: 1px solid #ccc;
 		background: #fff;
 		clear: left;
 	}
@@ -1641,13 +1607,13 @@ embed, iframe, object, video {
 	}
 	#mainnav-menu ul {
 		float: left;
-		background: #f4f4f4;
+		background: #fbfbfb;
 		width: 100%;
 	}
 	#mainnav-menu ul a {
 		display: block;
 		width: 100%;
-		padding: 1em 1em 1em 2em;
+		padding: 1em 1em 1em 2.5em;
 		font-size: 0.9em;
 		border-bottom: 1px solid #ddd;
 		-webkit-box-sizing: border-box;
@@ -1655,10 +1621,23 @@ embed, iframe, object, video {
 		box-sizing: border-box;
 	}
 	#mainnav-menu ul ul a {
-		padding-left: 3em;
+		padding-left: 4em;
 	}
 	#mainnav-menu ul ul ul a {
-		padding-left: 4em;
+		padding-left: 5.5em;
+	}
+	#mainnav-menu ul a:link, #mainnav-menu ul a:visited {
+		color: #222;
+	}
+	#mainnav-menu ul a:hover, #mainnav-menu ul a:active {
+		color: #00aa55;
+		background: none;
+	}
+	#mainnav-menu li.current_page_item ul li a, #mainnav-menu li.current-menu-item ul li a {
+		color: #222;
+	}
+	#mainnav-menu ul li.current_page_item a, #mainnav-menu ul li.current-menu-item a {
+		color: #222;
 	}
 	
 	/* Category Post Widgets */
@@ -1698,7 +1677,13 @@ embed, iframe, object, video {
 
 /* Tablets (portrait) | <800px */
 @media only screen and (max-width: 50em) {
-	.post-title, .page-title, .widgettitle {
+	#logo {
+		margin: 0;
+	}
+	#header-banner {
+		margin-top: 1.5em;
+	}
+	.post-title, .page-title {
 		font-size: 1.4em;
 	}
 	.entry h1, .comment h1 {
@@ -1760,7 +1745,7 @@ embed, iframe, object, video {
 	#logo .site-title {
 		font-size: 2.3em;
 	}
-	.post-title, .page-title, .widgettitle {
+	.post-title, .page-title {
 		font-size: 1.3em;
 	}
 	#mainnav-icon, #mainnav-menu a {
@@ -1891,13 +1876,6 @@ embed, iframe, object, video {
 		font-size: 1.0em;
 	}
 	
-	#footer-widgets {
-		padding: 1.5em 1.5em 0;
-	}
-	.footer-widget-column {
-		padding: 0;
-	}
-	
 		/* Category Post Widgets */
 	.widget-category-posts .type-post {
 		margin: 0 0 1.5em 0;
@@ -1997,7 +1975,7 @@ embed, iframe, object, video {
 	#mainnav-icon, #mainnav-menu a {
 		padding: 1.1em 1.3em;
 	}
-	.post-title, .page-title, .widgettitle, #footer-widgets .widgettitle {
+	.post-title, .page-title {
 		font-size: 1.2em;
 	}
 	.postmeta span {

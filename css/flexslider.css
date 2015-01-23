@@ -40,9 +40,9 @@ html[xmlns] .zeeslides {display: block;}
 /*  ThemeZee Slider Layout
 *****************************************/
 #post-slider-container {
-	padding: 2em 2em 1em;
+	padding: 2em 2em 0;
 	background: #fff;
-	border-bottom: 1px solid #ddd;
+	margin-bottom: -1em;
 }
 #post-slider-wrap {
 	position: relative;

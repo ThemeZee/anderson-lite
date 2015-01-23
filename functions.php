@@ -78,7 +78,7 @@ function anderson_setup() {
 	// Add Custom Header
 	add_theme_support('custom-header', array(
 		'header-text' => false,
-		'width'	=> 1340,
+		'width'	=> 1300,
 		'height' => 250,
 		'flex-height' => true));
 		
@@ -111,7 +111,7 @@ function anderson_add_image_sizes() {
 	add_image_size( 'post-thumbnail', 275, 275, true);
 	
 	// Add Custom Header Image Size
-	add_image_size( 'custom-header-image', 1340, 250, true);
+	add_image_size( 'custom-header-image', 1300, 250, true);
 	
 	// Add Category Post Widget image sizes
 	add_image_size( 'category-posts-widget-small', 95, 95, true);

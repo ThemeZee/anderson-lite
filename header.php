@@ -51,13 +51,17 @@
 	
 	</div>
 	
-	<nav id="mainnav" class="container clearfix" role="navigation">
-		<div id="mainnav-icon"><span><?php _e('Menu', 'anderson-lite'); ?></span></div>
-		<?php 
-			// Get Navigation out of Theme Options
-			wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'menu_id' => 'mainnav-menu', 'echo' => true, 'fallback_cb' => 'anderson_default_menu', 'before' => '', 'after' => '', 'link_before' => '', 'link_after' => '', 'depth' => 0));
-		?>
-	</nav>
+	<div id="navigation-wrap">
+	
+		<nav id="mainnav" class="container clearfix" role="navigation">
+			<div id="mainnav-icon"><span><?php _e('Menu', 'anderson-lite'); ?></span></div>
+			<?php 
+				// Get Navigation out of Theme Options
+				wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'menu_id' => 'mainnav-menu', 'echo' => true, 'fallback_cb' => 'anderson_default_menu', 'before' => '', 'after' => '', 'link_before' => '', 'link_after' => '', 'depth' => 0));
+			?>
+		</nav>
+		
+	</div>
 	
 	<?php // Display Custom Header Image
 		anderson_display_custom_header(); ?>
