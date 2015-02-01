@@ -2,6 +2,13 @@
 Anderson Lite Changelog
 ===================================
 
+Version 1.0.7
+-----------------------------------
+[added] extra content-search.php template for search
+[changed] appearance of static pages on search template
+[removed] unnecessary code in sidebar.php
+[fixed] ampersand escape bug in pagination links (https://core.trac.wordpress.org/ticket/30831)
+
 Version 1.0.6
 -----------------------------------
 [changed] design of main navigation

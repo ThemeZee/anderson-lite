@@ -1,13 +1,4 @@
 
-<?php 
-
-	// Get Theme Options from Database
-	$theme_options = anderson_theme_options();
-	
-	// Only show sidebar if fullwidth layout is not selected 
-	if ( isset($theme_options['layout']) and $theme_options['layout'] <> 'fullwidth' ) : 
-	
-?>
 	<section id="sidebar" class="secondary clearfix" role="complementary">
 
 		<?php
@@ -20,7 +11,7 @@
 			else : ?>
 
 			<aside class="widget">
-				<h3 class="widgettitle"><?php _e('Widget Area', 'anderson-lite'); ?></h3>
+				<h3 class="widgettitle"><span><?php _e('Widget Area', 'anderson-lite'); ?></span></h3>
 				<div class="textwidget">
 					<p><?php _e('There are no active widgets to be displayed. Please go to Appearance -> Widgets to setup your sidebar.', 'anderson-lite'); ?></p>
 				</div>
@@ -29,5 +20,3 @@
 		<?php endif; ?>
 
 	</section>
-	
-<?php endif; ?>
