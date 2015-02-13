@@ -201,17 +201,6 @@ function anderson_has_featured_content() {
 }
 
 
-// Display Credit Link Function
-function anderson_credit_link() {
-	
-	printf(__( 'Powered by %1$s and the %2$s.', 'anderson-lite' ), 
-			sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'anderson-lite' ) ),
-			sprintf( '<a href="http://themezee.com/themes/anderson/" title="Anderson WordPress Theme">%s</a>', __( 'Anderson Theme', 'anderson-lite' ) )
-		);
-
-}
-
-
 // Change Excerpt Length
 add_filter('excerpt_length', 'anderson_excerpt_length');
 function anderson_excerpt_length($length) {

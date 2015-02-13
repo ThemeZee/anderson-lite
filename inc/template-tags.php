@@ -7,6 +7,20 @@
  *
  */
 	
+
+// Display Site Title
+add_action( 'anderson_site_title', 'anderson_display_site_title' );
+
+function anderson_display_site_title() { ?>
+
+	<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+		<h1 class="site-title"><?php bloginfo('name'); ?></h1>
+	</a>
+
+<?php
+}
+
+
 // Display Custom Header
 if ( ! function_exists( 'anderson_display_header_banner' ) ):
 	
@@ -183,6 +197,22 @@ if ( ! function_exists( 'anderson_display_pagination' ) ):
 	}
 	
 endif;
+
+
+// Display Footer Text
+add_action( 'anderson_footer_text', 'anderson_display_footer_text' );
+
+function anderson_display_footer_text() { ?>
+
+	<span class="credit-link">
+		<?php printf(__( 'Powered by %1$s and %2$s.', 'anderson-lite' ), 
+			sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'anderson-lite' ) ),
+			sprintf( '<a href="http://themezee.com/themes/anderson/" title="Anderson WordPress Theme">%s</a>', __( 'Anderson', 'anderson-lite' ) )
+		); ?>
+	</span>
+
+<?php
+}
 
 
 // Display Social Icons

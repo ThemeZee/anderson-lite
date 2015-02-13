@@ -1,7 +1,5 @@
 		
-	<?php // Get Theme Options from Database
-		$theme_options = anderson_theme_options();
-	?>
+	<?php do_action('anderson_before_footer'); ?>
 	
 	<div id="footer-wrap">
 		
@@ -15,8 +13,8 @@
 			</nav>
 			
 			<div class="footer-content">
-				
-				<div id="credit-link"><?php anderson_credit_link(); ?></div>
+
+				<?php do_action('anderson_footer_text'); ?>
 
 			</div>
 			
