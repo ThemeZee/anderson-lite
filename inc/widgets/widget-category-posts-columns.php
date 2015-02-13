@@ -247,7 +247,28 @@ class Anderson_Category_Posts_Columns_Widget extends WP_Widget {
 			// Link Category Title
 			if( $category_link == true ) : 
 				
-				echo '<a href="'. esc_url( get_category_link( $category_id ) ) .'" title="'. $widget_title . '">'. $widget_title . '</a>';
+				// Check if "All Categories" is selected
+				if( $category_id == 0 ) :
+				
+					$link_title = __('View all posts', 'anderson-lite');
+					
+					// Set Link URL to always point to latest posts page
+					if ( get_option( 'show_on_front' ) == 'page' ) :
+						$link_url = esc_url( get_permalink( get_option('page_for_posts' ) ) );
+					else : 
+						$link_url =	esc_url( home_url('/') );
+					endif;
+					
+				else :
+					
+					// Set Link URL and Title for Category
+					$link_title = sprintf( __('View all posts from category %s', 'anderson-lite'), get_cat_name( $category_id ) );
+					$link_url = esc_url( get_category_link( $category_id ) );
+					
+				endif;
+				
+				// Display linked Widget Title
+				echo '<a href="'. $link_url .'" title="'. $link_title . '">'. $widget_title . '</a>';
 			
 			else:
 			
