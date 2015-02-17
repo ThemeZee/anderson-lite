@@ -32,6 +32,7 @@ function anderson_default_options() {
 	$default_options = array(
 		'layout' 							=> 'right-sidebar',
 		'image_grayscale' 					=> false,
+		'deactivate_google_fonts'			=> false,
 		'header_icons' 						=> false,
 		'header_ad_code' 					=> '',
 		'posts_length' 						=> 'excerpt',

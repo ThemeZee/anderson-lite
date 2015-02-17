@@ -149,11 +149,6 @@ input, textarea, select {
 	max-width: 100%;
 	margin: 1.2em 0;
 }
-#logo .site-logo {
-	border: 0;
-	max-width: 100%;
-	height: auto;
-}
 #logo .site-title {
 	display: inline;
 	background: #00aa55;
@@ -1792,10 +1787,6 @@ embed, iframe, object, video {
 }
 
 @media only screen and (max-width: 37em) {
-	.footer-widget-column {
-		float: none;
-		width: 100%;
-	}
 	.widget-category-posts .small-post .wp-post-image {
 		max-width: 60px;
 	}
