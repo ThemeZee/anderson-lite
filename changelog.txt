@@ -2,6 +2,12 @@
 Anderson Lite Changelog
 ===================================
 
+Version 1.0.9
+-----------------------------------
+[added] setting for deactivating google fonts in case they are not compatible with user language
+[changed] implementation of embedding google fonts with font url function
+[removed] unnecessary CSS markup
+
 Version 1.0.8
 -----------------------------------
 [added] check if current user can edit theme options before displaying admin notices on frontend
