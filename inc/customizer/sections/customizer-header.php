@@ -30,7 +30,7 @@ function anderson_customize_register_header_settings( $wp_customize ) {
             'label' => __( 'Header Content', 'anderson-lite' ),
             'section' => 'anderson_section_header',
             'settings' => 'anderson_theme_options[header_content]',
-            'priority' => 1
+            'priority' => 2
             )
         )
     );
@@ -46,7 +46,7 @@ function anderson_customize_register_header_settings( $wp_customize ) {
             'label' =>  __( 'The Header Content will be displayed on the right hand side of the header area.', 'anderson-lite' ),
             'section' => 'anderson_section_header',
             'settings' => 'anderson_theme_options[header_content_description]',
-            'priority' => 2
+            'priority' => 3
             )
         )
     );
@@ -64,7 +64,7 @@ function anderson_customize_register_header_settings( $wp_customize ) {
         'section'  => 'anderson_section_header',
         'settings' => 'anderson_theme_options[header_icons]',
         'type'     => 'checkbox',
-		'priority' => 3
+		'priority' => 4
 		)
 	);
 	$wp_customize->add_setting( 'anderson_theme_options[header_ad_code]', array(
@@ -79,7 +79,7 @@ function anderson_customize_register_header_settings( $wp_customize ) {
         'section'  => 'anderson_section_header',
         'settings' => 'anderson_theme_options[header_ad_code]',
         'type'     => 'textarea',
-		'priority' => 4
+		'priority' => 5
 		)
 	);
 	
