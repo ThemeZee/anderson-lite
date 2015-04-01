@@ -111,13 +111,6 @@ function anderson_setup() {
 		'width'	=> 1300,
 		'height' => 250,
 		'flex-height' => true));
-		
-	// Add theme support for Jetpack Featured Content
-	add_theme_support( 'featured-content', array(
-		'featured_content_filter' => 'anderson_get_featured_content',
-		'max_posts'  => 4
-		)
-	);
 	
 	// Add Theme Support for Anderson Pro Plugin
 	add_theme_support( 'anderson-pro' );
@@ -328,8 +321,7 @@ require( get_template_directory() . '/inc/widgets/widget-category-posts-grid.php
 require( get_template_directory() . '/inc/widgets/widget-category-posts-horizontal.php' );
 
 // Include Featured Content class in case it does not exist yet (e.g. user has not Jetpack installed)
-if ( ! class_exists( 'Featured_Content' ) && 'plugins.php' !== $GLOBALS['pagenow'] ) {
-	require get_template_directory() . '/inc/featured-content.php';
-}
+require get_template_directory() . '/inc/featured-content.php';
+
 
 ?>

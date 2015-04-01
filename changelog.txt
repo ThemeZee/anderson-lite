@@ -2,6 +2,11 @@
 Anderson Lite Changelog
 ===================================
 
+Version 1.1.1
+-----------------------------------
+[updated] Featured Content class to new version with many code improvements
+[added] new setting to display featured posts in latest blog post listing
+
 Version 1.1
 -----------------------------------
 [changed] category dropdown setting in Category Post widgets to show empty categories
