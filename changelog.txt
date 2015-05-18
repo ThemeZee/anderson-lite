@@ -1,5 +1,5 @@
 ===================================
-Anderson Changelog
+Anderson Lite Changelog
 ===================================
 
 Version 1.1.3
