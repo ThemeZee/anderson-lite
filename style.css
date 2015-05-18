@@ -1,8 +1,8 @@
 /*======================================
-Theme Name: Anderson Lite
+Theme Name: Anderson
 Theme URI: http://themezee.com/themes/anderson/
 Description: A clean and elegant magazine theme suitable for any kind of content related website. The theme comes with a fully responsive layout and a sleek featured post slideshow. The user-friendly and flexible theme options supporting the powerful Customizer allow you to setup your magazine website in only a few minutes. 
-Version: 1.1.2
+Version: 1.1.3
 Author: ThemeZee
 Author URI: http://themezee.com
 Tags: two-columns, light, green, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, silver, white, gray
@@ -196,7 +196,7 @@ input, textarea, select {
 #topheader {
 	border-bottom: 1px solid #ccc;
 }
-#topnav-icon {
+#topnav-icon, #topnav-toggle {
 	display: none;
 }
 #topnav-menu {
@@ -225,7 +225,7 @@ input, textarea, select {
 #navigation-wrap {
 	padding: 0 2em;
 }
-#mainnav-icon {
+#mainnav-icon, #mainnav-toggle {
 	display: none;
 }
 #mainnav {
@@ -316,7 +316,7 @@ input, textarea, select {
 }
 
 /* Add Menu Icons */
-#mainnav-menu .menu-item-has-children a:after, #mainnav-menu .page_item_has_children a:after{
+#mainnav-menu .menu-item-has-children a:after, #mainnav-menu .page_item_has_children a:after {
 	display: inline-block;
 	-webkit-font-smoothing: antialiased;
 	font: normal 12px 'Genericons';
@@ -326,18 +326,6 @@ input, textarea, select {
 	content: '\f502';
 }
 #mainnav-menu .menu-item-has-children ul li a:after, #mainnav-menu .page_item_has_children ul li a:after {
-	content: '';
-}
-#mainnav-menu .menu-dashicon a:before {
-	display: inline-block;
-	-webkit-font-smoothing: antialiased;
-	font: normal 20px 'Dashicons';
-	vertical-align: top;
-	color: #222;
-	margin: -0.2em 0.4em 0 0;
-	content: "\f102";
-}
-#mainnav-menu .menu-dashicon ul li a:before {
 	content: '';
 }
 #mainnav-menu li a:hover:before, #mainnav-menu li a:hover:after {
@@ -1493,18 +1481,21 @@ embed, iframe, object, video {
 	#topnav {
 		float: none;
 	}
-	#topnav-icon {
+	#topnav-toggle {
 		display: inline-block;
-		padding: 0.8em;
+		margin: 0;
+		padding: 0.6em;
 		text-decoration: none;
 		font-size: 0.85em;
 		color: #00aa55;
+		background: none;
+		border: none;
 	}
-	#topnav-icon:hover {
+	#topnav-toggle:hover {
 		color: #222;
 		cursor: pointer;
 	}
-	#topnav-icon:before {
+	#topnav-toggle:before {
 		display: inline-block;
 		margin: -0.3em 0.8em -0.2em 0.3em;
 		font: normal 14px Genericons;
@@ -1556,22 +1547,26 @@ embed, iframe, object, video {
 		margin: 1.5em 0;
 		float: none;
 	}
-	#mainnav-icon {
+	#mainnav-toggle {
 		display: block;
-		padding: 1.3em 1.4em;
+		width: 100%;
+		padding: 1em 1.4em;
 		text-decoration: none;
 		font-size: 1.15em;
 		font-family: 'Share', Tahoma, Verdana, Arial;
+		text-align: left;
+		background: none;
+		border: none;
 		border-top: 1px solid #222;
 		border-bottom: 2px solid #222;
 	}
-	#mainnav-icon:hover {
+	#mainnav-toggle:hover {
 		cursor: pointer;
 		color: #00aa55;
 	}
-	#mainnav-icon:after {
+	#mainnav-toggle:after {
 		float: right;
-		margin: -0.13em 0 0;
+		margin: 0;
 		-webkit-font-smoothing: antialiased;
 		display: inline-block;
 		content: '\f419';
@@ -1633,6 +1628,50 @@ embed, iframe, object, video {
 	}
 	#mainnav-menu ul li.current_page_item a, #mainnav-menu ul li.current-menu-item a {
 		color: #222;
+	}
+	
+	
+	#mainnav-menu .menu-item-has-children a:after, #mainnav-menu .page_item_has_children a:after {
+		content: '';
+	}
+	#mainnav-menu .submenu-dropdown-toggle {
+		float: right;
+		display: block;
+		margin: 0;
+		padding: 1.6em 2em 0.8em;
+	}
+	#mainnav-menu .submenu-dropdown-toggle:hover {
+		cursor: pointer;
+	}
+	#mainnav-menu .submenu-dropdown-toggle:before {
+		font-size: 20px;
+		line-height: 1;
+		font-family: 'Genericons';
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-decoration: inherit;
+		vertical-align: bottom;
+		content: '\f502';
+		color: #222;
+	}
+	#mainnav-menu .submenu-dropdown-toggle:hover:before {
+		color: #00aa55;
+	}
+	#mainnav-menu .submenu-dropdown-toggle.active {
+		padding: 0.8em 2em 1.6em;
+	}
+	#mainnav-menu .submenu-dropdown-toggle.active:before {
+		content: '\f500';
+	}
+	
+	#mainnav-menu ul .submenu-dropdown-toggle {
+		padding: 1.2em 1.5em 0.5em;
+	}
+	#mainnav-menu ul .submenu-dropdown-toggle.active {
+		padding: 0.5em 1.5em 1.2em;
+	}
+	#mainnav-menu ul .submenu-dropdown-toggle:before {
+		font-size: 14px;
 	}
 	
 	/* Category Post Widgets */
@@ -1743,8 +1782,17 @@ embed, iframe, object, video {
 	.post-title, .page-title {
 		font-size: 1.3em;
 	}
-	#mainnav-icon, #mainnav-menu a {
+	#mainnav-toggle {
+		padding: 0.9em 1.4em;
+	}
+	#mainnav-menu a {
 		padding: 1.2em 1.4em;
+	}
+	#mainnav-menu .submenu-dropdown-toggle {
+		padding: 1.5em 2em 0.7em;
+	}
+	#mainnav-menu .submenu-dropdown-toggle.active {
+		padding: 0.7em 2em 1.5em;
 	}
 	.postinfo span {
 		display: block;
@@ -1963,8 +2011,17 @@ embed, iframe, object, video {
 
 /* Smartphones | <320px */
 @media only screen and (max-width: 20em) {
-	#mainnav-icon, #mainnav-menu a {
+	#mainnav-toggle {
+		padding: 0.8em 1.3em;
+	}
+	#mainnav-menu a {
 		padding: 1.1em 1.3em;
+	}
+	#mainnav-menu .submenu-dropdown-toggle {
+		padding: 1.4em 1.5em 0.6em;
+	}
+	#mainnav-menu .submenu-dropdown-toggle.active {
+		padding: 0.6em 1.5em 1.4em;
 	}
 	.post-title, .page-title {
 		font-size: 1.2em;

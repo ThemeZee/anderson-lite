@@ -23,9 +23,16 @@
 	if ( has_nav_menu( 'secondary' ) ) : ?>
 	
 		<nav id="topnav" class="clearfix" role="navigation">
-			<div id="topnav-icon"><span><?php _e('Topmenu', 'anderson-lite'); ?></span></div>
-			<?php // Display Top Navigation
-				wp_nav_menu(array('theme_location' => 'secondary', 'container' => false, 'menu_id' => 'topnav-menu', 'echo' => true, 'fallback_cb' => '', 'before' => '', 'after' => '', 'link_before' => '', 'link_after' => '', 'depth' => 1));
+			<?php 
+			// Display Top Navigation
+			wp_nav_menu( array(
+				'theme_location' => 'secondary', 
+				'container' => false, 
+				'menu_id' => 'topnav-menu', 
+				'echo' => true, 
+				'fallback_cb' => '',
+				'depth' => 1)
+			);
 			?>
 		</nav>
 		

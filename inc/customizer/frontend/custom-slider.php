@@ -27,6 +27,30 @@ function anderson_custom_slider_params() {
 	
 	// Passing Parameters to Javascript
 	wp_localize_script( 'anderson-lite-post-slider', 'anderson_slider_params', $params );
+	
+}
+
+endif;
+
+
+
+// Passing Variables to jQuery responsiveMenu ( js/navigation.js)
+add_action('wp_enqueue_scripts', 'anderson_custom_navigation_params');
+
+if ( ! function_exists( 'anderson_custom_navigation_params' ) ):
+
+function anderson_custom_navigation_params() { 
+	
+	// Set Parameters array
+	$params = array();
+	
+	// Set Menu Titles
+	$params['mainnav_title'] = __('Menu', 'anderson-lite');
+	$params['topnav_title'] = __('Topmenu', 'anderson-lite');
+	
+	// Passing Parameters to Javascript
+	wp_localize_script( 'anderson-lite-navigation', 'anderson_navigation_params', $params );
+	
 }
 
 endif;

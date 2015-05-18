@@ -1,6 +1,12 @@
 ===================================
-Anderson Lite Changelog
+Anderson Changelog
 ===================================
+
+Version 1.1.3
+-----------------------------------
+[changed] navigation.js to use our new developed responsiveMenu function
+[improved] styling of navigation menu
+[added] dropdown icons and animations for nested submenus on mobile navigation
 
 Version 1.1.2
 -----------------------------------
