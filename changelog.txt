@@ -2,6 +2,12 @@
 Anderson Lite Changelog
 ===================================
 
+Version 1.1.4
+-----------------------------------
+[added] setting to display or hide post date
+[added] setting to display or hide post author
+[added] setting to display or hide post tags
+
 Version 1.1.3
 -----------------------------------
 [changed] navigation.js to use our new developed responsiveMenu function

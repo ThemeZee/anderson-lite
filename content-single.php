@@ -15,9 +15,7 @@
 				<div class="page-links"><?php wp_link_pages(); ?></div>			
 			</div>
 			
-			<div class="post-tags clearfix">
-				<?php echo get_the_tag_list('', ' '); ?>
-			</div>
+			<div class="post-tags clearfix"><?php anderson_display_tags(); ?></div>
 						
 		</div>
 

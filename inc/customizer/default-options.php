@@ -39,6 +39,9 @@ function anderson_default_options() {
 		'post_thumbnails_index'				=> true,
 		'post_thumbnails_single' 			=> true,
 		'excerpt_text' 						=> false,
+		'meta_date'							=> true,
+		'meta_author'						=> true,
+		'meta_tags'							=> true,
 		'slider_active' 					=> false,
 		'slider_active_magazine' 			=> false,
 		'slider_animation' 					=> 'horizontal'

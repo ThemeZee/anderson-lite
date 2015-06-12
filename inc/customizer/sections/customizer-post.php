@@ -120,6 +120,70 @@ function anderson_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 	
+	
+	// Add Postmeta Settings
+	$wp_customize->add_setting( 'anderson_theme_options[postmeta_headline]', array(
+        'default'           => '',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_attr'
+        )
+    );
+    $wp_customize->add_control( new Anderson_Customize_Header_Control(
+        $wp_customize, 'anderson_control_postmeta_headline', array(
+            'label' => __( 'Postmeta', 'anderson-lite' ),
+            'section' => 'anderson_section_post',
+            'settings' => 'anderson_theme_options[postmeta_headline]',
+            'priority' => 7
+            )
+        )
+    );
+	$wp_customize->add_setting( 'anderson_theme_options[meta_date]', array(
+        'default'           => true,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'anderson_sanitize_checkbox'
+		)
+	);
+    $wp_customize->add_control( 'anderson_control_meta_date', array(
+        'label'    => __( 'Display date on posts.', 'anderson-lite' ),
+        'section'  => 'anderson_section_post',
+        'settings' => 'anderson_theme_options[meta_date]',
+        'type'     => 'checkbox',
+		'priority' => 8
+		)
+	);
+	$wp_customize->add_setting( 'anderson_theme_options[meta_author]', array(
+        'default'           => true,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'anderson_sanitize_checkbox'
+		)
+	);
+    $wp_customize->add_control( 'anderson_control_meta_author', array(
+        'label'    => __( 'Display author on posts.', 'anderson-lite' ),
+        'section'  => 'anderson_section_post',
+        'settings' => 'anderson_theme_options[meta_author]',
+        'type'     => 'checkbox',
+		'priority' => 9
+		)
+	);
+	$wp_customize->add_setting( 'anderson_theme_options[meta_tags]', array(
+        'default'           => true,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'anderson_sanitize_checkbox'
+		)
+	);
+    $wp_customize->add_control( 'anderson_control_meta_tags', array(
+        'label'    => __( 'Display tags on posts.', 'anderson-lite' ),
+        'section'  => 'anderson_section_post',
+        'settings' => 'anderson_theme_options[meta_tags]',
+        'type'     => 'checkbox',
+		'priority' => 10
+		)
+	);
+	
 }
 
 

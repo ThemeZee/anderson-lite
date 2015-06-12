@@ -73,26 +73,60 @@ endif;
 // Display Postmeta Data
 if ( ! function_exists( 'anderson_display_postmeta' ) ):
 	
-	function anderson_display_postmeta() { ?>
+	function anderson_display_postmeta() {
 		
-		<span class="meta-date">
-		<?php printf(__('Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>', 'anderson-lite'), 
-				esc_url( get_permalink() ),
-				esc_attr( get_the_time() ),
-				esc_attr( get_the_date( 'c' ) ),
-				esc_html( get_the_date() )
-			);
-		?>
-		</span>
-		<span class="meta-author">
-		<?php printf(__('by <span class="author vcard"><a class="fn" href="%1$s" title="%2$s" rel="author">%3$s</a></span>', 'anderson-lite'), 
-				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-				esc_attr( sprintf( __( 'View all posts by %s', 'anderson-lite' ), get_the_author() ) ),
-				get_the_author()
-			);
-		?>
-		</span>
+		// Get Theme Options from Database
+		$theme_options = anderson_theme_options();
+
+		// Display Date unless user has deactivated it via settings
+		if ( isset($theme_options['meta_date']) and $theme_options['meta_date'] == true ) : ?>
+		
+			<span class="meta-date">
+			<?php printf(__('Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>', 'anderson-lite'), 
+					esc_url( get_permalink() ),
+					esc_attr( get_the_time() ),
+					esc_attr( get_the_date( 'c' ) ),
+					esc_html( get_the_date() )
+				);
+			?>
+			</span>
+			
+		<?php endif; 
+		
+		// Display Author unless user has deactivated it via settings
+		if ( isset($theme_options['meta_author']) and $theme_options['meta_author'] == true ) : ?>
+
+			<span class="meta-author">
+			<?php printf(__('by <span class="author vcard"><a class="fn" href="%1$s" title="%2$s" rel="author">%3$s</a></span>', 'anderson-lite'), 
+					esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+					esc_attr( sprintf( __( 'View all posts by %s', 'anderson-lite' ), get_the_author() ) ),
+					get_the_author()
+				);
+			?>
+			</span>
 	<?php
+		endif;
+		
+	}
+	
+endif;
+
+
+// Display Tags
+if ( ! function_exists( 'anderson_display_tags' ) ):
+	
+	function anderson_display_tags() {
+		
+		// Get Theme Options from Database
+		$theme_options = anderson_theme_options();
+
+		// Display Date unless user has deactivated it via settings
+		if ( isset($theme_options['meta_tags']) and $theme_options['meta_tags'] == true ) :
+		
+			echo get_the_tag_list('', ' ');
+			
+		endif;
+		
 	}
 	
 endif;
