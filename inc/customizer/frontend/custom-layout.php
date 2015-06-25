@@ -22,21 +22,6 @@ function anderson_css_layout() {
 		</style>';
 	
 	endif;
-	
-	// Turn off Grayscale Image Filter
-	if ( isset($theme_options['image_grayscale']) and $theme_options['image_grayscale'] == true ) :
-	
-		echo '<style type="text/css">
-				.wp-post-image, #post-slider-wrap img {
-					-moz-filter: none; 
-					-ms-filter: none; 
-					-o-filter: none; 
-					-webkit-filter: none; 
-					filter: none;
-				}
-		</style>';
-	
-	endif;
 
 }
 

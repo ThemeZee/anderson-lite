@@ -120,19 +120,15 @@ class Anderson_Category_Posts_Horizontal_Widget extends WP_Widget {
 				
 				$posts_query->the_post(); ?>
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class('big-post'); ?>>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 					<?php the_post_thumbnail('category-posts-widget-big'); ?>
 
 					<div class="post-content">
 						
 						<h3 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
-
-						<div class="post-entry">
-							
-							<div class="postmeta"><?php $this->display_postmeta($instance); ?></div>
-							
-						</div>
+						
+						<div class="postmeta"><?php $this->display_postmeta($instance); ?></div>
 					
 					</div>
 
@@ -149,22 +145,6 @@ class Anderson_Category_Posts_Horizontal_Widget extends WP_Widget {
 		// Reset Postdata
 		wp_reset_postdata();
 		
-	}
-	
-	// Display Postmeta
-	function display_postmeta($instance) {  ?>
-		
-		<span class="meta-date">
-		<?php printf(__('Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time datetime="%3$s">%4$s</time></a>', 'anderson-lite'), 
-				esc_url( get_permalink() ),
-				esc_attr( get_the_time() ),
-				esc_attr( get_the_date( 'c' ) ),
-				esc_html( get_the_date() )
-			);
-		?>
-		</span>
-		
-	<?php
 	}
 	
 	// Link Widget Title to Category
@@ -220,6 +200,22 @@ class Anderson_Category_Posts_Horizontal_Widget extends WP_Widget {
 			
 		endif;
 
+	}
+	
+	// Display Postmeta
+	function display_postmeta($instance) {  ?>
+		
+		<span class="meta-date">
+		<?php printf(__('<a href="%1$s" title="%2$s" rel="bookmark"><time datetime="%3$s">%4$s</time></a>', 'anderson-lite'), 
+				esc_url( get_permalink() ),
+				esc_attr( get_the_time() ),
+				esc_attr( get_the_date( 'c' ) ),
+				esc_html( get_the_date() )
+			);
+		?>
+		</span>
+
+	<?php
 	}
 
 	function update($new_instance, $old_instance) {

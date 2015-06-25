@@ -177,9 +177,9 @@ function anderson_display_thumbnail_and_categories_single() {
 	if ( has_post_thumbnail() and 
 		(isset($theme_options['post_thumbnails_single']) and $theme_options['post_thumbnails_single'] == true ) ) : ?>
 
-		<div class="post-image">
+		<div class="post-image-single">
 		
-			<?php the_post_thumbnail('post-thumbnail', array('class' => 'alignleft')); ?>
+			<?php the_post_thumbnail('slider-image'); ?>
 
 			<div class="image-post-categories post-categories">
 				<?php echo get_the_category_list(''); ?>

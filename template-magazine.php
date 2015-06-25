@@ -5,20 +5,20 @@ Template Name: Magazine Homepage
 ?>
 <?php get_header(); ?>
 	
-<?php // Get Theme Options from Database
-	$theme_options = anderson_theme_options();
-	
-	// Display Featured Post Slideshow if activated
-	if ( isset($theme_options['slider_active_magazine']) and $theme_options['slider_active_magazine'] == true ) :
-
-		get_template_part( 'featured-content-slider' );
-
-	endif; 
-?>
-	
 	<div id="wrap" class="container clearfix template-magazine">
-	
+
 		<section id="content" class="primary" role="main">
+		
+		<?php // Get Theme Options from Database
+			$theme_options = anderson_theme_options();
+			
+			// Display Featured Post Slideshow if activated
+			if ( isset($theme_options['slider_active']) and $theme_options['slider_active'] == true ) :
+
+				get_template_part( 'featured-content-slider' );
+
+			endif; 
+		?>	
 		
 		<?php // Display Magazine Homepage Widgets
 		if( is_active_sidebar('magazine-homepage') ) : ?>

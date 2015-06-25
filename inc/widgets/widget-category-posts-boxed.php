@@ -103,7 +103,7 @@ class Anderson_Category_Posts_Boxed_Widget extends WP_Widget {
 	
 		// Get latest posts from database
 		$query_arguments = array(
-			'posts_per_page' => 4,
+			'posts_per_page' => 6,
 			'ignore_sticky_posts' => true,
 			'cat' => (int)$category
 		);
@@ -125,20 +125,17 @@ class Anderson_Category_Posts_Boxed_Widget extends WP_Widget {
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class('big-post'); ?>>
 
-						<?php the_post_thumbnail('category-posts-widget-big'); ?>
+						<?php $this->display_thumbnail(); ?>
 
 						<div class="post-content">
 							
 							<h3 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 
-							<div class="post-entry">
-								
-								<div class="postmeta"><?php $this->display_postmeta($instance); ?></div>
-
-								<div class="entry">
-									<?php the_excerpt(); ?>
-								</div>
-								
+							<div class="postmeta"><?php $this->display_postmeta($instance); ?></div>
+							
+							<div class="entry clearfix">
+								<?php the_excerpt(); ?>
+								<a href="<?php esc_url(the_permalink()) ?>" class="more-link"><?php _e('&raquo; Read more', 'anderson-lite'); ?></a>
 							</div>
 						
 						</div>
@@ -157,7 +154,7 @@ class Anderson_Category_Posts_Boxed_Widget extends WP_Widget {
 
 						<div class="small-posts-content">
 							<h2 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-							<div class="postmeta"><?php $this->display_postmeta($instance); ?></div>
+							<div class="postmeta"><?php $this->display_meta_date($instance); ?></div>
 						</div>
 
 					</article>
@@ -180,11 +177,32 @@ class Anderson_Category_Posts_Boxed_Widget extends WP_Widget {
 		
 	}
 	
+	// Display Post Thumbnail on Archive Pages
+	function display_thumbnail() {
+		
+		// Display Post Thumbnail if it exists
+		if ( has_post_thumbnail() ) : ?>
+
+			<div class="post-image-single">
+			
+				<a href="<?php esc_url(the_permalink()) ?>" rel="bookmark">
+					<?php the_post_thumbnail('category-posts-widget-big'); ?>
+				</a>
+				
+				<div class="image-post-categories post-categories">
+					<?php echo get_the_category_list(''); ?>
+				</div>
+				
+			</div>
+		
+		<?php endif;
+	}
+	
 	// Display Postmeta
 	function display_postmeta($instance) {  ?>
 		
 		<span class="meta-date">
-		<?php printf(__('Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time datetime="%3$s">%4$s</time></a>', 'anderson-lite'), 
+		<?php printf(__('<a href="%1$s" title="%2$s" rel="bookmark"><time datetime="%3$s">%4$s</time></a>', 'anderson-lite'), 
 				esc_url( get_permalink() ),
 				esc_attr( get_the_time() ),
 				esc_attr( get_the_date( 'c' ) ),
@@ -193,13 +211,29 @@ class Anderson_Category_Posts_Boxed_Widget extends WP_Widget {
 		?>
 		</span>
 		<span class="meta-author">
-		<?php printf(__('by <a href="%1$s" title="%2$s" rel="author">%3$s</a>', 'anderson-lite'), 
+		<?php printf(__('<a href="%1$s" title="%2$s" rel="author">%3$s</a>', 'anderson-lite'), 
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 				esc_attr( sprintf( __( 'View all posts by %s', 'anderson-lite' ), get_the_author() ) ),
 				get_the_author()
 			);
 		?>
 		</span>
+	<?php
+	}
+	
+	// Display Date
+	function display_meta_date($instance) {  ?>
+		
+		<span class="meta-date">
+		<?php printf(__('<a href="%1$s" title="%2$s" rel="bookmark"><time datetime="%3$s">%4$s</time></a>', 'anderson-lite'), 
+				esc_url( get_permalink() ),
+				esc_attr( get_the_time() ),
+				esc_attr( get_the_date( 'c' ) ),
+				esc_html( get_the_date() )
+			);
+		?>
+		</span>
+		
 	<?php
 	}
 	
