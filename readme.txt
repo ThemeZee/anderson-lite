@@ -101,15 +101,12 @@ G) Licenses of bundled resources
 	4. Screenshot Photography (used on screenshot.png)
 	We only use verified images from Pixabay for the screenshot.png, which are licensed under CC0 (GPL compatible).
 	Source URL: http://pixabay.com
-	Image 1: http://pixabay.com/en/jet-engine-turbine-jet-airplane-371412/
-	Image 2: http://pixabay.com/en/by-wlodek-old-close-hack-closed-428549/
-	Image 3: http://pixabay.com/en/typewriter-letters-keyboard-keys-472850/
-	Image 4: http://pixabay.com/en/toothed-belt-drive-details-209677/
-	Image 5: http://pixabay.com/en/rusty-metal-old-machine-185531/
-	Image 6: http://pixabay.com/en/microscope-research-lab-laboratory-385364/
-	Image 7: http://pixabay.com/en/glass-facade-colorful-architecture-200888/
-	Image 8: http://pixabay.com/en/board-electronics-computer-453758/
-	Image 9: http://pixabay.com/en/microscope-research-lab-laboratory-385364/
+	Image 1: https://pixabay.com/en/capri-ford-oldtimer-automotive-790722/
+	Image 2: https://pixabay.com/en/bulli-volkswagen-auto-model-car-790719/
+	Image 3: https://pixabay.com/en/police-car-auto-police-beetle-vw-761231/
+	Image 4: https://pixabay.com/en/capri-auto-model-oldtimer-vehicles-792194/
+	Image 5: https://pixabay.com/de/capri-auto-modell-oldtimer-792196/
+	Image 6: https://pixabay.com/en/toy-car-mini-cooper-beach-mini-542701/
 	License URL: http://creativecommons.org/publicdomain/zero/1.0/deed.de
 
 ===================================

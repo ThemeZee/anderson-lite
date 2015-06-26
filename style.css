@@ -2,7 +2,7 @@
 Theme Name: Anderson Lite
 Theme URI: http://themezee.com/themes/anderson/
 Description: A clean and elegant magazine theme suitable for any kind of content related website. The theme comes with a fully responsive layout and a sleek featured post slideshow. The user-friendly and flexible theme options supporting the powerful Customizer allow you to setup your magazine website in only a few minutes. 
-Version: 1.1.4
+Version: 1.2
 Author: ThemeZee
 Author URI: http://themezee.com
 Tags: two-columns, light, green, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, silver, white, gray
@@ -185,7 +185,8 @@ input, textarea, select {
 	margin: 1.5em 2em 0;
 }
 #custom-header img {
-	max-width: 1300px;
+	margin: 0;
+	max-width: 1200px;
 	vertical-align: top;
 	width: 100%;
 	height: auto;
@@ -280,6 +281,7 @@ input, textarea, select {
 	letter-spacing: 0;
 	text-transform: none;
 	color: #fff;
+	border: none;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -291,6 +293,7 @@ input, textarea, select {
 }
 #mainnav-menu ul a:hover, #mainnav-menu ul a:active {
 	background: #dd2727; 
+	border: none;
 }
 #mainnav-menu li ul ul {
 	margin-left: 250px;
@@ -493,10 +496,10 @@ input, textarea, select {
 	background: #222;
 }
 .sticky {
-	margin: 0 0 2.5em;
-	padding: 2em 0 0;
+	margin: 0 0 2em;
+	padding: 2em 0 0.8em;
 	border-top: 1px solid #222;
-	border-bottom: 2px solid #222;
+	border-bottom: 1px solid #222;
 }
 
 /* Page Links | wp_link_pages() */
@@ -551,7 +554,7 @@ input, textarea, select {
 .postmeta, .postinfo {
 	color: #888;
 	margin: 0.8em 0 0;
-	line-height: 1.5em;
+	line-height: 1.4em;
 	font-size: 0.95em;
 }
 .postmeta a:link, .postmeta a:visited {
@@ -586,7 +589,7 @@ input, textarea, select {
 /* Read more Link */
 .more-link {
 	display: inline-block;
-	margin: 0.5em 0;
+	margin: 0.3em 0;
 	padding: 0.3em 0.8em;
 	text-decoration: none;
 	color: #fff;
@@ -601,20 +604,22 @@ input, textarea, select {
 }
 
 /* Archives and Search Heading */
-.archive-title {
+.page-header {
 	margin-bottom: 2em;
-	padding: 0.4em 0.5em;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+	border-bottom: 1px solid #222;
+}
+.page-header .archive-title {
+	display: inline-block;
 	font-family: 'Share', Tahoma, Verdana, Arial;
 	font-size: 1.15em;
 	line-height: 1.4em;
+	text-transform: uppercase;
 	color: #222;
-	-ms-word-wrap: break-word;
-	word-wrap: break-word;
-	border-top: 1px solid #222;
-	border-bottom: 1px solid #222;
-}
-.archive-title span{
-	color: #dd2727;
+	padding: 0 0.5em 0.2em 0.1em;
+	border-bottom: 5px solid #dd2727;
+	margin-bottom: -1px;
 }
 
 /* Content Pagination */
@@ -625,31 +630,35 @@ input, textarea, select {
 	line-height: 1.4em;
 	color: #222;
 	border-top: 1px solid #222;
-	border-bottom: 1px solid #222;
+	border-bottom: 2px solid #222;
 }
-.post-pagination a {
-	padding: 0.4em 0.6em;
+.post-pagination a,
+.post-pagination .current {
+	float: left;
+	padding: 0.2em 0.8em 0.4em;
 	display: inline-block;
     text-align: center;
 	text-decoration: none;
 	color: #222;
+	border-top: 5px solid transparent;
 }
 .post-pagination a:link, .post-pagination a:visited {
 	color: #222;
 }
 .post-pagination a:hover {
 	color: #dd2727;
+	border-top: 5px solid #dd2727;
 }
 .post-pagination .current {
-	padding: 0.4em 0.6em;
 	color: #dd2727;
+	border-top: 5px solid #dd2727;
 }
 
 /* Text Elements
 -------------------------------------------------------------- */
 .entry {
 	line-height: 1.6em;
-	margin: 0.4em 0;
+	margin: 0.2em 0;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }

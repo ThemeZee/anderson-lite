@@ -70,7 +70,6 @@ add_filter('excerpt_length', 'anderson_slideshow_excerpt_length');
 							
 							<div class="entry clearfix">
 								<?php the_excerpt(); ?>
-								<a href="<?php esc_url(the_permalink()) ?>" class="more-link"><?php _e('&raquo; Read more', 'anderson-lite'); ?></a>
 							</div>
 							
 						</div>

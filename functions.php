@@ -108,8 +108,8 @@ function anderson_setup() {
 	// Add Custom Header
 	add_theme_support('custom-header', array(
 		'header-text' => false,
-		'width'	=> 1300,
-		'height' => 250,
+		'width'	=> 1200,
+		'height' => 350,
 		'flex-height' => true));
 	
 	// Add Theme Support for Anderson Pro Plugin
@@ -137,7 +137,7 @@ function anderson_add_image_sizes() {
 	add_image_size( 'post-thumbnail', 520, 350, true);
 	
 	// Add Custom Header Image Size
-	add_image_size( 'custom-header-image', 1260, 250, true);
+	add_image_size( 'custom-header-image', 1200, 350, true);
 	
 	// Add Category Post Widget image sizes
 	add_image_size( 'category-posts-widget-small', 120, 80, true);
@@ -172,7 +172,7 @@ function anderson_register_sidebars() {
 		'name' => __( 'Magazine Homepage', 'anderson-lite' ),
 		'id' => 'magazine-homepage',
 		'description' => __( 'Appears on "Magazine Homepage" page template only. You can use the Category Posts widgets here.', 'anderson-lite' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'before_widget' => '<div id="%1$s" class="widget %2$s clearfix">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widgettitle"><span>',
 		'after_title' => '</span></h3>',
@@ -217,7 +217,7 @@ function anderson_has_featured_content() {
 // Change Excerpt Length
 add_filter('excerpt_length', 'anderson_excerpt_length');
 function anderson_excerpt_length($length) {
-    return 60;
+    return 30;
 }
 
 

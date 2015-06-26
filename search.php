@@ -9,9 +9,12 @@
 		<section id="content" class="primary" role="main">
 		
 		<?php if (have_posts()) : ?>
-			<h2 id="search-title" class="archive-title">
-				<?php printf( __( 'Search Results for: %s', 'anderson-lite' ), '<span>' . get_search_query() . '</span>' ); ?>
-			</h2>
+			
+			<div class="page-header">
+				<h2 id="search-title" class="archive-title">
+					<?php printf( __( 'Search Results for: %s', 'anderson-lite' ), '<span>' . get_search_query() . '</span>' ); ?>
+				</h2>
+			</div>
 		
 		<?php while (have_posts()) : the_post();
 		

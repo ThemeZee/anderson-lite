@@ -38,7 +38,7 @@ function anderson_default_options() {
 		'posts_length' 						=> 'excerpt',
 		'post_thumbnails_index'				=> true,
 		'post_thumbnails_single' 			=> true,
-		'excerpt_text' 						=> false,
+		'excerpt_text' 						=> true,
 		'meta_date'							=> true,
 		'meta_author'						=> true,
 		'meta_tags'							=> true,

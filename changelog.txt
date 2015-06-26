@@ -2,6 +2,14 @@
 Anderson Lite Changelog
 ===================================
 
+Version 1.2 - Redesign
+-----------------------------------
+[removed] thumbnail navigation of post slideshow
+[removed] grayscale image hover filter
+[tweaked] styling of navigation and widgets
+[changed] default color and screenshot.jpg
+[changed] archive templates to use new the_archive_title() function
+
 Version 1.1.4
 -----------------------------------
 [added] setting to display or hide post date
