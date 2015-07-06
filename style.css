@@ -1587,6 +1587,7 @@ embed, iframe, object, video {
 		color: #222;
 		text-decoration: none;
 		font-size: 1.05em;
+		border-top: none;
 		border-bottom: 1px solid #ccc;
 		background: #fff;
 		clear: left;
@@ -1596,6 +1597,7 @@ embed, iframe, object, video {
 	}
 	#mainnav-menu a:hover, #mainnav-menu a:active {
 		color: #dd2727;
+		border-top: none;
 	}
 	#mainnav-menu ul {
 		float: left;
@@ -1624,6 +1626,7 @@ embed, iframe, object, video {
 	#mainnav-menu ul a:hover, #mainnav-menu ul a:active {
 		color: #dd2727;
 		background: none;
+		border-bottom: 1px solid #ddd;
 	}
 	#mainnav-menu li.current_page_item ul li a, #mainnav-menu li.current-menu-item ul li a {
 		color: #222;
