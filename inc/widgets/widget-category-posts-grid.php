@@ -117,7 +117,7 @@ class Anderson_Category_Posts_Grid_Widget extends WP_Widget {
 		
 		// Select Layout of Grid Posts
 		$layout = ( $thumbnails == true ? 'small-post' : 'big-post' );
-		$image = ( $thumbnails == true ? 'category-posts-widget-small' : 'category-posts-widget-big' );
+		$image = ( $thumbnails == true ? 'anderson-category-posts-widget-small' : 'anderson-category-posts-widget-big' );
 		
 		// Check if there are posts
 		if( $posts_query->have_posts() ) :
@@ -145,7 +145,7 @@ class Anderson_Category_Posts_Grid_Widget extends WP_Widget {
 					<article id="post-<?php the_ID(); ?>" <?php post_class('small-post clearfix'); ?>>
 
 					<?php if ( '' != get_the_post_thumbnail() ) : ?>
-						<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail('category-posts-widget-small'); ?></a>
+						<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail('anderson-category-posts-widget-small'); ?></a>
 					<?php endif; ?>
 
 						<div class="small-posts-content">
@@ -209,7 +209,7 @@ class Anderson_Category_Posts_Grid_Widget extends WP_Widget {
 			<div class="post-image-single">
 			
 				<a href="<?php esc_url(the_permalink()) ?>" rel="bookmark">
-					<?php the_post_thumbnail('category-posts-widget-big'); ?>
+					<?php the_post_thumbnail('anderson-category-posts-widget-big'); ?>
 				</a>
 				
 				<div class="image-post-categories post-categories">

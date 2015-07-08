@@ -38,7 +38,7 @@ add_filter('excerpt_length', 'anderson_slideshow_excerpt_length');
 					<?php // Display Post Thumbnail or default thumbnail
 						if( '' != get_the_post_thumbnail() ) :
 
-							the_post_thumbnail('slider-image', array('class' => 'slide-image'));
+							the_post_thumbnail('anderson-slider-image', array('class' => 'slide-image'));
 
 						else: ?>
 

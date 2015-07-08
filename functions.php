@@ -12,7 +12,7 @@ function anderson_enqueue_scripts() {
 	wp_enqueue_style('anderson-lite-stylesheet', get_stylesheet_uri());
 	
 	// Register Genericons
-	wp_enqueue_style('anderson-lite-genericons', get_template_directory_uri() . '/css/genericons/genericons.css');
+	wp_enqueue_style('genericons', get_template_directory_uri() . '/css/genericons/genericons.css');
 
 	// Register and enqueue navigation.js
 	wp_enqueue_script('anderson-lite-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery'));
@@ -96,8 +96,11 @@ function anderson_setup() {
 	// init Localization
 	load_theme_textdomain('anderson-lite', get_template_directory() . '/languages' );
 
-	// Add Theme Support
+	// Enable support for Post Thumbnails
 	add_theme_support('post-thumbnails');
+	set_post_thumbnail_size( 520, 350, true );
+	
+	// Add Theme Support
 	add_theme_support('automatic-feed-links');
 	add_theme_support('title-tag');
 	add_editor_style();
@@ -133,18 +136,15 @@ add_action( 'after_setup_theme', 'anderson_add_image_sizes' );
 if ( ! function_exists( 'anderson_add_image_sizes' ) ):
 function anderson_add_image_sizes() {
 
-	// Add Post Thumbnail Size
-	add_image_size( 'post-thumbnail', 520, 350, true);
-	
 	// Add Custom Header Image Size
-	add_image_size( 'custom-header-image', 1200, 350, true);
+	add_image_size( 'anderson-header-image', 1200, 350, true);
 	
 	// Add Category Post Widget image sizes
-	add_image_size( 'category-posts-widget-small', 120, 80, true);
-	add_image_size( 'category-posts-widget-big', 520, 300, true);
+	add_image_size( 'anderson-category-posts-widget-small', 120, 80, true);
+	add_image_size( 'anderson-category-posts-widget-big', 520, 300, true);
 	
 	// Add Slider Image Size
-	add_image_size( 'slider-image', 880, 440, true);
+	add_image_size( 'anderson-slider-image', 880, 440, true);
 
 }
 endif;

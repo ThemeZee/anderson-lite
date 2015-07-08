@@ -53,7 +53,7 @@ if ( ! function_exists( 'anderson_display_custom_header' ) ):
 		if( is_page() && has_post_thumbnail() ) :
 		?>
 			<div id="custom-header" class="container">
-				<?php the_post_thumbnail('custom-header-image'); ?>
+				<?php the_post_thumbnail('anderson-header-image'); ?>
 			</div>
 <?php
 		// Check if there is a custom header image
@@ -179,7 +179,7 @@ function anderson_display_thumbnail_and_categories_single() {
 
 		<div class="post-image-single">
 		
-			<?php the_post_thumbnail('slider-image'); ?>
+			<?php the_post_thumbnail('anderson-slider-image'); ?>
 
 			<div class="image-post-categories post-categories">
 				<?php echo get_the_category_list(''); ?>

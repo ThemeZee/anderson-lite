@@ -179,7 +179,7 @@ class Anderson_Category_Posts_Columns_Widget extends WP_Widget {
 					<article id="post-<?php the_ID(); ?>" <?php post_class('small-post clearfix'); ?>>
 
 					<?php if ( '' != get_the_post_thumbnail() ) : ?>
-						<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail('category-posts-widget-small'); ?></a>
+						<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail('anderson-category-posts-widget-small'); ?></a>
 					<?php endif; ?>
 
 						<div class="small-posts-content clearfix">
@@ -210,7 +210,7 @@ class Anderson_Category_Posts_Columns_Widget extends WP_Widget {
 			<div class="post-image-single">
 			
 				<a href="<?php esc_url(the_permalink()) ?>" rel="bookmark">
-					<?php the_post_thumbnail('category-posts-widget-big'); ?>
+					<?php the_post_thumbnail('anderson-category-posts-widget-big'); ?>
 				</a>
 				
 				<div class="image-post-categories post-categories">

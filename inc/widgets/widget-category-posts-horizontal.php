@@ -122,7 +122,7 @@ class Anderson_Category_Posts_Horizontal_Widget extends WP_Widget {
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-					<?php the_post_thumbnail('category-posts-widget-big'); ?>
+					<?php the_post_thumbnail('anderson-category-posts-widget-big'); ?>
 
 					<div class="post-content">
 						
