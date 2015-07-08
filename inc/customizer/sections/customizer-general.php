@@ -38,6 +38,39 @@ function anderson_customize_register_general_settings( $wp_customize ) {
 		)
 	);
 	
+	// Add Image Grayscale Headline
+    $wp_customize->add_setting( 'anderson_theme_options[grayscale_filter_headline]', array(
+        'default'           => '',
+        'type'               => 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_attr'
+        )
+    );
+    $wp_customize->add_control( new Anderson_Customize_Header_Control(
+        $wp_customize, 'anderson_control_grayscale_filter_headline', array(
+            'label' => __( 'Image Grayscale', 'anderson-lite' ),
+            'section' => 'anderson_section_general',
+            'settings' => 'anderson_theme_options[grayscale_filter_headline]',
+            'priority' => 2
+            )
+        )
+    );
+    $wp_customize->add_setting( 'anderson_theme_options[grayscale_filter]', array(
+        'default'           => false,
+        'type'               => 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'anderson_sanitize_checkbox'
+        )
+    );
+    $wp_customize->add_control( 'anderson_control_image_grayscale', array(
+        'label'    => __( 'Enable grayscale filter for featured images.', 'anderson-lite' ),
+        'section'  => 'anderson_section_general',
+        'settings' => 'anderson_theme_options[grayscale_filter]',
+        'type'     => 'checkbox',
+        'priority' => 3
+        )
+    );
+	
 	// Add Default Fonts Header
 	$wp_customize->add_setting( 'anderson_theme_options[default_fonts]', array(
         'default'           => '',
