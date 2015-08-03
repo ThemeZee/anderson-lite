@@ -11,7 +11,14 @@
 #customize-control-anderson_control_image_grayscale_headline {
 	margin-top: 12px;
 }
+#customize-control-anderson_control_featured_posts_header,
+#customize-control-anderson_control_slider_animation {
+	margin-top: 8px;
+	border-top: 1px solid #eee;
+	padding-top: 14px;
+}
 
+#customize-control-anderson_control_featured_posts_header,
 #customize-control-anderson_control_default_fonts,
 #customize-control-anderson_control_header_content,
 #customize-control-anderson_control_post_images,

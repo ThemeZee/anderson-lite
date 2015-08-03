@@ -23,13 +23,6 @@
 class Anderson_Featured_Content {
 
 	/**
-	 * The maximum number of posts that a Featured Content area can contain.
-	 *
-	 * @see Anderson_Featured_Content::init()
-	 */
-	public static $max_posts = 4;
-
-	/**
 	 * Instantiate.
 	 *
 	 * All custom functionality will be hooked into the "init" action.
@@ -41,11 +34,10 @@ class Anderson_Featured_Content {
 	/**
 	 * Conditionally hook into WordPress.
 	 *
-	 * @uses Anderson_Featured_Content::$max_posts
 	 */
 	public static function init() {
 
-		add_filter( 'anderson_get_featured_content',     array( __CLASS__, 'get_featured_posts' )    );
+		add_filter( 'anderson_get_featured_content',      array( __CLASS__, 'get_featured_posts' )    );
 		add_action( 'customize_register',                 array( __CLASS__, 'customize_register' ), 9 );
 		add_action( 'admin_init',                         array( __CLASS__, 'register_setting'   )    );
 		add_action( 'save_post',                          array( __CLASS__, 'delete_transient'   )    );
@@ -104,6 +96,7 @@ class Anderson_Featured_Content {
 	 * @return array Array of post IDs.
 	 */
 	public static function get_featured_post_ids() {
+		
 		// Return array of cached results if they exist.
 		$featured_ids = get_transient( 'featured_content_ids' );
 		if ( ! empty( $featured_ids ) ) {
@@ -122,10 +115,10 @@ class Anderson_Featured_Content {
 		} else {
 			return apply_filters( 'anderson_featured_content_post_ids', array() );
 		}
-
+		
 		// Query for featured posts.
 		$featured = get_posts( array(
-			'numberposts' => self::$max_posts,
+			'numberposts' => absint( $settings['max-posts'] ),
 			'tax_query'   => array(
 				array(
 					'field'    => 'term_id',
@@ -344,12 +337,6 @@ class Anderson_Featured_Content {
 	 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
 	 */
 	public static function customize_register( $wp_customize ) {
-		$wp_customize->add_section( 'anderson_featured_content', array(
-			'title'          => __( 'Featured Content', 'anderson-lite' ),
-			'description'    => sprintf( __( 'Easily feature all posts with the <a href="%1$s">"featured" tag</a> or a tag of your choice. Your theme supports up to %2$s posts in its featured content area.', 'anderson-lite' ), admin_url( '/edit.php?tag=featured' ), absint( self::$max_posts ) ),
-			'priority'       => 40,
-			'panel'			 => 'anderson_panel_options'
-		) );
 
 		/* Add Featured Content settings.
 		 *
@@ -370,24 +357,39 @@ class Anderson_Featured_Content {
 			'type'                 => 'option',
 			'sanitize_js_callback' => array( __CLASS__, 'delete_transient' ),
 		) );
+		$wp_customize->add_setting( 'featured-content[max-posts]', array(
+			'default'              => 20,
+			'type'                 => 'option',
+			'sanitize_js_callback' => array( __CLASS__, 'delete_transient' ),
+		) );
 
 		// Add Featured Content controls.
 		$wp_customize->add_control( 'featured-content[tag-name]', array(
 			'label'          => __( 'Tag name', 'anderson-lite' ),
-			'section'        => 'anderson_featured_content',
-			'priority'       => 20,
+			'section'        => 'anderson_section_slider',
+			'priority'       => 6,
+			'active_callback' => 'anderson_slider_activated_callback'
 		) );
 		$wp_customize->add_control( 'featured-content[hide-tag]', array(
 			'label'          => __( 'Hide tag from displaying in post meta and tag clouds.', 'anderson-lite' ),
-			'section'        => 'anderson_featured_content',
+			'section'        => 'anderson_section_slider',
 			'type'           => 'checkbox',
-			'priority'       => 30,
+			'priority'       => 7,
+			'active_callback' => 'anderson_slider_activated_callback'
 		) );
 		$wp_customize->add_control( 'featured-content[show-all]', array(
 			'label'          => __( 'Display featured posts in latest blog post listing.', 'anderson-lite' ),
-			'section'        => 'anderson_featured_content',
+			'section'        => 'anderson_section_slider',
 			'type'           => 'checkbox',
-			'priority'       => 40,
+			'priority'       => 8,
+			'active_callback' => 'anderson_slider_activated_callback'
+		) );
+		$wp_customize->add_control( 'featured-content[max-posts]', array(
+			'label'          => __( 'Number of Posts', 'anderson-lite' ),
+			'section'        => 'anderson_section_slider',
+			'type'           => 'text',
+			'priority'       => 10,
+			'active_callback' => 'anderson_slider_activated_callback'
 		) );
 	}
 
@@ -419,6 +421,7 @@ class Anderson_Featured_Content {
 			'tag-id'   => 0,
 			'tag-name' => '',
 			'show-all' => 0,
+			'max-posts' => 20,
 		);
 
 		$options = wp_parse_args( $saved, $defaults );
@@ -467,6 +470,8 @@ class Anderson_Featured_Content {
 		$output['hide-tag'] = isset( $input['hide-tag'] ) && $input['hide-tag'] ? 1 : 0;
 
 		$output['show-all'] = isset( $input['show-all'] ) && $input['show-all'] ? 1 : 0;
+		
+		$output['max-posts'] = isset( $input['max-posts'] ) && $input['max-posts'] > 0 ? absint( $input['max-posts'] ) : 20;
 
 		self::delete_transient();
 

@@ -57,4 +57,17 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 	
 endif;
 
-?>
+
+// Add a callback function to retrieve wether slider is activated or not
+function anderson_slider_activated_callback( $control ) {
+	
+	// Check if Slider is turned on
+	if ( $control->manager->get_setting('anderson_theme_options[slider_active_magazine]')->value() == 1 ) :
+		return true;
+	elseif ( $control->manager->get_setting('anderson_theme_options[slider_active]')->value() == 1 ) :
+		return true;
+	else :
+		return false;
+	endif;
+	
+}

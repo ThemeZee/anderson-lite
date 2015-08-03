@@ -2,6 +2,13 @@
 Anderson Lite Changelog
 ===================================
 
+Version 1.2.2
+-----------------------------------
+[moved] featured content settings to post slider section in Customizer
+[added] number of posts setting for the Featured Post Slider
+[added] active_callback parameter to display slider controls only when slider is activated
+[added] translation files for German
+
 Version 1.2.1
 -----------------------------------
 [added] extra setting to enable grayscale filter on images
