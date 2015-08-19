@@ -10,7 +10,7 @@ class Anderson_Category_Posts_Boxed_Widget extends WP_Widget {
 			'classname' => 'anderson_category_posts_boxed', 
 			'description' => __('Display latest posts from category in boxed layout. Please use this widget ONLY on Magazine Homepage widget area.', 'anderson-lite')
 		);
-		$this->WP_Widget('anderson_category_posts_boxed', __('Category Posts Boxed (Anderson)', 'anderson-lite'), $widget_ops);
+		parent::__construct('anderson_category_posts_boxed', __('Category Posts Boxed (Anderson)', 'anderson-lite'), $widget_ops);
 		
 		// Delete Widget Cache on certain actions
 		add_action( 'save_post', array( $this, 'delete_widget_cache' ) );

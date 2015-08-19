@@ -10,7 +10,7 @@ class Anderson_Category_Posts_Columns_Widget extends WP_Widget {
 			'classname' => 'anderson_category_posts_columns', 
 			'description' => __('Display latest posts from two specified categories. Please use this widget ONLY on Magazine Homepage widget area.', 'anderson-lite')
 		);
-		$this->WP_Widget('anderson_category_posts_columns', __('Category Posts Columns (Anderson)', 'anderson-lite'), $widget_ops);
+		parent::__construct('anderson_category_posts_columns', __('Category Posts Columns (Anderson)', 'anderson-lite'), $widget_ops);
 		
 		// Delete Widget Cache on certain actions
 		add_action( 'save_post', array( $this, 'delete_widget_cache' ) );
