@@ -1,18 +1,24 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Anderson\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-08 14:35+0100\n"
-"PO-Revision-Date: 2015-07-08 14:37+0100\n"
-"Last-Translator: Ulrich Pogson <grapplerulrich@gmail.com>\n"
-"Language-Team: ThemeZee <contact@themezee.com>\n"
+"Project-Id-Version: Anderson Lite\n"
+"Report-Msgid-Bugs-To: http://themezee.com/\n"
+"POT-Creation-Date: 2015-08-25 15:01+0100\n"
+"PO-Revision-Date: 2015-08-25 15:02+0100\n"
+"Last-Translator: \n"
+"Language-Team: ThemeZee <support@themezee.com>\n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e;_x;_ex;_n;esc_attr_e;esc_attr__\n"
-"X-Poedit-Basepath: .\n"
-"X-Poedit-SourceCharset: UTF-8\n"
 "X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
 
 #: 404.php:9
 msgid "404 Error: Not found"
@@ -149,7 +155,13 @@ msgid ""
 msgstr ""
 
 #: searchform.php:4
+msgctxt "label"
 msgid "Search for:"
+msgstr ""
+
+#: searchform.php:5
+msgctxt "placeholder"
+msgid "Search &hellip;"
 msgstr ""
 
 #: sidebar.php:14
@@ -170,28 +182,20 @@ msgid ""
 "website."
 msgstr ""
 
-#: inc/featured-content.php:348
-msgid "Featured Content"
-msgstr ""
-
-#: inc/featured-content.php:349
-#, php-format
-msgid ""
-"Easily feature all posts with the <a href=\"%1$s\">\"featured\" tag</a> or a "
-"tag of your choice. Your theme supports up to %2$s posts in its featured "
-"content area."
-msgstr ""
-
-#: inc/featured-content.php:376
+#: inc/featured-content.php:368
 msgid "Tag name"
 msgstr ""
 
-#: inc/featured-content.php:381
+#: inc/featured-content.php:374
 msgid "Hide tag from displaying in post meta and tag clouds."
 msgstr ""
 
-#: inc/featured-content.php:387
+#: inc/featured-content.php:381
 msgid "Display featured posts in latest blog post listing."
+msgstr ""
+
+#: inc/featured-content.php:388
+msgid "Number of Posts"
 msgstr ""
 
 #: inc/template-tags.php:85
@@ -444,33 +448,37 @@ msgstr ""
 msgid "Post Slider"
 msgstr ""
 
-#: inc/customizer/sections/customizer-slider.php:15
-msgid ""
-"The slideshow displays your featured posts, which you can configure on the "
-"\"Featured Content\" section above."
-msgstr ""
-
-#: inc/customizer/sections/customizer-slider.php:31
+#: inc/customizer/sections/customizer-slider.php:30
 msgid "Activate Featured Post Slider"
 msgstr ""
 
-#: inc/customizer/sections/customizer-slider.php:47
+#: inc/customizer/sections/customizer-slider.php:46
 msgid "Display Slider above latest blog posts."
 msgstr ""
 
-#: inc/customizer/sections/customizer-slider.php:63
+#: inc/customizer/sections/customizer-slider.php:62
 msgid "Display Slider on Magazine Homepage template."
 msgstr ""
 
-#: inc/customizer/sections/customizer-slider.php:79
+#: inc/customizer/sections/customizer-slider.php:80
+msgid "Select Featured Posts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-slider.php:97
+msgid ""
+"The slideshow displays all your featured posts. You can easily feature posts "
+"by a tag of your choice."
+msgstr ""
+
+#: inc/customizer/sections/customizer-slider.php:114
 msgid "Slider Animation"
 msgstr ""
 
-#: inc/customizer/sections/customizer-slider.php:85
+#: inc/customizer/sections/customizer-slider.php:121
 msgid "Horizontal Slider"
 msgstr ""
 
-#: inc/customizer/sections/customizer-slider.php:86
+#: inc/customizer/sections/customizer-slider.php:122
 msgid "Fade Slider"
 msgstr ""
 
