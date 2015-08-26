@@ -11,8 +11,11 @@
 add_action('admin_menu', 'anderson_add_theme_info_page');
 function anderson_add_theme_info_page() {
 	
+	// Get Theme Details from style.css
+	$theme = wp_get_theme(); 
+	
 	add_theme_page( 
-		__('Welcome to Anderson', 'anderson-lite'), 
+		sprintf( __( 'Welcome to %1s %2s', 'anderson-lite' ), $theme->get( 'Name' ), $theme->get( 'Version' ) ), 
 		__('Theme Info', 'anderson-lite'), 
 		'edit_theme_options', 
 		'anderson', 
@@ -26,15 +29,15 @@ function anderson_add_theme_info_page() {
 function anderson_display_theme_info_page() { 
 	
 	// Get Theme Details from style.css
-	$theme_data = wp_get_theme(); 
+	$theme = wp_get_theme(); 
 	
 ?>
 			
 	<div class="wrap theme-info-wrap">
 
-		<h1><?php printf( __( 'Welcome to %1s %2s', 'anderson-lite' ), $theme_data->Name, $theme_data->Version ); ?></h1>
+		<h1><?php printf( __( 'Welcome to %1s %2s', 'anderson-lite' ), $theme->get( 'Name' ), $theme->get( 'Version' ) ); ?></h1>
 
-		<div class="theme-description"><?php echo $theme_data->Description; ?></div>
+		<div class="theme-description"><?php echo $theme->get( 'Description' ); ?></div>
 		
 		<hr>
 		<div class="important-links clearfix">
@@ -50,7 +53,7 @@ function anderson_display_theme_info_page() {
 				
 		<div id="getting-started">
 		
-			<h3><?php printf( __( 'Getting Started with %s', 'anderson-lite' ), $theme_data->Name ); ?></h3>
+			<h3><?php printf( __( 'Getting Started with %s', 'anderson-lite' ), $theme->get( 'Name' ) ); ?></h3>
 			
 			<div class="columns-wrapper clearfix">
 
@@ -59,27 +62,39 @@ function anderson_display_theme_info_page() {
 					<div class="section">
 						<h4><?php _e( 'Theme Documentation', 'anderson-lite' ); ?></h4>
 						
-						<p class="about"><?php _e( 'Need any help to setup and configure this theme? We got you covered with an extensive theme documentation on our website.', 'anderson-lite' ); ?></p>
+						<p class="about">
+							<?php _e( 'You need help to setup and configure this theme? We got you covered with an extensive theme documentation on our website.', 'anderson-lite' ); ?>
+						</p>
 						<p>
-							<a href="http://themezee.com/docs/anderson-documentation/" target="_blank" class="button button-secondary"><?php _e('Visit Anderson Documentation', 'anderson-lite'); ?></a>
+							<a href="http://themezee.com/docs/anderson-documentation/" target="_blank" class="button button-secondary">
+								<?php printf( __( 'View %s Documentation', 'anderson-lite' ), 'Anderson' ); ?>
+							</a>
 						</p>
 					</div>
 					
 					<div class="section">
 						<h4><?php _e( 'Theme Options', 'anderson-lite' ); ?></h4>
 						
-						<p class="about"><?php _e( 'Anderson supports the awesome Theme Customizer for all theme settings. Click "Customize Theme" to open the Customizer now.', 'anderson-lite' ); ?></p>
+						<p class="about">
+							<?php printf( __( '%s makes use of the Customizer for all theme settings. Click on "Customize Theme" to open the Customizer now.', 'anderson-lite' ), $theme->get( 'Name' ) ); ?>
+						</p>
 						<p>
-							<a href="<?php echo admin_url( 'customize.php' ); ?>" class="button button-primary"><?php _e('Customize Theme', 'anderson-lite'); ?></a>
+							<a href="<?php echo admin_url( 'customize.php' ); ?>" class="button button-primary">
+								<?php _e('Customize Theme', 'anderson-lite'); ?>
+							</a>
 						</p>
 					</div>
 					
 					<div class="section">
-						<h4><?php _e( 'PRO Version', 'anderson-lite' ); ?></h4>
+						<h4><?php _e( 'Pro Version', 'anderson-lite' ); ?></h4>
 						
-						<p class="about"><?php _e( 'Need more features? Check out the PRO version which comes with additional features and advanced customization options.', 'anderson-lite' ); ?></p>
+						<p class="about">
+							<?php _e( 'You need more features? Purchase the Pro Version to get additional features and advanced customization options.', 'anderson-lite' ); ?>
+						</p>
 						<p>
-							<a href="http://themezee.com/themes/anderson/#PROVersion-1" target="_blank" class="button button-secondary"><?php _e('Learn more about the PRO Version of Anderson', 'anderson-lite'); ?></a>
+							<a href="http://themezee.com/themes/anderson/#PROVersion-1" target="_blank" class="button button-secondary">
+								<?php printf( __( 'Learn more about %s Pro', 'anderson-lite' ), 'Anderson'); ?>
+							</a>
 						</p>
 					</div>
 
@@ -99,7 +114,8 @@ function anderson_display_theme_info_page() {
 		
 		<div id="theme-author">
 			
-			<p><?php printf( __( 'Anderson is proudly brought to you by %1s. If you like this theme, %2s :) ', 'anderson-lite' ), 
+			<p><?php printf( __( '%1s is proudly brought to you by %2s. If you like this theme, %3s :) ', 'anderson-lite' ), 
+				$theme->get( 'Name' ),
 				'<a target="_blank" href="http://themezee.com" title="ThemeZee">ThemeZee</a>',
 				'<a target="_blank" href="http://wordpress.org/support/view/theme-reviews/anderson-lite?filter=5" title="Anderson Lite Review">' . __( 'rate it', 'anderson-lite' ) . '</a>'); ?>
 			</p>

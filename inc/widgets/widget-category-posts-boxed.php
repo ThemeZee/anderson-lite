@@ -8,9 +8,9 @@ class Anderson_Category_Posts_Boxed_Widget extends WP_Widget {
 		// Setup Widget
 		$widget_ops = array(
 			'classname' => 'anderson_category_posts_boxed', 
-			'description' => __('Display latest posts from category in boxed layout. Please use this widget ONLY on Magazine Homepage widget area.', 'anderson-lite')
+			'description' => __('Displays your posts from a selected category in a boxed layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'anderson-lite')
 		);
-		parent::__construct('anderson_category_posts_boxed', __('Category Posts Boxed (Anderson)', 'anderson-lite'), $widget_ops);
+		parent::__construct('anderson_category_posts_boxed', sprintf( __('Category Posts: Boxed (%s)', 'anderson-lite'), 'Anderson' ), $widget_ops);
 		
 		// Delete Widget Cache on certain actions
 		add_action( 'save_post', array( $this, 'delete_widget_cache' ) );
@@ -199,25 +199,19 @@ class Anderson_Category_Posts_Boxed_Widget extends WP_Widget {
 	}
 	
 	// Display Postmeta
-	function display_postmeta($instance) {  ?>
+	function display_postmeta($instance) { 
 		
-		<span class="meta-date">
-		<?php printf(__('<a href="%1$s" title="%2$s" rel="bookmark"><time datetime="%3$s">%4$s</time></a>', 'anderson-lite'), 
-				esc_url( get_permalink() ),
-				esc_attr( get_the_time() ),
-				esc_attr( get_the_date( 'c' ) ),
-				esc_html( get_the_date() )
-			);
-		?>
-		</span>
+		$this->display_meta_date($instance); ?>
+		
 		<span class="meta-author">
-		<?php printf(__('<a href="%1$s" title="%2$s" rel="author">%3$s</a>', 'anderson-lite'), 
+		<?php printf( '<a class="fn" href="%1$s" title="%2$s" rel="author">%3$s</a>', 
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 				esc_attr( sprintf( __( 'View all posts by %s', 'anderson-lite' ), get_the_author() ) ),
 				get_the_author()
 			);
 		?>
 		</span>
+	
 	<?php
 	}
 	
@@ -225,7 +219,7 @@ class Anderson_Category_Posts_Boxed_Widget extends WP_Widget {
 	function display_meta_date($instance) {  ?>
 		
 		<span class="meta-date">
-		<?php printf(__('<a href="%1$s" title="%2$s" rel="bookmark"><time datetime="%3$s">%4$s</time></a>', 'anderson-lite'), 
+		<?php printf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>',
 				esc_url( get_permalink() ),
 				esc_attr( get_the_time() ),
 				esc_attr( get_the_date( 'c' ) ),

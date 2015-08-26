@@ -8,9 +8,9 @@ class Anderson_Category_Posts_Horizontal_Widget extends WP_Widget {
 		// Setup Widget
 		$widget_ops = array(
 			'classname' => 'anderson_category_posts_horizontal', 
-			'description' => __('Display the latest 3 posts from a category in a horizontal line. Please use this widget ONLY on Magazine Homepage widget area.', 'anderson-lite')
+			'description' => __('Displays your posts from a selected category in a horizontal line. Please use this widget ONLY in the Magazine Homepage widget area.', 'anderson-lite')
 		);
-		parent::__construct('anderson_category_posts_horizontal', __('Category Posts Horizontal (Anderson)', 'anderson-lite'), $widget_ops);
+		parent::__construct('anderson_category_posts_horizontal', sprintf( __('Category Posts: Horizontal (%s)', 'anderson-lite'), 'Anderson' ), $widget_ops);
 		
 		// Delete Widget Cache on certain actions
 		add_action( 'save_post', array( $this, 'delete_widget_cache' ) );
@@ -206,7 +206,7 @@ class Anderson_Category_Posts_Horizontal_Widget extends WP_Widget {
 	function display_postmeta($instance) {  ?>
 		
 		<span class="meta-date">
-		<?php printf(__('<a href="%1$s" title="%2$s" rel="bookmark"><time datetime="%3$s">%4$s</time></a>', 'anderson-lite'), 
+		<?php printf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>',
 				esc_url( get_permalink() ),
 				esc_attr( get_the_time() ),
 				esc_attr( get_the_date( 'c' ) ),
