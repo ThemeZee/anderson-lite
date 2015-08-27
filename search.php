@@ -8,16 +8,16 @@
 		
 		<section id="content" class="primary" role="main">
 		
-		<?php if (have_posts()) : ?>
-			
 			<div class="page-header">
 				<h2 id="search-title" class="archive-title">
 					<?php printf( __( 'Search Results for: %s', 'anderson-lite' ), '<span>' . get_search_query() . '</span>' ); ?>
 				</h2>
 			</div>
-		
-		<?php while (have_posts()) : the_post();
-		
+				
+		<?php if (have_posts()) :
+
+			while (have_posts()) : the_post();
+	
 				if ( 'post' == get_post_type() ) :
 		
 					get_template_part( 'content', $theme_options['posts_length'] );
@@ -29,24 +29,26 @@
 				endif;
 		
 			endwhile;
-			
+		
 			anderson_display_pagination();
 
 		else : ?>
 
-			<h2 id="search-title" class="archive-title">
-				<?php printf( __( 'Search Results for: %s', 'anderson-lite' ), '<span>' . get_search_query() . '</span>' ); ?>
-			</h2>
-			
-			<div class="post">
+			<div class="type-page">
 				
-				<div class="entry">
-					<p><?php _e('No matches. Please try again, or use the navigation menus to find what you search for.', 'anderson-lite'); ?></p>
+				<h2 class="page-title entry-title"><?php _e('No matches', 'anderson-lite'); ?></h2>
+				
+				<div class="entry clearfix">
+					
+					<p><?php esc_html_e('Please try again, or use the navigation menus to find what you search for.', 'anderson-lite'); ?></p>
+					
+					<?php get_search_form(); ?>
+					
 				</div>
 				
 			</div>
 
-			<?php endif; ?>
+		<?php endif; ?>
 			
 		</section>
 		

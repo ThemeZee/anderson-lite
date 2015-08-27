@@ -26,14 +26,14 @@ function anderson_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'anderson_control_posts_length', array(
-        'label'    => __( 'Post Length', 'anderson-lite' ),
+        'label'    => __( 'Post length on archives', 'anderson-lite' ),
         'section'  => 'anderson_section_post',
         'settings' => 'anderson_theme_options[posts_length]',
         'type'     => 'radio',
 		'priority' => 1,
         'choices'  => array(
             'index' => __( 'Show full posts', 'anderson-lite' ),
-            'excerpt' => __( 'Show post summaries (excerpt)', 'anderson-lite' )
+            'excerpt' => __( 'Show post excerpts', 'anderson-lite' )
 			)
 		)
 	);

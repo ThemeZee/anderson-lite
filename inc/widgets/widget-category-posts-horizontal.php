@@ -8,7 +8,7 @@ class Anderson_Category_Posts_Horizontal_Widget extends WP_Widget {
 		// Setup Widget
 		$widget_ops = array(
 			'classname' => 'anderson_category_posts_horizontal', 
-			'description' => __('Displays your posts from a selected category in a horizontal line. Please use this widget ONLY in the Magazine Homepage widget area.', 'anderson-lite')
+			'description' => __('Displays your posts from a selected category in a horizontal arrangement. Please use this widget ONLY in the Magazine Homepage widget area.', 'anderson-lite')
 		);
 		parent::__construct('anderson_category_posts_horizontal', sprintf( __('Category Posts: Horizontal (%s)', 'anderson-lite'), 'Anderson' ), $widget_ops);
 		

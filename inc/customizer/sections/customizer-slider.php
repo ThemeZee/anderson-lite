@@ -27,29 +27,13 @@ function anderson_customize_register_slider_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Anderson_Customize_Header_Control(
         $wp_customize, 'anderson_control_slider_active_header', array(
-            'label' => __( 'Activate Featured Post Slider', 'anderson-lite' ),
+            'label' => __( 'Activate Post Slider', 'anderson-lite' ),
             'section' => 'anderson_section_slider',
             'settings' => 'anderson_theme_options[slider_active_header]',
             'priority' => 	1
             )
         )
     );
-	
-	$wp_customize->add_setting( 'anderson_theme_options[slider_active]', array(
-        'default'           => false,
-		'type'           	=> 'option',
-        'transport'         => 'refresh',
-        'sanitize_callback' => 'anderson_sanitize_checkbox'
-		)
-	);
-    $wp_customize->add_control( 'anderson_control_slider_active', array(
-        'label'    => __( 'Display Slider above latest blog posts.', 'anderson-lite' ),
-        'section'  => 'anderson_section_slider',
-        'settings' => 'anderson_theme_options[slider_active]',
-        'type'     => 'checkbox',
-		'priority' => 2
-		)
-	);
 	
 	$wp_customize->add_setting( 'anderson_theme_options[slider_active_magazine]', array(
         'default'           => false,
@@ -59,9 +43,25 @@ function anderson_customize_register_slider_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'anderson_control_slider_active_magazine', array(
-        'label'    => __( 'Display Slider on Magazine Homepage template.', 'anderson-lite' ),
+        'label'    => __( 'Show Slider on Magazine Homepage', 'anderson-lite' ),
         'section'  => 'anderson_section_slider',
         'settings' => 'anderson_theme_options[slider_active_magazine]',
+        'type'     => 'checkbox',
+		'priority' => 2
+		)
+	);
+	
+	$wp_customize->add_setting( 'anderson_theme_options[slider_active]', array(
+        'default'           => false,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'anderson_sanitize_checkbox'
+		)
+	);
+    $wp_customize->add_control( 'anderson_control_slider_active', array(
+        'label'    => __( 'Show Slider on posts page', 'anderson-lite' ),
+        'section'  => 'anderson_section_slider',
+        'settings' => 'anderson_theme_options[slider_active]',
         'type'     => 'checkbox',
 		'priority' => 3
 		)
@@ -118,8 +118,8 @@ function anderson_customize_register_slider_settings( $wp_customize ) {
 		'priority' => 9,
 		'active_callback' => 'anderson_slider_activated_callback',
         'choices'  => array(
-            'horizontal' => __( 'Horizontal Slider', 'anderson-lite' ),
-            'fade' => __( 'Fade Slider', 'anderson-lite' )
+            'horizontal' => __( 'Slide Effect', 'anderson-lite' ),
+            'fade' => __( 'Fade Effect', 'anderson-lite' )
 			)
 		)
 	);

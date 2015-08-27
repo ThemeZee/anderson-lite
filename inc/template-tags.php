@@ -239,9 +239,9 @@ add_action( 'anderson_footer_text', 'anderson_display_footer_text' );
 function anderson_display_footer_text() { ?>
 
 	<span class="credit-link">
-		<?php printf(__( 'Powered by %1$s and %2$s.', 'anderson-lite' ), 
-			sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'anderson-lite' ) ),
-			sprintf( '<a href="http://themezee.com/themes/anderson/" title="Anderson WordPress Theme">%s</a>', __( 'Anderson', 'anderson-lite' ) )
+		<?php printf( __( 'Powered by %1$s and %2$s.', 'anderson-lite' ), 
+			'<a href="http://wordpress.org" title="WordPress">WordPress</a>',
+			'<a href="http://themezee.com/themes/anderson/" title="Anderson WordPress Theme">Anderson</a>'
 		); ?>
 	</span>
 
