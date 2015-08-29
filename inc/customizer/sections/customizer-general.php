@@ -63,7 +63,7 @@ function anderson_customize_register_general_settings( $wp_customize ) {
         )
     );
     $wp_customize->add_control( 'anderson_control_image_grayscale', array(
-        'label'    => __( 'Enable grayscale filter for featured images.', 'anderson-lite' ),
+        'label'    => __( 'Enable grayscale filter for featured images', 'anderson-lite' ),
         'section'  => 'anderson_section_general',
         'settings' => 'anderson_theme_options[grayscale_filter]',
         'type'     => 'checkbox',

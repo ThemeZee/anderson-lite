@@ -13,7 +13,7 @@
 			<aside class="widget">
 				<h3 class="widgettitle"><span><?php _e('Sidebar', 'anderson-lite'); ?></span></h3>
 				<div class="textwidget">
-					<p><?php _e('Please go to Appearance &#8594; Widgets to set up your widgets in the sidebar.', 'anderson-lite'); ?></p>
+					<p><?php _e('Please go to Appearance &#8594; Widgets and add some widgets to your sidebar.', 'anderson-lite'); ?></p>
 				</div>
 			</aside>
 		
