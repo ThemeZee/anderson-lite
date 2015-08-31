@@ -35,7 +35,7 @@ function anderson_customize_register_options( $wp_customize ) {
 	
 	// Change default background section
 	$wp_customize->get_control( 'background_color'  )->section   = 'background_image';
-	$wp_customize->get_section( 'background_image'  )->title     = 'Background';
+	$wp_customize->get_section( 'background_image'  )->title     = __( 'Background', 'anderson-lite' );
 	
 	// Add Header Tagline option
 	$wp_customize->add_setting( 'anderson_theme_options[header_tagline]', array(

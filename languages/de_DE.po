@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Everything\n"
 "Report-Msgid-Bugs-To: http://themezee.com/\n"
-"POT-Creation-Date: 2015-08-29 14:17+0100\n"
-"PO-Revision-Date: 2015-08-29 14:18+0100\n"
+"POT-Creation-Date: 2015-08-31 19:54+0100\n"
+"PO-Revision-Date: 2015-08-31 19:54+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -35,6 +35,7 @@ msgid "One comment"
 msgstr "Ein Kommentar"
 
 #: comments.php:23
+#, php-format
 msgid "% comments"
 msgstr "% Kommentare"
 
@@ -97,19 +98,19 @@ msgstr ""
 "Erscheint nur auf dem Magazine Homepage Template. Du kannst hier die "
 "Kategorie Beiträge Widgets verwenden."
 
-#: functions.php:263
+#: functions.php:269
 msgid "Pingback:"
 msgstr "Pingback:"
 
-#: functions.php:264 functions.php:284
+#: functions.php:270 functions.php:290
 msgid "(Edit)"
 msgstr "(Bearbeiten)"
 
-#: functions.php:279
+#: functions.php:285
 msgid "Your comment is awaiting moderation."
 msgstr "Dein Kommentar wird überprüft."
 
-#: functions.php:283
+#: functions.php:289
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s am %2$s"
@@ -307,6 +308,10 @@ msgstr ""
 #: inc/theme-info.php:120
 msgid "rate it"
 msgstr "bewerte es"
+
+#: inc/customizer/customizer.php:38
+msgid "Background"
+msgstr "Hintergrund"
 
 #: inc/customizer/customizer.php:49
 msgid "Display Tagline below site title."
@@ -1076,9 +1081,6 @@ msgstr "Kategorie Beiträge: Horizontal (%s)"
 
 #~ msgid "Post Slider Color"
 #~ msgstr "Farbe des Beitrags-Sliders"
-
-#~ msgid "Header Background Color"
-#~ msgstr "Header Hintergrundfarbe"
 
 #~ msgid "Footer Background Color"
 #~ msgstr "Footer Hintergrundfarbe"

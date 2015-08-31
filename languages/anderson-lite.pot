@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Anderson Lite\n"
 "Report-Msgid-Bugs-To: http://themezee.com/\n"
-"POT-Creation-Date: 2015-08-29 14:17+0100\n"
-"PO-Revision-Date: 2015-08-29 14:17+0100\n"
+"POT-Creation-Date: 2015-08-31 19:54+0100\n"
+"PO-Revision-Date: 2015-08-31 19:54+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: en_US\n"
@@ -93,19 +93,19 @@ msgid ""
 "widgets here."
 msgstr ""
 
-#: functions.php:263
+#: functions.php:269
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:264 functions.php:284
+#: functions.php:270 functions.php:290
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:279
+#: functions.php:285
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:283
+#: functions.php:289
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
@@ -281,6 +281,10 @@ msgstr ""
 
 #: inc/theme-info.php:120
 msgid "rate it"
+msgstr ""
+
+#: inc/customizer/customizer.php:38
+msgid "Background"
 msgstr ""
 
 #: inc/customizer/customizer.php:49
