@@ -398,5 +398,3 @@ class Anderson_Category_Posts_Columns_Widget extends WP_Widget {
 <?php
 	}
 }
-register_widget('Anderson_Category_Posts_Columns_Widget');
-?>
