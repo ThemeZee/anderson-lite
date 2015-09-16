@@ -178,12 +178,6 @@ function anderson_register_sidebars() {
 		'after_title' => '</span></h3>',
 	));
 	
-	// Register Category Post Widgets
-	register_widget('Anderson_Category_Posts_Boxed_Widget');
-	register_widget('Anderson_Category_Posts_Columns_Widget');
-	register_widget('Anderson_Category_Posts_Grid_Widget');
-	register_widget('Anderson_Category_Posts_Horizontal_Widget');
-	
 }
 endif;
 
