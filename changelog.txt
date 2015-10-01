@@ -2,7 +2,7 @@
 Anderson Lite Changelog
 ===================================
 
-Version 1.2.6
+Version 1.2.7
 -----------------------------------
 [moved] additional functions from functions.php to extras.php and template-tags.php
 [added] theme support for Widget Bundle Addon Plugin
