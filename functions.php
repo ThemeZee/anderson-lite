@@ -117,6 +117,9 @@ function anderson_setup() {
 	
 	// Add Theme Support for Anderson Pro Plugin
 	add_theme_support( 'anderson-pro' );
+	
+	// Add Theme Support for ThemeZee Addons
+	add_theme_support( 'themezee-widget-bundle' );
 
 	// Register Navigation Menus
 	register_nav_menu( 'primary', __('Main Navigation', 'anderson-lite') );
@@ -182,122 +185,6 @@ function anderson_register_sidebars() {
 endif;
 
 
-// Add title tag for older WordPress versions
-if ( ! function_exists( '_wp_render_title_tag' ) ) :
-
-	add_action( 'wp_head', 'anderson_wp_title' );
-	function anderson_wp_title() { ?>
-		
-		<title><?php wp_title( '|', true, 'right' ); ?></title>
-
-<?php
-    }
-    
-endif;
-
-
-// Add Default Menu Fallback Function
-function anderson_default_menu() {
-	echo '<ul id="mainnav-menu" class="menu">'. wp_list_pages('title_li=&echo=0') .'</ul>';
-}
-
-
-// Get Featured Posts
-function anderson_get_featured_content() {
-	return apply_filters( 'anderson_get_featured_content', false );
-}
-
-
-// Check if featured posts exists
-function anderson_has_featured_content() {
-	return ! is_paged() && (bool) anderson_get_featured_content();
-}
-
-
-// Change Excerpt Length
-add_filter('excerpt_length', 'anderson_excerpt_length');
-function anderson_excerpt_length($length) {
-    return 30;
-}
-
-
-// Change Excerpt More
-add_filter('excerpt_more', 'anderson_excerpt_more');
-function anderson_excerpt_more($more) {
-    
-	// Get Theme Options from Database
-	$theme_options = anderson_theme_options();
-
-	// Return Excerpt Text
-	if ( isset($theme_options['excerpt_text']) and $theme_options['excerpt_text'] == true ) :
-		return ' [...]';
-	else :
-		return '';
-	endif;
-}
-
-
-// Change Excerpt Length for Featured Content
-add_filter('excerpt_length', 'anderson_excerpt_length');
-function anderson_slideshow_excerpt_length($length) {
-    return 20;
-}
-
-
-// Change Excerpt Length for Featured Content
-add_filter('excerpt_length', 'anderson_excerpt_length');
-function anderson_category_posts_widgets_excerpt_length($length) {
-    return 20;
-}
-
-
-// Custom Template for comments and pingbacks.
-if ( ! function_exists( 'anderson_list_comments' ) ):
-function anderson_list_comments($comment, $args, $depth) {
-
-	$GLOBALS['comment'] = $comment;
-
-	if( $comment->comment_type == 'pingback' or $comment->comment_type == 'trackback' ) : ?>
-
-		<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-			<p><?php _e( 'Pingback:', 'anderson-lite' ); ?> <?php comment_author_link(); ?>
-			<?php edit_comment_link( __( '(Edit)', 'anderson-lite' ), '<span class="edit-link">', '</span>' ); ?>
-			</p>
-
-	<?php else : ?>
-
-		<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-
-			<div id="div-comment-<?php comment_ID(); ?>" class="comment-body">
-
-				<div class="comment-author vcard">
-					<?php echo get_avatar( $comment, 56 ); ?>
-					<?php printf( '<span class="fn">%s</span>', get_comment_author_link() ); ?>
-				</div>
-
-		<?php if ($comment->comment_approved == '0') : ?>
-				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'anderson-lite' ); ?></p>
-		<?php endif; ?>
-
-				<div class="comment-meta commentmetadata">
-					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><?php printf(__('%1$s at %2$s', 'anderson-lite'), get_comment_date(),  get_comment_time()) ?></a>
-					<?php edit_comment_link(__('(Edit)', 'anderson-lite'),'  ','') ?>
-				</div>
-
-				<div class="comment-content"><?php comment_text(); ?></div>
-
-				<div class="reply">
-					<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-				</div>
-
-			</div>
-<?php
-	endif;
-
-}
-endif;
-
-
 /*==================================== INCLUDE FILES ====================================*/
 
 // include Theme Info page
@@ -314,6 +201,9 @@ require( get_template_directory() . '/inc/customizer/frontend/custom-slider.php'
 // include Template Functions
 require( get_template_directory() . '/inc/template-tags.php' );
 
+// Include Extra Functions
+require get_template_directory() . '/inc/extras.php';
+
 // include Widget Files
 require( get_template_directory() . '/inc/widgets/widget-category-posts-boxed.php' );
 require( get_template_directory() . '/inc/widgets/widget-category-posts-columns.php' );
@@ -322,6 +212,3 @@ require( get_template_directory() . '/inc/widgets/widget-category-posts-horizont
 
 // Include Featured Content class in case it does not exist yet (e.g. user has not Jetpack installed)
 require get_template_directory() . '/inc/featured-content.php';
-
-
-?>
