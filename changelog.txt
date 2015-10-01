@@ -8,6 +8,7 @@ Version 1.2.6
 [added] theme support for Widget Bundle Addon Plugin
 [removed] fallback solution for new title tag feature of WordPress
 [removed] function_exists wrappers for action hook functions
+[changed] implementation of threaded comments javascript
 
 Version 1.2.5
 -----------------------------------

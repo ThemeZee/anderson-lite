@@ -47,6 +47,6 @@ add_action( 'after_setup_theme', 'anderson_theme_addons_image_sizes' );
 function anderson_theme_addons_image_sizes() {
 
 	// Add Widget Bundle Thumbnail
-	add_image_size( 'tzwb-thumbnail', 80, 80, true );
+	add_image_size( 'tzwb-thumbnail', 85, 65, true );
 
 }

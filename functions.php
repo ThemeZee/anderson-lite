@@ -181,11 +181,11 @@ require( get_template_directory() . '/inc/customizer/default-options.php' );
 require( get_template_directory() . '/inc/customizer/frontend/custom-layout.php' );
 require( get_template_directory() . '/inc/customizer/frontend/custom-slider.php' );
 
-// include Template Functions
-require( get_template_directory() . '/inc/template-tags.php' );
-
 // Include Extra Functions
 require get_template_directory() . '/inc/extras.php';
+
+// include Template Functions
+require( get_template_directory() . '/inc/template-tags.php' );
 
 // Include support functions for Theme Addons
 require get_template_directory() . '/inc/addons.php';
