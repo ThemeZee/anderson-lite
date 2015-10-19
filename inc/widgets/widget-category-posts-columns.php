@@ -34,7 +34,8 @@ class Anderson_Category_Posts_Columns_Widget extends WP_Widget {
 			'category_two_title'	=> '',
 			'number'				=> 4,
 			'highlight_post'		=> true,
-			'category_link'			=> false
+			'category_link'			=> false,
+			'postmeta'			=> true
 		);
 		
 		return $defaults;
@@ -225,34 +226,48 @@ class Anderson_Category_Posts_Columns_Widget extends WP_Widget {
 	// Display Postmeta
 	function display_postmeta($instance) { 
 		
-		$this->display_meta_date($instance); ?>
+		// Get Widget Settings
+		$defaults = $this->default_settings();
+		extract( wp_parse_args( $instance, $defaults ) );
 		
-		<span class="meta-author">
-		<?php printf( '<a class="fn" href="%1$s" title="%2$s" rel="author">%3$s</a>', 
-				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-				esc_attr( sprintf( __( 'View all posts by %s', 'anderson-lite' ), get_the_author() ) ),
-				get_the_author()
-			);
-		?>
-		</span>
+		if( true == $postmeta ) :
+		
+			$this->display_meta_date( $instance ); ?>
+		
+			<span class="meta-author">
+			<?php printf( '<a class="fn" href="%1$s" title="%2$s" rel="author">%3$s</a>', 
+					esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+					esc_attr( sprintf( __( 'View all posts by %s', 'anderson-lite' ), get_the_author() ) ),
+					get_the_author()
+				);
+			?>
+			</span>
 	
-	<?php
+		<?php endif;
+		
 	}
 	
 	// Display Date
-	function display_meta_date($instance) {  ?>
+	function display_meta_date( $instance ) { 
+	
+		// Get Widget Settings
+		$defaults = $this->default_settings();
+		extract( wp_parse_args( $instance, $defaults ) );
 		
-		<span class="meta-date">
-		<?php printf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>',
-				esc_url( get_permalink() ),
-				esc_attr( get_the_time() ),
-				esc_attr( get_the_date( 'c' ) ),
-				esc_html( get_the_date() )
-			);
-		?>
-		</span>
+		if( true == $postmeta ) : ?>
 		
-	<?php
+			<span class="meta-date">
+			<?php printf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>',
+					esc_url( get_permalink() ),
+					esc_attr( get_the_time() ),
+					esc_attr( get_the_date( 'c' ) ),
+					esc_html( get_the_date() )
+				);
+			?>
+			</span>	
+		
+		<?php endif;
+		
 	}
 	
 	// Link Widget Title to Category
@@ -320,6 +335,7 @@ class Anderson_Category_Posts_Columns_Widget extends WP_Widget {
 		$instance['number'] = (int)$new_instance['number'];
 		$instance['highlight_post'] = !empty($new_instance['highlight_post']);
 		$instance['category_link'] = !empty($new_instance['category_link']);
+		$instance['postmeta'] = !empty($new_instance['postmeta']);
 		
 		$this->delete_widget_cache();
 		
@@ -392,6 +408,13 @@ class Anderson_Category_Posts_Columns_Widget extends WP_Widget {
 			<label for="<?php echo $this->get_field_id('category_link'); ?>">
 				<input class="checkbox" type="checkbox" <?php checked( $category_link ) ; ?> id="<?php echo $this->get_field_id('category_link'); ?>" name="<?php echo $this->get_field_name('category_link'); ?>" />
 				<?php _e('Link Category Titles to Category Archive pages', 'anderson-lite'); ?>
+			</label>
+		</p>
+		
+		<p>
+			<label for="<?php echo $this->get_field_id('postmeta'); ?>">
+				<input class="checkbox" type="checkbox" <?php checked( $postmeta ) ; ?> id="<?php echo $this->get_field_id('postmeta'); ?>" name="<?php echo $this->get_field_name('postmeta'); ?>" />
+				<?php _e('Display post date and author', 'anderson-lite'); ?>
 			</label>
 		</p>
 		
