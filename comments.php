@@ -10,7 +10,7 @@ if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['
 	die ('Please do not load this page directly. Thanks!');
 
 if ( post_password_required()) : ?>
-	<p><?php _e('Enter password to view comments.', 'anderson-lite'); ?></p>
+	<p><?php esc_html_e( 'Enter password to view comments.', 'anderson-lite' ); ?></p>
 <?php return; endif; ?>
 
 
@@ -20,7 +20,7 @@ if ( post_password_required()) : ?>
 	
 		<?php if ( have_comments() ) : ?>
 
-			<h3 class="comments-title"><span><?php comments_number( '', __('One comment','anderson-lite'), __('% comments','anderson-lite') );?></span></h3>
+			<h3 class="comments-title"><span><?php comments_number( '', esc_html__( 'One comment', 'anderson-lite' ), esc_html__( '% comments', 'anderson-lite' ) );?></span></h3>
 
 			<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 			<div class="comment-pagination clearfix">

@@ -11,7 +11,7 @@ function anderson_customize_register_general_settings( $wp_customize ) {
 
 	// Add Section for Theme Options
 	$wp_customize->add_section( 'anderson_section_general', array(
-        'title'    => __( 'General Settings', 'anderson-lite' ),
+        'title'    => esc_html__( 'General Settings', 'anderson-lite' ),
         'priority' => 10,
 		'panel' => 'anderson_panel_options' 
 		)
@@ -26,14 +26,14 @@ function anderson_customize_register_general_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'anderson_control_layout', array(
-        'label'    => __( 'Theme Layout', 'anderson-lite' ),
+        'label'    => esc_html__( 'Theme Layout', 'anderson-lite' ),
         'section'  => 'anderson_section_general',
         'settings' => 'anderson_theme_options[layout]',
         'type'     => 'radio',
 		'priority' => 1,
         'choices'  => array(
-            'left-sidebar' => __( 'Left Sidebar', 'anderson-lite' ),
-            'right-sidebar' => __( 'Right Sidebar', 'anderson-lite' )
+            'left-sidebar' => esc_html__( 'Left Sidebar', 'anderson-lite' ),
+            'right-sidebar' => esc_html__( 'Right Sidebar', 'anderson-lite' )
 			)
 		)
 	);
@@ -48,7 +48,7 @@ function anderson_customize_register_general_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Anderson_Customize_Header_Control(
         $wp_customize, 'anderson_control_grayscale_filter_headline', array(
-            'label' => __( 'Image Grayscale', 'anderson-lite' ),
+            'label' => esc_html__( 'Image Grayscale', 'anderson-lite' ),
             'section' => 'anderson_section_general',
             'settings' => 'anderson_theme_options[grayscale_filter_headline]',
             'priority' => 2
@@ -63,7 +63,7 @@ function anderson_customize_register_general_settings( $wp_customize ) {
         )
     );
     $wp_customize->add_control( 'anderson_control_image_grayscale', array(
-        'label'    => __( 'Enable grayscale filter for featured images', 'anderson-lite' ),
+        'label'    => esc_html__( 'Enable grayscale filter for featured images', 'anderson-lite' ),
         'section'  => 'anderson_section_general',
         'settings' => 'anderson_theme_options[grayscale_filter]',
         'type'     => 'checkbox',
@@ -81,7 +81,7 @@ function anderson_customize_register_general_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Anderson_Customize_Header_Control(
         $wp_customize, 'anderson_control_default_fonts', array(
-            'label' => __( 'Default Fonts', 'anderson-lite' ),
+            'label' => esc_html__( 'Default Fonts', 'anderson-lite' ),
             'section' => 'anderson_section_general',
             'settings' => 'anderson_theme_options[default_fonts]',
             'priority' => 4
@@ -98,7 +98,7 @@ function anderson_customize_register_general_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'anderson_control_deactivate_google_fonts', array(
-        'label'    => __( 'Deactivate Google Fonts in case your language is not compatible.', 'anderson-lite' ),
+        'label'    => esc_html__( 'Deactivate Google Fonts in case your language is not compatible.', 'anderson-lite' ),
         'section'  => 'anderson_section_general',
         'settings' => 'anderson_theme_options[deactivate_google_fonts]',
         'type'     => 'checkbox',

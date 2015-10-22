@@ -365,27 +365,27 @@ class Anderson_Featured_Content {
 
 		// Add Featured Content controls.
 		$wp_customize->add_control( 'featured-content[tag-name]', array(
-			'label'          => __( 'Tag name', 'anderson-lite' ),
+			'label'          => esc_html__( 'Tag name', 'anderson-lite' ),
 			'section'        => 'anderson_section_slider',
 			'priority'       => 6,
 			'active_callback' => 'anderson_slider_activated_callback'
 		) );
 		$wp_customize->add_control( 'featured-content[hide-tag]', array(
-			'label'          => __( 'Hide tag from displaying in post meta and tag clouds.', 'anderson-lite' ),
+			'label'          => esc_html__( 'Hide tag from displaying in post meta and tag clouds.', 'anderson-lite' ),
 			'section'        => 'anderson_section_slider',
 			'type'           => 'checkbox',
 			'priority'       => 7,
 			'active_callback' => 'anderson_slider_activated_callback'
 		) );
 		$wp_customize->add_control( 'featured-content[show-all]', array(
-			'label'          => __( 'Display featured posts in latest blog post listing.', 'anderson-lite' ),
+			'label'          => esc_html__( 'Display featured posts in latest blog post listing.', 'anderson-lite' ),
 			'section'        => 'anderson_section_slider',
 			'type'           => 'checkbox',
 			'priority'       => 8,
 			'active_callback' => 'anderson_slider_activated_callback'
 		) );
 		$wp_customize->add_control( 'featured-content[max-posts]', array(
-			'label'          => __( 'Number of Posts', 'anderson-lite' ),
+			'label'          => esc_html__( 'Number of Posts', 'anderson-lite' ),
 			'section'        => 'anderson_section_slider',
 			'type'           => 'text',
 			'priority'       => 10,

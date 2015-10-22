@@ -8,9 +8,9 @@ class Anderson_Category_Posts_Columns_Widget extends WP_Widget {
 		// Setup Widget
 		$widget_ops = array(
 			'classname' => 'anderson_category_posts_columns', 
-			'description' => __('Displays your posts from two selected categories. Please use this widget ONLY in the Magazine Homepage widget area.', 'anderson-lite')
+			'description' => esc_html__( 'Displays your posts from two selected categories. Please use this widget ONLY in the Magazine Homepage widget area.', 'anderson-lite' )
 		);
-		parent::__construct('anderson_category_posts_columns', sprintf( __('Category Posts: 2 Columns (%s)', 'anderson-lite'), 'Anderson' ), $widget_ops);
+		parent::__construct('anderson_category_posts_columns', sprintf( esc_html__( 'Category Posts: 2 Columns (%s)', 'anderson-lite' ), 'Anderson' ), $widget_ops);
 		
 		// Delete Widget Cache on certain actions
 		add_action( 'save_post', array( $this, 'delete_widget_cache' ) );
@@ -168,7 +168,7 @@ class Anderson_Category_Posts_Columns_Widget extends WP_Widget {
 							
 							<div class="entry">
 								<?php the_excerpt(); ?>
-								<a href="<?php esc_url(the_permalink()) ?>" class="more-link"><?php _e('&raquo; Read more', 'anderson-lite'); ?></a>
+								<a href="<?php esc_url(the_permalink()) ?>" class="more-link"><?php esc_html_e( '&raquo; Read more', 'anderson-lite' ); ?></a>
 							</div>
 						
 						</div>
@@ -237,7 +237,7 @@ class Anderson_Category_Posts_Columns_Widget extends WP_Widget {
 			<span class="meta-author">
 			<?php printf( '<a class="fn" href="%1$s" title="%2$s" rel="author">%3$s</a>', 
 					esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-					esc_attr( sprintf( __( 'View all posts by %s', 'anderson-lite' ), get_the_author() ) ),
+					esc_attr( sprintf( esc_html__( 'View all posts by %s', 'anderson-lite' ), get_the_author() ) ),
 					get_the_author()
 				);
 			?>
@@ -293,7 +293,7 @@ class Anderson_Category_Posts_Columns_Widget extends WP_Widget {
 				// Check if "All Categories" is selected
 				if( $category_id == 0 ) :
 				
-					$link_title = __('View all posts', 'anderson-lite');
+					$link_title = esc_html__( 'View all posts', 'anderson-lite' );
 					
 					// Set Link URL to always point to latest posts page
 					if ( get_option( 'show_on_front' ) == 'page' ) :
@@ -305,7 +305,7 @@ class Anderson_Category_Posts_Columns_Widget extends WP_Widget {
 				else :
 					
 					// Set Link URL and Title for Category
-					$link_title = sprintf( __('View all posts from category %s', 'anderson-lite'), get_cat_name( $category_id ) );
+					$link_title = sprintf( esc_html__( 'View all posts from category %s', 'anderson-lite' ), get_cat_name( $category_id ) );
 					$link_url = esc_url( get_category_link( $category_id ) );
 					
 				endif;
@@ -350,16 +350,16 @@ class Anderson_Category_Posts_Columns_Widget extends WP_Widget {
 
 ?>
 		<p>
-			<label for="<?php echo $this->get_field_id('category_one_title'); ?>"><?php _e('Left Category Title:', 'anderson-lite'); ?>
+			<label for="<?php echo $this->get_field_id('category_one_title'); ?>"><?php esc_html_e( 'Left Category Title:', 'anderson-lite' ); ?>
 				<input class="widefat" id="<?php echo $this->get_field_id('category_one_title'); ?>" name="<?php echo $this->get_field_name('category_one_title'); ?>" type="text" value="<?php echo $category_one_title; ?>" />
 			</label>
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id('category_one'); ?>"><?php _e('Left Category:', 'anderson-lite'); ?></label><br/>
+			<label for="<?php echo $this->get_field_id('category_one'); ?>"><?php esc_html_e( 'Left Category:', 'anderson-lite' ); ?></label><br/>
 			<?php // Display Category One Select
 				$args = array(
-					'show_option_all'    => __('All Categories', 'anderson-lite'),
+					'show_option_all'    => esc_html__( 'All Categories', 'anderson-lite' ),
 					'show_count' 		 => true,
 					'hide_empty'		 => false,
 					'selected'           => $category_one,
@@ -371,16 +371,16 @@ class Anderson_Category_Posts_Columns_Widget extends WP_Widget {
 		</p>
 		
 		<p>
-			<label for="<?php echo $this->get_field_id('category_two_title'); ?>"><?php _e('Right Category Title:', 'anderson-lite'); ?>
+			<label for="<?php echo $this->get_field_id('category_two_title'); ?>"><?php esc_html_e( 'Right Category Title:', 'anderson-lite' ); ?>
 				<input class="widefat" id="<?php echo $this->get_field_id('category_two_title'); ?>" name="<?php echo $this->get_field_name('category_two_title'); ?>" type="text" value="<?php echo $category_two_title; ?>" />
 			</label>
 		</p>
 		
 		<p>
-			<label for="<?php echo $this->get_field_id('category_two'); ?>"><?php _e('Right Category:', 'anderson-lite'); ?></label><br/>
+			<label for="<?php echo $this->get_field_id('category_two'); ?>"><?php esc_html_e( 'Right Category:', 'anderson-lite' ); ?></label><br/>
 			<?php // Display Category One Select
 				$args = array(
-					'show_option_all'    => __('All Categories', 'anderson-lite'),
+					'show_option_all'    => esc_html__( 'All Categories', 'anderson-lite' ),
 					'show_count' 		 => true,
 					'hide_empty'		 => false,
 					'selected'           => $category_two,
@@ -392,7 +392,7 @@ class Anderson_Category_Posts_Columns_Widget extends WP_Widget {
 		</p>
 		
 		<p>
-			<label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of posts:', 'anderson-lite'); ?>
+			<label for="<?php echo $this->get_field_id('number'); ?>"><?php esc_html_e( 'Number of posts:', 'anderson-lite' ); ?>
 				<input id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo (int)$number; ?>" size="3" />
 			</label>
 		</p>
@@ -400,21 +400,21 @@ class Anderson_Category_Posts_Columns_Widget extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_id('highlight_post'); ?>">
 				<input class="checkbox" type="checkbox" <?php checked( $highlight_post ) ; ?> id="<?php echo $this->get_field_id('highlight_post'); ?>" name="<?php echo $this->get_field_name('highlight_post'); ?>" />
-				<?php _e( 'Highlight first post (big image + excerpt)', 'anderson-lite' ); ?>
+				<?php esc_html_e( 'Highlight first post (big image + excerpt)', 'anderson-lite' ); ?>
 			</label>
 		</p>
 		
 		<p>
 			<label for="<?php echo $this->get_field_id('category_link'); ?>">
 				<input class="checkbox" type="checkbox" <?php checked( $category_link ) ; ?> id="<?php echo $this->get_field_id('category_link'); ?>" name="<?php echo $this->get_field_name('category_link'); ?>" />
-				<?php _e('Link Category Titles to Category Archive pages', 'anderson-lite'); ?>
+				<?php esc_html_e( 'Link Category Titles to Category Archive pages', 'anderson-lite' ); ?>
 			</label>
 		</p>
 		
 		<p>
 			<label for="<?php echo $this->get_field_id('postmeta'); ?>">
 				<input class="checkbox" type="checkbox" <?php checked( $postmeta ) ; ?> id="<?php echo $this->get_field_id('postmeta'); ?>" name="<?php echo $this->get_field_name('postmeta'); ?>" />
-				<?php _e('Display post date and author', 'anderson-lite'); ?>
+				<?php esc_html_e( 'Display post date and author', 'anderson-lite' ); ?>
 			</label>
 		</p>
 		

@@ -110,12 +110,12 @@ function anderson_setup() {
 		'flex-height' => true));
 
 	// Register Navigation Menus
-	register_nav_menu( 'primary', __('Main Navigation', 'anderson-lite') );
-	register_nav_menu( 'secondary', __('Top Navigation', 'anderson-lite') );
-	register_nav_menu( 'footer', __('Footer Navigation', 'anderson-lite') );
+	register_nav_menu( 'primary', esc_html__( 'Main Navigation', 'anderson-lite' ) );
+	register_nav_menu( 'secondary', esc_html__( 'Top Navigation', 'anderson-lite' ) );
+	register_nav_menu( 'footer', esc_html__( 'Footer Navigation', 'anderson-lite' ) );
 	
 	// Register Social Icons Menu
-	register_nav_menu( 'social', __('Social Icons', 'anderson-lite') );
+	register_nav_menu( 'social', esc_html__( 'Social Icons', 'anderson-lite' ) );
 
 }
 
@@ -145,9 +145,9 @@ function anderson_register_sidebars() {
 
 	// Register Sidebar
 	register_sidebar( array(
-		'name' => __( 'Sidebar', 'anderson-lite' ),
+		'name' => esc_html__( 'Sidebar', 'anderson-lite' ),
 		'id' => 'sidebar',
-		'description' => __( 'Appears on posts and pages except Magazine Homepage and Fullwidth template.', 'anderson-lite' ),
+		'description' => esc_html__( 'Appears on posts and pages except Magazine Homepage and Fullwidth template.', 'anderson-lite' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widgettitle"><span>',
@@ -156,9 +156,9 @@ function anderson_register_sidebars() {
 	
 	// Register Magazine Homepage Widgets
 	register_sidebar( array(
-		'name' => __( 'Magazine Homepage', 'anderson-lite' ),
+		'name' => esc_html__( 'Magazine Homepage', 'anderson-lite' ),
 		'id' => 'magazine-homepage',
-		'description' => __( 'Appears on Magazine Homepage template only. You can use the Category Posts widgets here.', 'anderson-lite' ),
+		'description' => esc_html__( 'Appears on Magazine Homepage template only. You can use the Category Posts widgets here.', 'anderson-lite' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s clearfix">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widgettitle"><span>',

@@ -45,8 +45,8 @@ function anderson_custom_navigation_params() {
 	$params = array();
 	
 	// Set Menu Titles
-	$params['mainnav_title'] = __('Menu', 'anderson-lite');
-	$params['topnav_title'] = __('Menu', 'anderson-lite');
+	$params['mainnav_title'] = esc_html__( 'Menu', 'anderson-lite' );
+	$params['topnav_title'] = esc_html__( 'Menu', 'anderson-lite' );
 	
 	// Passing Parameters to Javascript
 	wp_localize_script( 'anderson-lite-navigation', 'anderson_navigation_params', $params );

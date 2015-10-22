@@ -11,7 +11,7 @@ function anderson_customize_register_post_settings( $wp_customize ) {
 
 	// Add Section for Theme Fonts
 	$wp_customize->add_section( 'anderson_section_post', array(
-        'title'    => __( 'Post Settings', 'anderson-lite' ),
+        'title'    => esc_html__( 'Post Settings', 'anderson-lite' ),
         'priority' => 30,
 		'panel' => 'anderson_panel_options'
 		)
@@ -26,14 +26,14 @@ function anderson_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'anderson_control_posts_length', array(
-        'label'    => __( 'Post length on archives', 'anderson-lite' ),
+        'label'    => esc_html__( 'Post length on archives', 'anderson-lite' ),
         'section'  => 'anderson_section_post',
         'settings' => 'anderson_theme_options[posts_length]',
         'type'     => 'radio',
 		'priority' => 1,
         'choices'  => array(
-            'index' => __( 'Show full posts', 'anderson-lite' ),
-            'excerpt' => __( 'Show post excerpts', 'anderson-lite' )
+            'index' => esc_html__( 'Show full posts', 'anderson-lite' ),
+            'excerpt' => esc_html__( 'Show post excerpts', 'anderson-lite' )
 			)
 		)
 	);
@@ -48,7 +48,7 @@ function anderson_customize_register_post_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Anderson_Customize_Header_Control(
         $wp_customize, 'anderson_control_post_images', array(
-            'label' => __( 'Post Images', 'anderson-lite' ),
+            'label' => esc_html__( 'Post Images', 'anderson-lite' ),
             'section' => 'anderson_section_post',
             'settings' => 'anderson_theme_options[post_images]',
             'priority' => 	2
@@ -63,7 +63,7 @@ function anderson_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'anderson_control_posts_thumbnails_index', array(
-        'label'    => __( 'Display featured images on archive pages', 'anderson-lite' ),
+        'label'    => esc_html__( 'Display featured images on archive pages', 'anderson-lite' ),
         'section'  => 'anderson_section_post',
         'settings' => 'anderson_theme_options[post_thumbnails_index]',
         'type'     => 'checkbox',
@@ -79,7 +79,7 @@ function anderson_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'anderson_control_posts_thumbnails_single', array(
-        'label'    => __( 'Display featured images on single posts', 'anderson-lite' ),
+        'label'    => esc_html__( 'Display featured images on single posts', 'anderson-lite' ),
         'section'  => 'anderson_section_post',
         'settings' => 'anderson_theme_options[post_thumbnails_single]',
         'type'     => 'checkbox',
@@ -97,7 +97,7 @@ function anderson_customize_register_post_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Anderson_Customize_Header_Control(
         $wp_customize, 'anderson_control_excerpt_text_headline', array(
-            'label' => __( 'Text after Excerpts', 'anderson-lite' ),
+            'label' => esc_html__( 'Text after Excerpts', 'anderson-lite' ),
             'section' => 'anderson_section_post',
             'settings' => 'anderson_theme_options[excerpt_text_headline]',
             'priority' => 5
@@ -112,7 +112,7 @@ function anderson_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'anderson_control_excerpt_text', array(
-        'label'    => __( 'Display [...] after excerpts', 'anderson-lite' ),
+        'label'    => esc_html__( 'Display [...] after excerpts', 'anderson-lite' ),
         'section'  => 'anderson_section_post',
         'settings' => 'anderson_theme_options[excerpt_text]',
         'type'     => 'checkbox',
@@ -131,7 +131,7 @@ function anderson_customize_register_post_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Anderson_Customize_Header_Control(
         $wp_customize, 'anderson_control_postmeta_headline', array(
-            'label' => __( 'Post Meta', 'anderson-lite' ),
+            'label' => esc_html__( 'Post Meta', 'anderson-lite' ),
             'section' => 'anderson_section_post',
             'settings' => 'anderson_theme_options[postmeta_headline]',
             'priority' => 7
@@ -146,7 +146,7 @@ function anderson_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'anderson_control_meta_date', array(
-        'label'    => __( 'Display post date', 'anderson-lite' ),
+        'label'    => esc_html__( 'Display post date', 'anderson-lite' ),
         'section'  => 'anderson_section_post',
         'settings' => 'anderson_theme_options[meta_date]',
         'type'     => 'checkbox',
@@ -161,7 +161,7 @@ function anderson_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'anderson_control_meta_author', array(
-        'label'    => __( 'Display post author', 'anderson-lite' ),
+        'label'    => esc_html__( 'Display post author', 'anderson-lite' ),
         'section'  => 'anderson_section_post',
         'settings' => 'anderson_theme_options[meta_author]',
         'type'     => 'checkbox',
@@ -176,7 +176,7 @@ function anderson_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'anderson_control_meta_tags', array(
-        'label'    => __( 'Display post tags', 'anderson-lite' ),
+        'label'    => esc_html__( 'Display post tags', 'anderson-lite' ),
         'section'  => 'anderson_section_post',
         'settings' => 'anderson_theme_options[meta_tags]',
         'type'     => 'checkbox',

@@ -25,7 +25,7 @@ function anderson_customize_register_options( $wp_customize ) {
 		'priority'       => 180,
 		'capability'     => 'edit_theme_options',
 		'theme_supports' => '',
-		'title'          => __( 'Theme Options', 'anderson-lite' ),
+		'title'          => esc_html__( 'Theme Options', 'anderson-lite' ),
 		'description'    => '',
 	) );
 	
@@ -35,7 +35,7 @@ function anderson_customize_register_options( $wp_customize ) {
 	
 	// Change default background section
 	$wp_customize->get_control( 'background_color'  )->section   = 'background_image';
-	$wp_customize->get_section( 'background_image'  )->title     = __( 'Background', 'anderson-lite' );
+	$wp_customize->get_section( 'background_image'  )->title     = esc_html__( 'Background', 'anderson-lite' );
 	
 	// Add Header Tagline option
 	$wp_customize->add_setting( 'anderson_theme_options[header_tagline]', array(
@@ -46,7 +46,7 @@ function anderson_customize_register_options( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'anderson_control_header_tagline', array(
-        'label'    => __( 'Display Tagline below site title.', 'anderson-lite' ),
+        'label'    => esc_html__( 'Display Tagline below site title.', 'anderson-lite' ),
         'section'  => 'title_tagline',
         'settings' => 'anderson_theme_options[header_tagline]',
         'type'     => 'checkbox',

@@ -11,7 +11,7 @@ function anderson_customize_register_slider_settings( $wp_customize ) {
 
 	// Add Sections for Slider Settings
 	$wp_customize->add_section( 'anderson_section_slider', array(
-        'title'    => __( 'Post Slider', 'anderson-lite' ),
+        'title'    => esc_html__( 'Post Slider', 'anderson-lite' ),
         'priority' => 50,
 		'panel' => 'anderson_panel_options' 
 		)
@@ -27,7 +27,7 @@ function anderson_customize_register_slider_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Anderson_Customize_Header_Control(
         $wp_customize, 'anderson_control_slider_active_header', array(
-            'label' => __( 'Activate Post Slider', 'anderson-lite' ),
+            'label' => esc_html__( 'Activate Post Slider', 'anderson-lite' ),
             'section' => 'anderson_section_slider',
             'settings' => 'anderson_theme_options[slider_active_header]',
             'priority' => 	1
@@ -43,7 +43,7 @@ function anderson_customize_register_slider_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'anderson_control_slider_active_magazine', array(
-        'label'    => __( 'Show Slider on Magazine Homepage', 'anderson-lite' ),
+        'label'    => esc_html__( 'Show Slider on Magazine Homepage', 'anderson-lite' ),
         'section'  => 'anderson_section_slider',
         'settings' => 'anderson_theme_options[slider_active_magazine]',
         'type'     => 'checkbox',
@@ -59,7 +59,7 @@ function anderson_customize_register_slider_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'anderson_control_slider_active', array(
-        'label'    => __( 'Show Slider on posts page', 'anderson-lite' ),
+        'label'    => esc_html__( 'Show Slider on posts page', 'anderson-lite' ),
         'section'  => 'anderson_section_slider',
         'settings' => 'anderson_theme_options[slider_active]',
         'type'     => 'checkbox',
@@ -77,7 +77,7 @@ function anderson_customize_register_slider_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Anderson_Customize_Header_Control(
         $wp_customize, 'anderson_control_featured_posts_header', array(
-            'label' => __( 'Select Featured Posts', 'anderson-lite' ),
+            'label' => esc_html__( 'Select Featured Posts', 'anderson-lite' ),
             'section' => 'anderson_section_slider',
             'settings' => 'anderson_theme_options[featured_posts_header]',
             'priority' => 4,
@@ -94,7 +94,7 @@ function anderson_customize_register_slider_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Anderson_Customize_Description_Control(
         $wp_customize, 'anderson_control_featured_posts_description', array(
-			'label'    => __( 'The slideshow displays all your featured posts. You can easily feature posts by a tag of your choice.', 'anderson-lite' ),
+			'label'    => esc_html__( 'The slideshow displays all your featured posts. You can easily feature posts by a tag of your choice.', 'anderson-lite' ),
             'section' => 'anderson_section_slider',
             'settings' => 'anderson_theme_options[featured_posts_description]',
             'priority' => 5,
@@ -111,15 +111,15 @@ function anderson_customize_register_slider_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'anderson_control_slider_animation', array(
-        'label'    => __( 'Slider Animation', 'anderson-lite' ),
+        'label'    => esc_html__( 'Slider Animation', 'anderson-lite' ),
         'section'  => 'anderson_section_slider',
         'settings' => 'anderson_theme_options[slider_animation]',
         'type'     => 'radio',
 		'priority' => 9,
 		'active_callback' => 'anderson_slider_activated_callback',
         'choices'  => array(
-            'horizontal' => __( 'Slide Effect', 'anderson-lite' ),
-            'fade' => __( 'Fade Effect', 'anderson-lite' )
+            'horizontal' => esc_html__( 'Slide Effect', 'anderson-lite' ),
+            'fade' => esc_html__( 'Fade Effect', 'anderson-lite' )
 			)
 		)
 	);

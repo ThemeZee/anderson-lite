@@ -79,35 +79,61 @@ if ( ! function_exists( 'anderson_display_postmeta' ) ):
 		$theme_options = anderson_theme_options();
 
 		// Display Date unless user has deactivated it via settings
-		if ( isset($theme_options['meta_date']) and $theme_options['meta_date'] == true ) : ?>
+		if ( true == $theme_options['meta_date'] ) :
 		
-			<span class="meta-date">
-			<?php printf(__('Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>', 'anderson-lite'), 
-					esc_url( get_permalink() ),
-					esc_attr( get_the_time() ),
-					esc_attr( get_the_date( 'c' ) ),
-					esc_html( get_the_date() )
-				);
-			?>
-			</span>
+			anderson_meta_date();
 			
-		<?php endif; 
+		endif; 
 		
 		// Display Author unless user has deactivated it via settings
-		if ( isset($theme_options['meta_author']) and $theme_options['meta_author'] == true ) : ?>
-
-			<span class="meta-author">
-			<?php printf(__('by <span class="author vcard"><a class="fn" href="%1$s" title="%2$s" rel="author">%3$s</a></span>', 'anderson-lite'), 
-					esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-					esc_attr( sprintf( __( 'View all posts by %s', 'anderson-lite' ), get_the_author() ) ),
-					get_the_author()
-				);
-			?>
-			</span>
-	<?php
+		if ( true == $theme_options['meta_author'] ) :
+		
+			anderson_meta_author();
+			
 		endif;
 		
 	}
+	
+endif;
+
+
+// Display Post Date
+if ( ! function_exists( 'anderson_meta_date' ) ):
+
+	function anderson_meta_date() {	
+			
+		$time_string = sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>',
+			esc_url( get_permalink() ),
+			esc_attr( get_the_time() ),
+			esc_attr( get_the_date( 'c' ) ),
+			esc_html( get_the_date() )
+		);
+
+		$posted_on = sprintf( esc_html_x( 'Posted on %s', 'post date', 'anderson-lite' ), $time_string );
+		
+		echo '<span class="meta-date">' . $posted_on . '</span>';
+		
+	}
+	
+endif;
+
+
+// Display Post Author
+if ( ! function_exists( 'anderson_meta_author' ) ):
+
+	function anderson_meta_author() {  
+	
+		$author_string = sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>', 
+			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+			esc_attr( sprintf( esc_html__( 'View all posts by %s', 'anderson-lite' ), get_the_author() ) ),
+			esc_html( get_the_author() )
+		);
+		
+		$byline = sprintf( esc_html_x( 'by %s', 'post author', 'anderson-lite' ), $author_string );
+		
+		echo '<span class="meta-author"> ' . $byline . '</span>';
+
+}
 	
 endif;
 
@@ -239,7 +265,7 @@ add_action( 'anderson_footer_text', 'anderson_display_footer_text' );
 function anderson_display_footer_text() { ?>
 
 	<span class="credit-link">
-		<?php printf( __( 'Powered by %1$s and %2$s.', 'anderson-lite' ), 
+		<?php printf( esc_html__( 'Powered by %1$s and %2$s.', 'anderson-lite' ), 
 			'<a href="http://wordpress.org" title="WordPress">WordPress</a>',
 			'<a href="http://themezee.com/themes/anderson/" title="Anderson WordPress Theme">Anderson</a>'
 		); ?>
@@ -273,7 +299,7 @@ function anderson_display_social_icons() {
 	else: // Display Hint how to configure Social Icons ?>
 
 		<p class="social-icons-hint">
-			<?php _e('Please go to Appearance &#8594; Menus and create a new custom menu with custom links to all your social networks. Then click on "Manage Locations" tab and assign your created menu to the "Social Icons" location.', 'anderson-lite'); ?>
+			<?php esc_html_e( 'Please go to Appearance &#8594; Menus and create a new custom menu with custom links to all your social networks. Then click on "Manage Locations" tab and assign your created menu to the "Social Icons" location.', 'anderson-lite' ); ?>
 		</p>
 <?php
 	endif;
@@ -290,8 +316,8 @@ function anderson_list_comments($comment, $args, $depth) {
 	if( $comment->comment_type == 'pingback' or $comment->comment_type == 'trackback' ) : ?>
 
 		<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-			<p><?php _e( 'Pingback:', 'anderson-lite' ); ?> <?php comment_author_link(); ?>
-			<?php edit_comment_link( __( '(Edit)', 'anderson-lite' ), '<span class="edit-link">', '</span>' ); ?>
+			<p><?php esc_html_e( 'Pingback:', 'anderson-lite' ); ?> <?php comment_author_link(); ?>
+			<?php edit_comment_link( esc_html__( '(Edit)', 'anderson-lite' ), '<span class="edit-link">', '</span>' ); ?>
 			</p>
 
 	<?php else : ?>
@@ -306,12 +332,12 @@ function anderson_list_comments($comment, $args, $depth) {
 				</div>
 
 		<?php if ($comment->comment_approved == '0') : ?>
-				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'anderson-lite' ); ?></p>
+				<p class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'anderson-lite' ); ?></p>
 		<?php endif; ?>
 
 				<div class="comment-meta commentmetadata">
-					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><?php printf(__('%1$s at %2$s', 'anderson-lite'), get_comment_date(),  get_comment_time()) ?></a>
-					<?php edit_comment_link(__('(Edit)', 'anderson-lite'),'  ','') ?>
+					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><?php printf( esc_html__( '%1$s at %2$s', 'anderson-lite' ), get_comment_date(),  get_comment_time()) ?></a>
+					<?php edit_comment_link( esc_html__( '(Edit)', 'anderson-lite' ),'  ','') ?>
 				</div>
 
 				<div class="comment-content"><?php comment_text(); ?></div>

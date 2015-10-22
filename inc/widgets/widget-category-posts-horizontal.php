@@ -8,9 +8,9 @@ class Anderson_Category_Posts_Horizontal_Widget extends WP_Widget {
 		// Setup Widget
 		$widget_ops = array(
 			'classname' => 'anderson_category_posts_horizontal', 
-			'description' => __('Displays your posts from a selected category in a horizontal arrangement. Please use this widget ONLY in the Magazine Homepage widget area.', 'anderson-lite')
+			'description' => esc_html__( 'Displays your posts from a selected category in a horizontal arrangement. Please use this widget ONLY in the Magazine Homepage widget area.', 'anderson-lite' )
 		);
-		parent::__construct('anderson_category_posts_horizontal', sprintf( __('Category Posts: Horizontal (%s)', 'anderson-lite'), 'Anderson' ), $widget_ops);
+		parent::__construct('anderson_category_posts_horizontal', sprintf( esc_html__( 'Category Posts: Horizontal (%s)', 'anderson-lite' ), 'Anderson' ), $widget_ops);
 		
 		// Delete Widget Cache on certain actions
 		add_action( 'save_post', array( $this, 'delete_widget_cache' ) );
@@ -170,7 +170,7 @@ class Anderson_Category_Posts_Horizontal_Widget extends WP_Widget {
 				// Check if "All Categories" is selected
 				if( $category == 0 ) :
 				
-					$link_title = __('View all posts', 'anderson-lite');
+					$link_title = esc_html__( 'View all posts', 'anderson-lite' );
 					
 					// Set Link URL to always point to latest posts page
 					if ( get_option( 'show_on_front' ) == 'page' ) :
@@ -182,7 +182,7 @@ class Anderson_Category_Posts_Horizontal_Widget extends WP_Widget {
 				else :
 					
 					// Set Link URL and Title for Category
-					$link_title = sprintf( __('View all posts from category %s', 'anderson-lite'), get_cat_name( $category ) );
+					$link_title = sprintf( esc_html__( 'View all posts from category %s', 'anderson-lite' ), get_cat_name( $category ) );
 					$link_url = esc_url( get_category_link( $category ) );
 					
 				endif;
@@ -238,16 +238,16 @@ class Anderson_Category_Posts_Horizontal_Widget extends WP_Widget {
 
 ?>
 		<p>
-			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'anderson-lite'); ?>
+			<label for="<?php echo $this->get_field_id('title'); ?>"><?php esc_html_e( 'Title:', 'anderson-lite' ); ?>
 				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 			</label>
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id('category'); ?>"><?php _e('Category:', 'anderson-lite'); ?></label><br/>
+			<label for="<?php echo $this->get_field_id('category'); ?>"><?php esc_html_e( 'Category:', 'anderson-lite' ); ?></label><br/>
 			<?php // Display Category Select
 				$args = array(
-					'show_option_all'    => __('All Categories', 'anderson-lite'),
+					'show_option_all'    => esc_html__( 'All Categories', 'anderson-lite' ),
 					'show_count' 		 => true,
 					'hide_empty'		 => false,
 					'selected'           => $category,
@@ -261,7 +261,7 @@ class Anderson_Category_Posts_Horizontal_Widget extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_id('category_link'); ?>">
 				<input class="checkbox" type="checkbox" <?php checked( $category_link ) ; ?> id="<?php echo $this->get_field_id('category_link'); ?>" name="<?php echo $this->get_field_name('category_link'); ?>" />
-				<?php _e('Link Widget Title to Category Archive page', 'anderson-lite'); ?>
+				<?php esc_html_e( 'Link Widget Title to Category Archive page', 'anderson-lite' ); ?>
 			</label>
 		</p>
 

@@ -10,7 +10,7 @@
 			<div class="postmeta"><?php anderson_display_postmeta(); ?></div>
 			
 			<div class="entry clearfix">
-				<?php the_content(__('&raquo; Read more', 'anderson-lite')); ?>
+				<?php the_content( esc_html__( '&raquo; Read more', 'anderson-lite' ) ); ?>
 			</div>
 						
 		</div>
