@@ -13,7 +13,7 @@ Template Name: Magazine Homepage
 			$theme_options = anderson_theme_options();
 			
 			// Display Featured Post Slideshow if activated
-			if ( isset($theme_options['slider_active']) and $theme_options['slider_active'] == true ) :
+			if ( isset($theme_options['slider_active_magazine']) and $theme_options['slider_active_magazine'] == true ) :
 
 				get_template_part( 'featured-content-slider' );
 

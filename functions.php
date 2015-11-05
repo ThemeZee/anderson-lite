@@ -20,8 +20,7 @@ function anderson_enqueue_scripts() {
 	$theme_options = anderson_theme_options();
 	
 	// Register and Enqueue FlexSlider JS and CSS if necessary
-	if ( ( isset($theme_options['slider_active']) and $theme_options['slider_active'] == true )
-		|| ( isset($theme_options['slider_active_magazine']) and $theme_options['slider_active_magazine'] == true ) ) :
+	if ( true == $theme_options['slider_active'] or true == $theme_options['slider_active_magazine'] or is_page_template('template-slider.php') ) :
 
 		// FlexSlider CSS
 		wp_enqueue_style('anderson-lite-flexslider', get_template_directory_uri() . '/css/flexslider.css');

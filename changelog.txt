@@ -4,6 +4,7 @@ Anderson Lite Changelog
 
 Version 1.2.9
 -----------------------------------
+[added] Post Slider page template
 [changed] all h2 post and page titles to h1 for better SEO
 
 Version 1.2.8
