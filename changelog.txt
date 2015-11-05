@@ -2,6 +2,10 @@
 Anderson Lite Changelog
 ===================================
 
+Version 1.2.9
+-----------------------------------
+[changed] all h2 post and page titles to h1 for better SEO
+
 Version 1.2.8
 -----------------------------------
 [added] escaping for translation strings for improved security

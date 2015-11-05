@@ -2,7 +2,7 @@
 Theme Name: Anderson Lite
 Theme URI: http://themezee.com/themes/anderson/
 Description: A clean and elegant magazine theme suitable for any kind of content related website. The theme comes with a fully responsive layout and a sleek featured post slideshow. The user-friendly and flexible theme options supporting the powerful Customizer allow you to setup your magazine website in only a few minutes. 
-Version: 1.2.8
+Version: 1.2.9
 Author: ThemeZee
 Author URI: http://themezee.com
 Tags: two-columns, light, green, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, silver, white, gray
@@ -471,7 +471,7 @@ input, textarea, select {
 .type-post, .type-page, .type-attachment  {
 	margin: 0.3em 0 2em 0;
 }
-.page-title, .post-title {
+.page-title, .entry-title {
 	margin: 0;
 	font-family: 'Share', Tahoma, Verdana, Arial;
 	color: #222;
@@ -480,7 +480,7 @@ input, textarea, select {
 	word-wrap: break-word;
     font-size: 1.6em;
 }
-.post-title {
+.entry-title {
 	display: inline;
 	background: #dd2727;
 	color: #fff;
@@ -488,11 +488,11 @@ input, textarea, select {
 	-webkit-box-decoration-break: clone;
 	box-decoration-break: clone;
 }
-.post-title a:link, .post-title a:visited {
+.entry-title a:link, .entry-title a:visited {
 	color: #fff;
 	text-decoration: none;
 }
-.post-title:hover, .post-title:active{
+.entry-title:hover, .entry-title:active{
 	background: #222;
 }
 .sticky {
@@ -1248,7 +1248,7 @@ embed, iframe, object, video {
 .widget-category-posts .type-post .more-link:visited  {
 	color: #fff;
 }
-.widget-category-posts .big-post .post-title {
+.widget-category-posts .big-post .entry-title {
 	margin-top: 1em;
 	font-size: 1.4em;
 }
@@ -1275,7 +1275,7 @@ embed, iframe, object, video {
 .widget-category-posts .small-post .small-posts-content {
 	display: inline;
 }
-.widget-category-posts .small-post .post-title{
+.widget-category-posts .small-post .entry-title{
 	font-size: 1.0em;
 }
 
@@ -1329,7 +1329,7 @@ embed, iframe, object, video {
 #widget-category-posts-horizontal .type-post .wp-post-image {
 	margin: 0;
 }
-#widget-category-posts-horizontal .type-post .post-title {
+#widget-category-posts-horizontal .type-post .entry-title {
 	font-size: 1.1em;
 }
 #widget-category-posts-horizontal .type-post .post-content {
@@ -1399,10 +1399,10 @@ embed, iframe, object, video {
 		font-size: 1.1em;
 	}
 	/* Category Post Widgets */
-	.widget-category-posts .big-post .post-title {
+	.widget-category-posts .big-post .entry-title {
 		font-size: 1.3em;
 	}
-	#widget-category-posts-horizontal .type-post .post-title {
+	#widget-category-posts-horizontal .type-post .entry-title {
 		font-size: 1.0em;
 	}
 }
@@ -1423,7 +1423,7 @@ embed, iframe, object, video {
 	#wrapper {
 		width: 96%;
 	}
-	.post-title, .page-title {
+	.entry-title, .page-title {
 		font-size: 1.5em;
 	}
 	#header {
@@ -1680,7 +1680,7 @@ embed, iframe, object, video {
 	}
 	
 	/* Category Post Widgets */
-	.widget-category-posts .big-post .post-title {
+	.widget-category-posts .big-post .entry-title {
 		font-size: 1.4em;
 	}
 	
@@ -1710,7 +1710,7 @@ embed, iframe, object, video {
 	#header-banner {
 		margin-top: 1.5em;
 	}
-	.post-title, .page-title {
+	.entry-title, .page-title {
 		font-size: 1.4em;
 	}
 	.entry h1, .comment h1 {
@@ -1731,7 +1731,7 @@ embed, iframe, object, video {
 	}
 	
 	/* Category Post Widgets */
-	.widget-category-posts .big-post .post-title {
+	.widget-category-posts .big-post .entry-title {
 		font-size: 1.3em;
 	}
 	.widget-category-posts .small-post .wp-post-image {
@@ -1744,7 +1744,7 @@ embed, iframe, object, video {
 	#logo .site-title {
 		font-size: 2.3em;
 	}
-	.post-title, .page-title {
+	.entry-title, .page-title {
 		font-size: 1.3em;
 	}
 	#mainnav-toggle {
@@ -1775,10 +1775,10 @@ embed, iframe, object, video {
 	}
 	
 	/* Category Post Widgets */
-	.widget-category-posts .big-post .post-title {
+	.widget-category-posts .big-post .entry-title {
 		font-size: 1.2em;
 	}
-	.widget-category-posts .small-post .post-title {
+	.widget-category-posts .small-post .entry-title {
 		font-size: 0.95em;
 	}
 	.widget-category-posts .small-post .wp-post-image {
@@ -1787,7 +1787,7 @@ embed, iframe, object, video {
 	.widget-category-posts .small-post .postmeta {
 		font-size: 0.8em;
 	}
-	#widget-category-posts-horizontal .type-post .post-content .post-title {
+	#widget-category-posts-horizontal .type-post .post-content .entry-title {
 		font-size: 0.95em;
 	}
 		
@@ -1812,13 +1812,13 @@ embed, iframe, object, video {
 	.widget-category-posts {
 		margin: 0 0 -1em 0;
 	}
-	.widget-category-posts .big-post .post-title {
+	.widget-category-posts .big-post .entry-title {
 		font-size: 1.4em;
 	}
 	.widget-category-posts .type-post .postmeta {
 		font-size: 0.95em;
 	}
-	.widget-category-posts .small-post .post-title {
+	.widget-category-posts .small-post .entry-title {
 		font-size: 1.0em;
 	}
 	.widget-category-posts .small-post .wp-post-image {
@@ -1854,7 +1854,7 @@ embed, iframe, object, video {
 		display: inline-block;
 		position: static;
 	}
-	#widget-category-posts-horizontal .type-post .post-title {
+	#widget-category-posts-horizontal .type-post .entry-title {
 		font-size: 1.0em;
 	}
 	#widget-category-posts-horizontal .type-post .post-content {
@@ -1903,19 +1903,19 @@ embed, iframe, object, video {
 @media only screen and (max-width: 25em) {
 	
 	/* Category Post Widgets */
-	.widget-category-posts .big-post .post-title {
+	.widget-category-posts .big-post .entry-title {
 		font-size: 1.3em;
 	}
 	.widget-category-posts .type-post .postmeta {
 		font-size: 0.85em;
 	}
-	.widget-category-posts .small-post .post-title {
+	.widget-category-posts .small-post .entry-title {
 		font-size: 0.9em;
 	}
 	.widget-category-posts .small-post .wp-post-image {
 		max-width: 100px;
 	}
-	#widget-category-posts-horizontal .type-post .post-title {
+	#widget-category-posts-horizontal .type-post .entry-title {
 		font-size: 0.9em;
 	}
 	#widget-category-posts-horizontal .type-post .wp-post-image {
@@ -1951,7 +1951,7 @@ embed, iframe, object, video {
 	#mainnav-menu .submenu-dropdown-toggle.active {
 		padding: 0.6em 1.5em 1.4em;
 	}
-	.post-title, .page-title {
+	.entry-title, .page-title {
 		font-size: 1.2em;
 	}
 	.postmeta .meta-date, .postmeta .meta-author {
@@ -1959,7 +1959,7 @@ embed, iframe, object, video {
 	}
 	
 	/* Category Post Widgets */
-	.widget-category-posts .big-post .post-title {
+	.widget-category-posts .big-post .entry-title {
 		font-size: 1.1em;
 	}
 	.widget-category-posts .type-post .postmeta {

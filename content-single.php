@@ -5,7 +5,7 @@
 		
 		<div class="post-content">
 
-			<h2 class="post-title entry-title"><a href="<?php esc_url(the_permalink()) ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+			<?php the_title( '<h1 class="entry-title post-title">', '</h1>' ); ?>
 			
 			<div class="postmeta"><?php anderson_display_postmeta(); ?></div>
 			
