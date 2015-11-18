@@ -66,5 +66,4 @@
 	</div>
 	
 	<?php // Display Custom Header Image
-		anderson_display_custom_header(); ?>
-		
+		anderson_display_custom_header(); ?>	

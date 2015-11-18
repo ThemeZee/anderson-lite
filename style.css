@@ -420,6 +420,15 @@ input, textarea, select {
 
 
 /* Tagcloud Widget */
+.widget_tag_cloud .tagcloud:before,
+.widget_tag_cloud .tagcloud:after {
+	content: "";
+	display: table;
+}
+
+.widget_tag_cloud .tagcloud:after {
+	clear: both;
+}
 .tagcloud a {
 	float: left;
 	display: inline-block;
