@@ -107,6 +107,9 @@ function anderson_setup() {
 		'width'	=> 1200,
 		'height' => 350,
 		'flex-height' => true));
+		
+	// Add Theme Support for wooCommerce
+	add_theme_support( 'woocommerce' );
 
 	// Register Navigation Menus
 	register_nav_menu( 'primary', esc_html__( 'Main Navigation', 'anderson-lite' ) );
