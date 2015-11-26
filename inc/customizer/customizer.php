@@ -50,7 +50,43 @@ function anderson_customize_register_options( $wp_customize ) {
         'section'  => 'title_tagline',
         'settings' => 'anderson_theme_options[header_tagline]',
         'type'     => 'checkbox',
-		'priority' => 99
+		'priority' => 10
+		)
+	);
+	
+	// Add Custom Header Link
+	$wp_customize->add_setting( 'anderson_theme_options[custom_header_link]', array(
+        'default'           => '',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_url'
+		)
+	);
+    $wp_customize->add_control( 'anderson_control_custom_header_link', array(
+        'label'    => esc_html__( 'Custom Header Link', 'anderson-lite' ),
+        'section'  => 'header_image',
+        'settings' => 'anderson_theme_options[custom_header_link]',
+        'type'     => 'url',
+		'priority' => 10,
+		'active_callback' => 'get_header_image'
+		)
+	);
+	
+	// Add Custom Header Hide Checkbox
+	$wp_customize->add_setting( 'anderson_theme_options[custom_header_hide]', array(
+        'default'           => false,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'anderson_sanitize_checkbox'
+		)
+	);
+    $wp_customize->add_control( 'anderson_control_custom_header_hide', array(
+        'label'    => esc_html__( 'Hide custom header image on Magazine Homepage template', 'anderson-lite' ),
+        'section'  => 'header_image',
+        'settings' => 'anderson_theme_options[custom_header_hide]',
+        'type'     => 'checkbox',
+		'priority' => 15,
+		'active_callback' => 'get_header_image'
 		)
 	);
 }

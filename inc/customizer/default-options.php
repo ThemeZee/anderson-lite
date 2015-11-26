@@ -30,6 +30,9 @@ function anderson_theme_options() {
 function anderson_default_options() {
 
 	$default_options = array(
+		'header_tagline'					=> false,
+		'custom_header_link'				=> '',
+		'custom_header_hide'				=> false,
 		'layout' 							=> 'right-sidebar',
 		'grayscale_filter' 					=> false,
 		'deactivate_google_fonts'			=> false,
