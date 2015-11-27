@@ -3,6 +3,8 @@
 	<div id="wrap" class="container clearfix">
 
 		<section id="content" class="primary" role="main">
+
+		<?php if ( function_exists( 'themezee_breadcrumbs' ) ) themezee_breadcrumbs(); ?>
 		
 		<?php // Get Theme Options from Database
 			$theme_options = anderson_theme_options();
@@ -14,7 +16,7 @@
 
 			endif; 
 		?>
-		 
+
 		<?php if (have_posts()) : while (have_posts()) : the_post();
 		
 			get_template_part( 'content', $theme_options['posts_length'] );

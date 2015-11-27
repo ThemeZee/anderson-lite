@@ -3,16 +3,27 @@
 <?php // Get Theme Options from Database
 	$theme_options = anderson_theme_options();
 ?>
-
+	
+	
 	<div id="wrap" class="container clearfix">
 		
 		<section id="content" class="primary" role="main">
-
-		<div class="page-header">
-			<?php the_archive_title( '<h2 class="archive-title">', '</h2>' ); ?>
-		</div>
 		
-		<?php if (have_posts()) : while (have_posts()) : the_post();
+		<?php // Display breadcrumbs or archive title
+		if ( function_exists( 'themezee_breadcrumbs' ) ) :
+
+			themezee_breadcrumbs(); 
+			
+		else : ?>
+		
+			<div class="page-header">
+				<?php the_archive_title( '<h2 class="archive-title">', '</h2>' ); ?>
+			</div>
+		
+		<?php
+		endif; 
+		
+		if (have_posts()) : while (have_posts()) : the_post();
 		
 			get_template_part( 'content', $theme_options['posts_length'] );
 		

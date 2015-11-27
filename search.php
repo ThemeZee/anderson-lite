@@ -8,31 +8,41 @@
 		
 		<section id="content" class="primary" role="main">
 		
-			<div class="page-header">
-				<h2 id="search-title" class="archive-title">
-					<?php printf( esc_html__( 'Search Results for: %s', 'anderson-lite' ), '<span>' . get_search_query() . '</span>' ); ?>
-				</h2>
-			</div>
-				
-		<?php if (have_posts()) :
+			<?php // Display breadcrumbs or search title
+			if ( function_exists( 'themezee_breadcrumbs' ) ) :
 
-			while (have_posts()) : the_post();
-	
-				if ( 'post' == get_post_type() ) :
+				themezee_breadcrumbs(); 
+				
+			else : ?>
+			
+				<div class="page-header">
+					<h2 id="search-title" class="archive-title">
+						<?php printf( esc_html__( 'Search Results for: %s', 'anderson-lite' ), '<span>' . get_search_query() . '</span>' ); ?>
+					</h2>
+				</div>
+			
+			<?php
+			endif;
 		
-					get_template_part( 'content', $theme_options['posts_length'] );
-				
-				else :
-				
-					get_template_part( 'content', 'search' );
+			if (have_posts()) :
+
+				while (have_posts()) : the_post();
+		
+					if ( 'post' == get_post_type() ) :
+			
+						get_template_part( 'content', $theme_options['posts_length'] );
 					
-				endif;
+					else :
+					
+						get_template_part( 'content', 'search' );
+						
+					endif;
+			
+				endwhile;
 		
-			endwhile;
-		
-			anderson_display_pagination();
+				anderson_display_pagination();
 
-		else : ?>
+			else : ?>
 
 			<div class="type-page">
 				
@@ -48,7 +58,7 @@
 				
 			</div>
 
-		<?php endif; ?>
+			<?php endif; ?>
 			
 		</section>
 		

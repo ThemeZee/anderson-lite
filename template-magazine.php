@@ -9,6 +9,8 @@ Template Name: Magazine Homepage
 
 		<section id="content" class="primary" role="main">
 		
+		<?php if ( function_exists( 'themezee_breadcrumbs' ) ) themezee_breadcrumbs(); ?>
+		
 		<?php // Get Theme Options from Database
 			$theme_options = anderson_theme_options();
 			
