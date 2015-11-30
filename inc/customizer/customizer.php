@@ -54,7 +54,7 @@ function anderson_customize_register_options( $wp_customize ) {
 		)
 	);
 	
-	// Add Custom Header Link
+	// Add Header Image Link
 	$wp_customize->add_setting( 'anderson_theme_options[custom_header_link]', array(
         'default'           => '',
 		'type'           	=> 'option',
@@ -63,12 +63,11 @@ function anderson_customize_register_options( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'anderson_control_custom_header_link', array(
-        'label'    => esc_html__( 'Custom Header Link', 'anderson-lite' ),
+        'label'    => esc_html__( 'Header Image Link', 'anderson-lite' ),
         'section'  => 'header_image',
         'settings' => 'anderson_theme_options[custom_header_link]',
         'type'     => 'url',
-		'priority' => 10,
-		'active_callback' => 'get_header_image'
+		'priority' => 10
 		)
 	);
 	
@@ -81,12 +80,11 @@ function anderson_customize_register_options( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'anderson_control_custom_header_hide', array(
-        'label'    => esc_html__( 'Hide custom header image on Magazine Homepage template', 'anderson-lite' ),
+        'label'    => esc_html__( 'Hide header image on front page', 'anderson-lite' ),
         'section'  => 'header_image',
         'settings' => 'anderson_theme_options[custom_header_hide]',
         'type'     => 'checkbox',
-		'priority' => 15,
-		'active_callback' => 'get_header_image'
+		'priority' => 15
 		)
 	);
 }

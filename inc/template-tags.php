@@ -49,11 +49,11 @@ if ( ! function_exists( 'anderson_display_custom_header' ) ):
 	
 	function anderson_display_custom_header() {
 	
-		// Get Theme Options from Database
+		// Get theme options from database
 		$theme_options = anderson_theme_options();
 		
-		// Hide Header image on Magazine Homepage
-		if ( true == $theme_options['custom_header_hide'] and is_page_template('template-magazine.php') ) {
+		// Hide header image on front page
+		if ( true == $theme_options['custom_header_hide'] and is_front_page() ) {
 			return;
 		}
 			
