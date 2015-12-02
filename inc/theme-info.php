@@ -41,7 +41,7 @@ function anderson_display_theme_info_page() {
 		
 		<hr>
 		<div class="important-links clearfix">
-			<p><strong><?php esc_html_e( 'Important Links:', 'anderson-lite' ); ?></strong>
+			<p><strong><?php esc_html_e( 'Theme Links:', 'anderson-lite' ); ?></strong>
 				<a href="http://themezee.com/themes/anderson/" target="_blank"><?php esc_html_e( 'Theme Page', 'anderson-lite' ); ?></a>
 				<a href="<?php echo get_template_directory_uri(); ?>/changelog.txt" target="_blank"><?php esc_html_e( 'Changelog', 'anderson-lite' ); ?></a>
 				<a href="http://preview.themezee.com/anderson/" target="_blank"><?php esc_html_e( 'Theme Demo', 'anderson-lite' ); ?></a>

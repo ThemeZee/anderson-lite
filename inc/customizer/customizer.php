@@ -94,7 +94,30 @@ function anderson_customize_register_options( $wp_customize ) {
 add_action( 'customize_preview_init', 'anderson_customize_preview_js' );
 
 function anderson_customize_preview_js() {
-	wp_enqueue_script( 'anderson-lite-customizer-js', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20140312', true );
+	
+	wp_enqueue_script( 'anderson-lite-customizer-preview', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151202', true );
+
+}
+
+// Embed JS file for Customizer Controls
+add_action( 'customize_controls_enqueue_scripts', 'anderson_customize_controls_js' );
+
+function anderson_customize_controls_js() {
+	
+	wp_enqueue_script( 'anderson-lite-customizer-controls', get_template_directory_uri() . '/js/customizer-controls.js', array(), '20151202', true );
+	
+	// Localize the script
+	wp_localize_script( 'anderson-lite-customizer-controls', 'anderson_theme_links', array(
+		'title'	=> esc_html__( 'Theme Links', 'anderson-lite' ),
+		'themeURL'	=> esc_url( 'http://themezee.com/themes/anderson/' ),
+		'themeLabel'	=> esc_html__( 'Theme Page', 'anderson-lite' ),
+		'docuURL'	=> esc_url( 'http://themezee.com/docs/anderson-documentation/' ),
+		'docuLabel'	=>  esc_html__( 'Theme Documentation', 'anderson-lite' ),
+		'rateURL'	=> esc_url( 'http://wordpress.org/support/view/theme-reviews/anderson-lite?filter=5' ),
+		'rateLabel'	=> esc_html__( 'Rate this theme', 'anderson-lite' ),
+		)
+	);
+
 }
 
 
@@ -102,9 +125,7 @@ function anderson_customize_preview_js() {
 add_action( 'customize_controls_print_styles', 'anderson_customize_preview_css' );
 
 function anderson_customize_preview_css() {
-	wp_enqueue_style( 'anderson-lite-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20140312' );
+	
+	wp_enqueue_style( 'anderson-lite-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20151202' );
 
 }
-
-
-?>
