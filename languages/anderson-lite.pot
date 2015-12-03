@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Anderson Lite\n"
 "Report-Msgid-Bugs-To: http://themezee.com/\n"
-"POT-Creation-Date: 2015-11-12 09:51+0100\n"
-"PO-Revision-Date: 2015-11-12 09:51+0100\n"
+"POT-Creation-Date: 2015-12-03 15:03+0100\n"
+"PO-Revision-Date: 2015-12-03 15:04+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: en_US\n"
@@ -20,11 +20,11 @@ msgstr ""
 "X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: 404.php:9
+#: 404.php:11
 msgid "404: Page not found"
 msgstr ""
 
-#: 404.php:12
+#: 404.php:14
 msgid ""
 "It looks like nothing was found at this location. Maybe try a search or one "
 "of the links below?"
@@ -58,51 +58,51 @@ msgid ""
 "posts which are tagged with that keyword."
 msgstr ""
 
-#: functions.php:112
+#: functions.php:115
 msgid "Main Navigation"
 msgstr ""
 
-#: functions.php:113
+#: functions.php:116
 msgid "Top Navigation"
 msgstr ""
 
-#: functions.php:114
+#: functions.php:117
 msgid "Footer Navigation"
 msgstr ""
 
-#: functions.php:117
+#: functions.php:120
 msgid "Social Icons"
 msgstr ""
 
-#: functions.php:147 sidebar.php:14
+#: functions.php:150 sidebar.php:14
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:149
+#: functions.php:152
 msgid ""
 "Appears on posts and pages except Magazine Homepage and Fullwidth template."
 msgstr ""
 
-#: functions.php:158
+#: functions.php:161
 msgid "Magazine Homepage"
 msgstr ""
 
-#: functions.php:160
+#: functions.php:163
 msgid ""
 "Appears on Magazine Homepage template only. You can use the Category Posts "
 "widgets here."
 msgstr ""
 
-#: search.php:13
+#: search.php:20
 #, php-format
 msgid "Search Results for: %s"
 msgstr ""
 
-#: search.php:39
+#: search.php:49
 msgid "No matches"
 msgstr ""
 
-#: search.php:43
+#: search.php:53
 msgid ""
 "Please try again, or use the navigation menus to find what you search for."
 msgstr ""
@@ -122,7 +122,7 @@ msgid ""
 "Please go to Appearance &#8594; Widgets and add some widgets to your sidebar."
 msgstr ""
 
-#: template-magazine.php:39
+#: template-magazine.php:41
 msgid ""
 "Please go to Appearance &#8594; Widgets and add at least one widget to the "
 "\"Magazine Homepage\" widget area. You can use the Category Posts widgets to "
@@ -145,50 +145,50 @@ msgstr ""
 msgid "Number of Posts"
 msgstr ""
 
-#: inc/template-tags.php:112
+#: inc/template-tags.php:134
 #, php-format
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
-#: inc/template-tags.php:128 inc/widgets/widget-category-posts-boxed.php:216
+#: inc/template-tags.php:150 inc/widgets/widget-category-posts-boxed.php:216
 #: inc/widgets/widget-category-posts-columns.php:240
 #: inc/widgets/widget-category-posts-grid.php:239
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
 
-#: inc/template-tags.php:132
+#: inc/template-tags.php:154
 #, php-format
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
-#: inc/template-tags.php:268
+#: inc/template-tags.php:290
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr ""
 
-#: inc/template-tags.php:302
+#: inc/template-tags.php:324
 msgid ""
 "Please go to Appearance &#8594; Menus and create a new custom menu with "
 "custom links to all your social networks. Then click on \"Manage Locations\" "
 "tab and assign your created menu to the \"Social Icons\" location."
 msgstr ""
 
-#: inc/template-tags.php:319
+#: inc/template-tags.php:341
 msgid "Pingback:"
 msgstr ""
 
-#: inc/template-tags.php:320 inc/template-tags.php:340
+#: inc/template-tags.php:342 inc/template-tags.php:362
 msgid "(Edit)"
 msgstr ""
 
-#: inc/template-tags.php:335
+#: inc/template-tags.php:357
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/template-tags.php:339
+#: inc/template-tags.php:361
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
@@ -203,10 +203,10 @@ msgid "Theme Info"
 msgstr ""
 
 #: inc/theme-info.php:44
-msgid "Important Links:"
+msgid "Theme Links:"
 msgstr ""
 
-#: inc/theme-info.php:45
+#: inc/theme-info.php:45 inc/customizer/customizer.php:113
 msgid "Theme Page"
 msgstr ""
 
@@ -219,10 +219,11 @@ msgid "Theme Demo"
 msgstr ""
 
 #: inc/theme-info.php:48 inc/theme-info.php:63
+#: inc/customizer/customizer.php:115
 msgid "Theme Documentation"
 msgstr ""
 
-#: inc/theme-info.php:49
+#: inc/theme-info.php:49 inc/customizer/customizer.php:117
 msgid "Rate this theme"
 msgstr ""
 
@@ -257,17 +258,18 @@ msgstr ""
 msgid "Customize Theme"
 msgstr ""
 
-#: inc/theme-info.php:89 inc/customizer/sections/customizer-upgrade.php:14
+#: inc/theme-info.php:89 inc/customizer/functions/custom-controls.php:43
 msgid "Pro Version"
 msgstr ""
 
-#: inc/theme-info.php:92
+#: inc/theme-info.php:92 inc/customizer/functions/custom-controls.php:46
+#, php-format
 msgid ""
-"You need more features? Purchase the Pro Version to get additional features "
-"and advanced customization options."
+"Purchase the Pro Version of %s to get additional features and advanced "
+"customization options."
 msgstr ""
 
-#: inc/theme-info.php:96 inc/customizer/sections/customizer-upgrade.php:62
+#: inc/theme-info.php:96 inc/customizer/functions/custom-controls.php:51
 #, php-format
 msgid "Learn more about %s Pro"
 msgstr ""
@@ -289,9 +291,53 @@ msgstr ""
 msgid "Display Tagline below site title."
 msgstr ""
 
+#: inc/customizer/customizer.php:66
+msgid "Header Image Link"
+msgstr ""
+
+#: inc/customizer/customizer.php:83
+msgid "Hide header image on front page"
+msgstr ""
+
+#: inc/customizer/customizer.php:111
+msgid "Theme Links"
+msgstr ""
+
 #: inc/customizer/frontend/custom-slider.php:48
 #: inc/customizer/frontend/custom-slider.php:49
 msgid "Menu"
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:59
+msgid "ThemeZee Toolkit"
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:62
+msgid ""
+"The ThemeZee Toolkit add-on is a collection of useful small modules and "
+"features, neatly bundled into a single plugin."
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:67
+msgid "Learn more"
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:70
+msgid "Install now"
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:78
+msgid "Add-on plugins"
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:81
+msgid ""
+"Extend the functionality of your WordPress website with our customized add-"
+"ons."
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:86
+msgid "Browse our add-ons"
 msgstr ""
 
 #: inc/customizer/sections/customizer-general.php:14
@@ -435,14 +481,8 @@ msgstr ""
 msgid "Fade Effect"
 msgstr ""
 
-#: inc/customizer/sections/customizer-upgrade.php:30
-msgid "You need more features?"
-msgstr ""
-
-#: inc/customizer/sections/customizer-upgrade.php:46
-msgid ""
-"Purchase the Pro Version to get additional features and advanced "
-"customization options."
+#: inc/customizer/sections/customizer-upgrade.php:14
+msgid "More Features"
 msgstr ""
 
 #: inc/widgets/widget-category-posts-boxed.php:11

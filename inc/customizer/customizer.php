@@ -109,9 +109,9 @@ function anderson_customize_controls_js() {
 	// Localize the script
 	wp_localize_script( 'anderson-lite-customizer-controls', 'anderson_theme_links', array(
 		'title'	=> esc_html__( 'Theme Links', 'anderson-lite' ),
-		'themeURL'	=> esc_url( 'http://themezee.com/themes/anderson/' ),
+		'themeURL'	=> esc_url( 'http://themezee.com/themes/anderson/?utm_source=customizer&utm_medium=textlink&utm_campaign=anderson&utm_content=theme-page' ),
 		'themeLabel'	=> esc_html__( 'Theme Page', 'anderson-lite' ),
-		'docuURL'	=> esc_url( 'http://themezee.com/docs/anderson-documentation/' ),
+		'docuURL'	=> esc_url( 'http://themezee.com/docs/anderson-documentation/?utm_source=customizer&utm_medium=textlink&utm_campaign=anderson&utm_content=documentation' ),
 		'docuLabel'	=>  esc_html__( 'Theme Documentation', 'anderson-lite' ),
 		'rateURL'	=> esc_url( 'http://wordpress.org/support/view/theme-reviews/anderson-lite?filter=5' ),
 		'rateLabel'	=> esc_html__( 'Rate this theme', 'anderson-lite' ),

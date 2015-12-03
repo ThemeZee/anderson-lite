@@ -46,7 +46,7 @@
 		
 		setTimeout(function () {
 			$('#accordion-panel-anderson_panel_options .control-panel-content').append(content);
-		}, 200);
+		}, 2000);
 
 		// Remove accordion click event
 		$('.anderson-theme-links a').on('click', function(e) {
