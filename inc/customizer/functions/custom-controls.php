@@ -6,7 +6,6 @@
 
 /*========================== CUSTOMIZER CONTROLS FUNCTIONS ==========================*/
 
-// Add simple heading option to the theme customizer
 if ( class_exists( 'WP_Customize_Control' ) ) :
 
 	// Title Control
@@ -64,7 +63,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 				
 				<p>
 					<a href="http://themezee.com/addons/toolkit/?utm_source=customizer&utm_medium=button&utm_campaign=anderson&utm_content=toolkit" target="_blank" class="button button-secondary">
-						<?php printf( esc_html__( 'Learn more', 'anderson-lite' ), 'Anderson'); ?>
+						<?php printf( esc_html__( 'View Details', 'anderson-lite' ), 'Anderson'); ?>
 					</a>
 					<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-primary">
 						<?php esc_html_e( 'Install now', 'anderson-lite' ); ?>

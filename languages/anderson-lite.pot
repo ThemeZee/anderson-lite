@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Anderson Lite\n"
 "Report-Msgid-Bugs-To: http://themezee.com/\n"
-"POT-Creation-Date: 2015-12-03 15:03+0100\n"
-"PO-Revision-Date: 2015-12-03 15:04+0100\n"
+"POT-Creation-Date: 2015-12-04 11:35+0100\n"
+"PO-Revision-Date: 2015-12-04 11:36+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: en_US\n"
@@ -202,8 +202,8 @@ msgstr ""
 msgid "Theme Info"
 msgstr ""
 
-#: inc/theme-info.php:44
-msgid "Theme Links:"
+#: inc/theme-info.php:44 inc/customizer/customizer.php:111
+msgid "Theme Links"
 msgstr ""
 
 #: inc/theme-info.php:45 inc/customizer/customizer.php:113
@@ -258,18 +258,18 @@ msgstr ""
 msgid "Customize Theme"
 msgstr ""
 
-#: inc/theme-info.php:89 inc/customizer/functions/custom-controls.php:43
+#: inc/theme-info.php:89 inc/customizer/functions/custom-controls.php:42
 msgid "Pro Version"
 msgstr ""
 
-#: inc/theme-info.php:92 inc/customizer/functions/custom-controls.php:46
+#: inc/theme-info.php:92 inc/customizer/functions/custom-controls.php:45
 #, php-format
 msgid ""
 "Purchase the Pro Version of %s to get additional features and advanced "
 "customization options."
 msgstr ""
 
-#: inc/theme-info.php:96 inc/customizer/functions/custom-controls.php:51
+#: inc/theme-info.php:96 inc/customizer/functions/custom-controls.php:50
 #, php-format
 msgid "Learn more about %s Pro"
 msgstr ""
@@ -299,44 +299,40 @@ msgstr ""
 msgid "Hide header image on front page"
 msgstr ""
 
-#: inc/customizer/customizer.php:111
-msgid "Theme Links"
-msgstr ""
-
 #: inc/customizer/frontend/custom-slider.php:48
 #: inc/customizer/frontend/custom-slider.php:49
 msgid "Menu"
 msgstr ""
 
-#: inc/customizer/functions/custom-controls.php:59
+#: inc/customizer/functions/custom-controls.php:58
 msgid "ThemeZee Toolkit"
 msgstr ""
 
-#: inc/customizer/functions/custom-controls.php:62
+#: inc/customizer/functions/custom-controls.php:61
 msgid ""
 "The ThemeZee Toolkit add-on is a collection of useful small modules and "
 "features, neatly bundled into a single plugin."
 msgstr ""
 
-#: inc/customizer/functions/custom-controls.php:67
-msgid "Learn more"
+#: inc/customizer/functions/custom-controls.php:66
+msgid "View Details"
 msgstr ""
 
-#: inc/customizer/functions/custom-controls.php:70
+#: inc/customizer/functions/custom-controls.php:69
 msgid "Install now"
 msgstr ""
 
-#: inc/customizer/functions/custom-controls.php:78
+#: inc/customizer/functions/custom-controls.php:77
 msgid "Add-on plugins"
 msgstr ""
 
-#: inc/customizer/functions/custom-controls.php:81
+#: inc/customizer/functions/custom-controls.php:80
 msgid ""
 "Extend the functionality of your WordPress website with our customized add-"
 "ons."
 msgstr ""
 
-#: inc/customizer/functions/custom-controls.php:86
+#: inc/customizer/functions/custom-controls.php:85
 msgid "Browse our add-ons"
 msgstr ""
 

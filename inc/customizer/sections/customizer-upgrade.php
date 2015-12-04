@@ -1,6 +1,6 @@
 <?php
 /**
- * Register PRO Version section, settings and controls for Theme Customizer
+ * Register upgrade section, settings and controls for Theme Customizer
  *
  */
 
@@ -35,5 +35,3 @@ function anderson_customize_register_upgrade_settings( $wp_customize ) {
     );
 
 }
-
-?>
