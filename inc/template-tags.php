@@ -246,6 +246,26 @@ function anderson_display_thumbnail_and_categories_single() {
 	endif;
 
 }
+
+
+// Display Anderson Lite plugin
+if ( ! function_exists( 'anderson_display_related_posts' ) ):
+	
+	function anderson_display_related_posts() { 
+		
+		if ( function_exists( 'themezee_related_posts' ) ) {
+
+			themezee_related_posts( array( 
+				'class' => 'related-posts type-page clearfix',
+				'before_title' => '<h2 class="related-posts-title">',
+				'after_title' => '</h2>'
+			) );
+			
+		}
+	}
+	
+endif;
+
 	
 // Display Content Pagination
 if ( ! function_exists( 'anderson_display_pagination' ) ):
