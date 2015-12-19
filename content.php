@@ -7,7 +7,7 @@
 
 			<?php the_title( sprintf( '<h1 class="entry-title post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 			
-			<div class="postmeta"><?php anderson_display_postmeta(); ?></div>
+			<div class="entry-meta postmeta"><?php anderson_display_postmeta(); ?></div>
 			
 			<div class="entry clearfix">
 				<?php the_content( esc_html__( '&raquo; Read more', 'anderson-lite' ) ); ?>

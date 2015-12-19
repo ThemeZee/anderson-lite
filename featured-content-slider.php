@@ -56,7 +56,7 @@ add_filter('excerpt_length', 'anderson_slideshow_excerpt_length');
 						
 						<div class="post-content">
 							
-							<div class="postmeta"><?php anderson_display_postmeta(); ?></div>
+							<div class="entry-meta postmeta"><?php anderson_display_postmeta(); ?></div>
 							
 							<div class="entry clearfix">
 								<?php the_excerpt(); ?>
