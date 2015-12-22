@@ -248,7 +248,25 @@ function anderson_display_thumbnail_and_categories_single() {
 }
 
 
-// Display Anderson Lite plugin
+// Display Single Post Navigation
+if ( ! function_exists( 'anderson_display_post_navigation' ) ):
+	
+	function anderson_display_post_navigation() { 
+		
+		// Get Theme Options from Database
+		$theme_options = anderson_theme_options();
+		
+		if ( true == $theme_options['post_navigation'] ) {
+
+			the_post_navigation( array( 'prev_text' => '&laquo; %title', 'next_text' => '%title &raquo;' ) );
+			
+		}
+	}
+	
+endif;
+
+
+// Display ThemeZee Related Posts plugin
 if ( ! function_exists( 'anderson_display_related_posts' ) ):
 	
 	function anderson_display_related_posts() { 

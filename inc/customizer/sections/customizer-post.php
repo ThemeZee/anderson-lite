@@ -184,7 +184,37 @@ function anderson_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 	
+	// Add Post Footer Settings
+	$wp_customize->add_setting( 'anderson_theme_options[post_footer_headline]', array(
+        'default'           => '',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_attr'
+        )
+    );
+    $wp_customize->add_control( new Anderson_Customize_Header_Control(
+        $wp_customize, 'anderson_control_post_footer_headline', array(
+            'label' => esc_html__( 'Post Footer', 'anderson-lite' ),
+            'section' => 'anderson_section_post',
+            'settings' => 'anderson_theme_options[post_footer_headline]',
+            'priority' => 12
+            )
+        )
+    );
+	$wp_customize->add_setting( 'anderson_theme_options[post_navigation]', array(
+        'default'           => false,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'anderson_sanitize_checkbox'
+		)
+	);
+    $wp_customize->add_control( 'anderson_control_post_navigation', array(
+        'label'    => esc_html__( 'Display post navigation on single posts', 'anderson-lite' ),
+        'section'  => 'anderson_section_post',
+        'settings' => 'anderson_theme_options[post_navigation]',
+        'type'     => 'checkbox',
+		'priority' => 13
+		)
+	);
+	
 }
-
-
-?>

@@ -3,13 +3,18 @@
  *
  */
 
+.customize-control-checkbox {
+    margin-bottom: 4px;
+}
+
 #customize-control-anderson_control_slider_active_header,
 #customize-control-anderson_control_footer_text,
 #customize-control-anderson_control_post_images,
 #customize-control-anderson_control_excerpt_text_headline, 
-#customize-control-anderson_control_postmeta_headline, 
+#customize-control-anderson_control_postmeta_headline,
+#customize-control-anderson_control_post_footer_headline, 
 #customize-control-anderson_control_image_grayscale_headline {
-	margin-top: 12px;
+	margin-top: 16px;
 }
 #customize-control-anderson_control_featured_posts_header,
 #customize-control-anderson_control_slider_animation {
@@ -24,6 +29,7 @@
 #customize-control-anderson_control_post_images,
 #customize-control-anderson_control_excerpt_text_headline,
 #customize-control-anderson_control_postmeta_headline,
+#customize-control-anderson_control_post_footer_headline,
 #customize-control-anderson_control_grayscale_filter_headline,
 #customize-control-anderson_control_slider_active_header {
 	margin-bottom: 0;

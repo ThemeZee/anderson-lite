@@ -45,13 +45,12 @@ function anderson_default_options() {
 		'meta_date'							=> true,
 		'meta_author'						=> true,
 		'meta_tags'							=> true,
+		'post_navigation' 					=> false,
 		'slider_active' 					=> false,
 		'slider_active_magazine' 			=> false,
-		'slider_animation' 					=> 'horizontal'
+		'slider_animation' 					=> 'horizontal',
 	);
 	
 	return $default_options;
+	
 }
-
-
-?>
