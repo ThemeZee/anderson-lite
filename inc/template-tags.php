@@ -327,7 +327,7 @@ function anderson_display_footer_text() { ?>
 	<span class="credit-link">
 		<?php printf( esc_html__( 'Powered by %1$s and %2$s.', 'anderson-lite' ), 
 			'<a href="http://wordpress.org" title="WordPress">WordPress</a>',
-			'<a href="http://themezee.com/themes/anderson/" title="Anderson WordPress Theme">Anderson</a>'
+			'<a href="https://themezee.com/themes/anderson/" title="Anderson WordPress Theme">Anderson</a>'
 		); ?>
 	</span>
 

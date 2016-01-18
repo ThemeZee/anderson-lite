@@ -73,7 +73,7 @@ Version 1.2.1
 [fixed] styling of navigation on mobile devices
 [updated] translation .pot file
 [added] prefix to image sizes to follow wordpress.org review guidelines
-=> you may have to regenerate your featured images: http://themezee.com/docs/regenerate-thumbnails-image-sizes/
+=> you may have to regenerate your featured images: https://themezee.com/docs/regenerate-thumbnails-image-sizes/
 
 Version 1.2 - Redesign
 -----------------------------------
