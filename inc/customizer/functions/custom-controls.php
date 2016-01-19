@@ -46,46 +46,30 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 				</span>
 				
 				<p>
-					<a href="https://themezee.com/themes/anderson/?utm_source=customizer&utm_medium=button&utm_campaign=anderson&utm_content=pro-version" target="_blank" class="button button-secondary">
+					<a href="<?php echo esc_url( __( 'https://themezee.com/addons/anderson-pro/', 'anderson-lite' ) ); ?>?utm_source=customizer&utm_medium=button&utm_campaign=anderson&utm_content=pro-version" target="_blank" class="button button-secondary">
 						<?php printf( esc_html__( 'Learn more about %s Pro', 'anderson-lite' ), 'Anderson'); ?>
 					</a>
 				</p>
 				
 			</div>
 			
-			<div class="upgrade-toolkit">
+			<div class="upgrade-plugins">
 			
-				<span class="customize-control-title"><?php esc_html_e( 'ThemeZee Toolkit', 'anderson-lite' ); ?></span>
+				<span class="customize-control-title"><?php esc_html_e( 'ThemeZee Plugins', 'anderson-lite' ); ?></span>
 				
 				<span class="textfield">
-					<?php esc_html_e( 'The ThemeZee Toolkit add-on is a collection of useful small modules and features, neatly bundled into a single plugin.', 'anderson-lite' ); ?>
+					<?php esc_html_e( 'Extend the functionality of your WordPress website with our customized plugins.', 'anderson-lite' ); ?>
 				</span>
 				
 				<p>
-					<a href="https://themezee.com/plugins/toolkit/?utm_source=customizer&utm_medium=button&utm_campaign=anderson&utm_content=toolkit" target="_blank" class="button button-secondary">
-						<?php printf( esc_html__( 'View Details', 'anderson-lite' ), 'Anderson'); ?>
+					<a href="<?php echo esc_url( __( 'https://themezee.com/plugins/', 'anderson-lite' ) ); ?>?utm_source=customizer&utm_medium=button&utm_campaign=anderson&utm_content=plugins" target="_blank" class="button button-secondary">
+						<?php esc_html_e( 'Browse Plugins', 'anderson-lite' ); ?>
 					</a>
 					<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-primary">
 						<?php esc_html_e( 'Install now', 'anderson-lite' ); ?>
 					</a>
 				</p>
 			
-			</div>
-			
-			<div class="upgrade-addons">
-			
-				<span class="customize-control-title"><?php esc_html_e( 'Add-on plugins', 'anderson-lite' ); ?></span>
-				
-				<span class="textfield">
-					<?php esc_html_e( 'Extend the functionality of your WordPress website with our customized add-ons.', 'anderson-lite' ); ?>
-				</span>
-
-				<p>
-					<a href="https://themezee.com/plugins/?utm_source=customizer&utm_medium=button&utm_campaign=anderson&utm_content=addons" target="_blank" class="button button-secondary">
-						<?php esc_html_e( 'Browse our add-ons', 'anderson-lite' ); ?>
-					</a>
-				</p>
-				
 			</div>
 			
 			<?php

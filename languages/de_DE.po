@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Everything\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2015-12-04 11:35+0100\n"
-"PO-Revision-Date: 2015-12-04 11:36+0100\n"
+"POT-Creation-Date: 2016-01-19 16:28+0100\n"
+"PO-Revision-Date: 2016-01-19 16:28+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -176,12 +176,12 @@ msgctxt "post author"
 msgid "by %s"
 msgstr "von %s"
 
-#: inc/template-tags.php:290
+#: inc/template-tags.php:328
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr "Erstellt mit %1$s und %2$s."
 
-#: inc/template-tags.php:324
+#: inc/template-tags.php:362
 msgid ""
 "Please go to Appearance &#8594; Menus and create a new custom menu with "
 "custom links to all your social networks. Then click on \"Manage Locations\" "
@@ -191,19 +191,19 @@ msgstr ""
 "all deinen sozialen Netzwerken. Klicke danach auf den Tab 'Positionen "
 "verwalten' und weise deinem erstelltes Menü die \"Social Icons\" Position zu."
 
-#: inc/template-tags.php:341
+#: inc/template-tags.php:379
 msgid "Pingback:"
 msgstr "Pingback:"
 
-#: inc/template-tags.php:342 inc/template-tags.php:362
+#: inc/template-tags.php:380 inc/template-tags.php:400
 msgid "(Edit)"
 msgstr "(Bearbeiten)"
 
-#: inc/template-tags.php:357
+#: inc/template-tags.php:395
 msgid "Your comment is awaiting moderation."
 msgstr "Dein Kommentar wird überprüft."
 
-#: inc/template-tags.php:361
+#: inc/template-tags.php:399
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s am %2$s"
@@ -221,6 +221,10 @@ msgstr "Theme Info"
 msgid "Theme Links"
 msgstr "Theme Links"
 
+#: inc/theme-info.php:45 inc/customizer/customizer.php:112
+msgid "https://themezee.com/themes/anderson/"
+msgstr "https://themezee.com/de/themes/anderson/"
+
 #: inc/theme-info.php:45 inc/customizer/customizer.php:113
 msgid "Theme Page"
 msgstr "Theme Seite"
@@ -232,6 +236,11 @@ msgstr "Changelog"
 #: inc/theme-info.php:47
 msgid "Theme Demo"
 msgstr "Theme Demo"
+
+#: inc/theme-info.php:48 inc/theme-info.php:69
+#: inc/customizer/customizer.php:114
+msgid "https://themezee.com/docs/anderson-documentation/"
+msgstr "https://themezee.com/de/docs/anderson-dokumentation/"
 
 #: inc/theme-info.php:48 inc/theme-info.php:63
 #: inc/customizer/customizer.php:115
@@ -290,6 +299,10 @@ msgstr ""
 "Erwirb die Pro Version von %s und erhalte zusätzliche Features und "
 "erweiterte Anpassungsmöglichkeiten."
 
+#: inc/theme-info.php:95 inc/customizer/functions/custom-controls.php:49
+msgid "https://themezee.com/addons/anderson-pro/"
+msgstr "https://themezee.com/de/addons/anderson-pro/"
+
 #: inc/theme-info.php:96 inc/customizer/functions/custom-controls.php:50
 #, php-format
 msgid "Learn more about %s Pro"
@@ -300,6 +313,10 @@ msgstr "Erfahre mehr über %s Pro"
 msgid "%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)"
 msgstr ""
 "%1$s wird stolz präsentiert von %2$s. Falls dir dieses Theme gefällt, %3$s :)"
+
+#: inc/theme-info.php:119
+msgid "https://themezee.com/"
+msgstr "https://themezee.com/de/"
 
 #: inc/theme-info.php:120
 msgid "rate it"
@@ -327,39 +344,28 @@ msgid "Menu"
 msgstr "Menü"
 
 #: inc/customizer/functions/custom-controls.php:58
-msgid "ThemeZee Toolkit"
-msgstr "ThemeZee Toolkit"
+msgid "ThemeZee Plugins"
+msgstr "ThemeZee Plugins"
 
 #: inc/customizer/functions/custom-controls.php:61
 msgid ""
-"The ThemeZee Toolkit add-on is a collection of useful small modules and "
-"features, neatly bundled into a single plugin."
+"Extend the functionality of your WordPress website with our customized "
+"plugins."
 msgstr ""
-"Das ThemeZee Toolkit ist eine Sammlung von nützlichen Modulen und kleinen "
-"Features, gebündelt in einem einzigen Plugin."
+"Erweitere die Funktionalität deiner WordPress Webseite mit unseren "
+"kostenlosen Plugins."
+
+#: inc/customizer/functions/custom-controls.php:65
+msgid "https://themezee.com/plugins/"
+msgstr "https://themezee.com/de/plugins/"
 
 #: inc/customizer/functions/custom-controls.php:66
-msgid "View Details"
-msgstr "Details ansehen"
+msgid "Browse Plugins"
+msgstr "Plugins ansehen"
 
 #: inc/customizer/functions/custom-controls.php:69
 msgid "Install now"
 msgstr "Jetzt installieren"
-
-#: inc/customizer/functions/custom-controls.php:77
-msgid "Add-on plugins"
-msgstr "Add-on Plugins"
-
-#: inc/customizer/functions/custom-controls.php:80
-msgid ""
-"Extend the functionality of your WordPress website with our customized add-"
-"ons."
-msgstr ""
-"Erweitere die Funktionalität deiner WordPress Webseite mit unseren Add-ons."
-
-#: inc/customizer/functions/custom-controls.php:85
-msgid "Browse our add-ons"
-msgstr "Add-ons ansehen"
 
 #: inc/customizer/sections/customizer-general.php:14
 msgid "General Settings"
@@ -465,6 +471,14 @@ msgstr "Zeige den Author des Beitrags"
 #: inc/customizer/sections/customizer-post.php:179
 msgid "Display post tags"
 msgstr "Zeige die Schlagwörter des Beitrags"
+
+#: inc/customizer/sections/customizer-post.php:197
+msgid "Post Footer"
+msgstr "Beitrags-Footer"
+
+#: inc/customizer/sections/customizer-post.php:212
+msgid "Display post navigation on single posts"
+msgstr "Zeige eine Beitrags-Navigation unter einzelnen Beiträgen"
 
 #: inc/customizer/sections/customizer-slider.php:14
 msgid "Post Slider"
@@ -645,6 +659,19 @@ msgstr ""
 #, php-format
 msgid "Category Posts: Horizontal (%s)"
 msgstr "Kategorie Beiträge: Horizontal (%s)"
+
+#~ msgid ""
+#~ "The ThemeZee Toolkit add-on is a collection of useful small modules and "
+#~ "features, neatly bundled into a single plugin."
+#~ msgstr ""
+#~ "Das ThemeZee Toolkit ist eine Sammlung von nützlichen Modulen und kleinen "
+#~ "Features, gebündelt in einem einzigen Plugin."
+
+#~ msgid "View Details"
+#~ msgstr "Details ansehen"
+
+#~ msgid "Add-on plugins"
+#~ msgstr "Add-on Plugins"
 
 #~ msgid "Learn more"
 #~ msgstr "Details"
@@ -837,17 +864,11 @@ msgstr "Kategorie Beiträge: Horizontal (%s)"
 #~ msgid "Title above Latest Posts"
 #~ msgstr "Titel über den letzten Beiträgen"
 
-#~ msgid "Post Footer"
-#~ msgstr "Beitrags-Footer"
-
 #~ msgid "Display post categories and comments on archive pages"
 #~ msgstr "Zeige die Kategorien und Kommentare des Beitrags auf Archiv Seiten"
 
 #~ msgid "Display post categories and comments on single posts"
 #~ msgstr "Zeige die Kategorien und Kommentare auf einzelnen Beitragsseiten"
-
-#~ msgid "Display post tags on single posts"
-#~ msgstr "Zeige die Schlagwörter in einzelnen Beiträgen"
 
 #~ msgid "Slider Category"
 #~ msgstr "Slider Kategorie"
