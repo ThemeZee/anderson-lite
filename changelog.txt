@@ -2,6 +2,10 @@
 Anderson Lite Changelog
 ===================================
 
+Version 1.3.3
+-----------------------------------
+[added] support for Jetpack Infinite Scroll feature
+
 Version 1.3.2
 -----------------------------------
 [removed] extract() function from widget files for better readable code

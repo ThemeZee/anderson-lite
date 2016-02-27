@@ -2,7 +2,7 @@
 Theme Name: Anderson Lite
 Theme URI: https://themezee.com/themes/anderson/
 Description: A clean and elegant magazine theme suitable for any kind of content related website. The theme comes with a fully responsive layout and a sleek featured post slideshow. The user-friendly and flexible theme options supporting the powerful Customizer allow you to setup your magazine website in only a few minutes. 
-Version: 1.3.2
+Version: 1.3.3
 Author: ThemeZee
 Author URI: https://themezee.com
 Tags: two-columns, light, green, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, silver, white, gray
@@ -640,6 +640,30 @@ input, textarea, select {
 	text-decoration: none;
 }
 
+/* Post Navigation */
+.post-navigation {
+	margin-bottom: 2em;
+	padding: 0.5em 0.8em 0.6em;
+	line-height: 1.5;
+	color: #222;
+	border-top: 1px solid #222;
+	border-bottom: 1px solid #222;
+}
+.post-navigation .nav-links:before,
+.post-navigation .nav-links:after {
+	content: "";
+	display: table;
+}
+.post-navigation .nav-links:after {
+	clear: both;
+}
+.post-navigation .nav-links .nav-previous {
+	float: left;
+}
+.post-navigation .nav-links .nav-next {
+	float: right;
+}
+
 /* Archives and Search Heading */
 .page-header {
 	margin-bottom: 2em;
@@ -697,28 +721,23 @@ input, textarea, select {
 	border-top: 5px solid #dd2727;
 }
 
-/* Post Navigation */
-.post-navigation {
+/* Infinite Scroll Pagination */
+.infinite-scroll .post-pagination {
+	display: none;
+}
+.infinite-scroll #infinite-handle span {
+	display: inline-block;
 	margin-bottom: 2em;
-	padding: 0.5em 0.8em 0.6em;
+	padding: 0.4em 0.8em;
+	font-size: 1em;
 	line-height: 1.5;
-	color: #222;
-	border-top: 1px solid #222;
-	border-bottom: 1px solid #222;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	background-color: #dd2727;
 }
-.post-navigation .nav-links:before,
-.post-navigation .nav-links:after {
-	content: "";
-	display: table;
-}
-.post-navigation .nav-links:after {
-	clear: both;
-}
-.post-navigation .nav-links .nav-previous {
-	float: left;
-}
-.post-navigation .nav-links .nav-next {
-	float: right;
+.infinite-scroll #infinite-handle span:hover {
+	background-color: #222;
 }
 
 /* Breadcrumbs */
@@ -842,8 +861,6 @@ big, .big_tag {
 	font-size: 1.3em;
 }
 ins {
-	padding: 1px 2px;
-	background: #ffa;
 	text-decoration: none;
 }
 code, pre {
@@ -1084,7 +1101,7 @@ embed, iframe, object, video {
 	padding: 0.8em;
 	text-decoration: none;
 	color: #fff;
-	background: #dd2727;
+	background: #222;
 }
 .social-icons-menu li a:before {
 	color: #fff;
@@ -1132,9 +1149,9 @@ embed, iframe, object, video {
 .social-icons-menu li a[href*="feedburner.google.com"]:before,
 .social-icons-menu li a[href*="feedburner.com"]:before { content: '\f413'; }
 
-.social-icons-menu li a:hover, .social-icons-menu li a:hover:before  {
+.social-icons-menu li a:hover  {
 	text-decoration: none;
-	background: #222;
+	background: #dd2727;
 }
 
 .social-icons-menu li a .screen-reader-text {
