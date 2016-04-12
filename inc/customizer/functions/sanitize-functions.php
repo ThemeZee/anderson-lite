@@ -52,8 +52,8 @@ function anderson_sanitize_post_length( $value ) {
 // Sanitize the slider animation value.
 function anderson_sanitize_slider_animation( $value ) {
 
-	if ( ! in_array( $value, array( 'horizontal', 'fade' ) ) ) :
-        $value = 'horizontal';
+	if ( ! in_array( $value, array( 'slide', 'fade' ) ) ) :
+        $value = 'slide';
 	endif;
 
     return $value;

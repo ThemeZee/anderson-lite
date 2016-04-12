@@ -8,13 +8,13 @@ add_action('wp_enqueue_scripts', 'anderson_enqueue_scripts');
 function anderson_enqueue_scripts() {
 
 	// Register and Enqueue Stylesheet
-	wp_enqueue_style('anderson-lite-stylesheet', get_stylesheet_uri());
+	wp_enqueue_style( 'anderson-lite-stylesheet', get_stylesheet_uri() );
 	
 	// Register Genericons
-	wp_enqueue_style('genericons', get_template_directory_uri() . '/css/genericons/genericons.css');
+	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/css/genericons/genericons.css' );
 
 	// Register and enqueue navigation.js
-	wp_enqueue_script('anderson-lite-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery'));
+	wp_enqueue_script( 'anderson-lite-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery') );
 	
 	// Get Theme Options from Database
 	$theme_options = anderson_theme_options();
@@ -23,13 +23,13 @@ function anderson_enqueue_scripts() {
 	if ( true == $theme_options['slider_active'] or true == $theme_options['slider_active_magazine'] or is_page_template('template-slider.php') ) :
 
 		// FlexSlider CSS
-		wp_enqueue_style('anderson-lite-flexslider', get_template_directory_uri() . '/css/flexslider.css');
+		wp_enqueue_style( 'anderson-lite-flexslider', get_template_directory_uri() . '/css/flexslider.css');
 
 		// FlexSlider JS
-		wp_enqueue_script('anderson-lite-flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array('jquery'));
+		wp_enqueue_script( 'anderson-lite-flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array('jquery'), '2.6.0' );
 
 		// Register and enqueue slider.js
-		wp_enqueue_script('anderson-lite-post-slider', get_template_directory_uri() .'/js/slider.js', array('anderson-lite-flexslider'));
+		wp_enqueue_script( 'anderson-lite-post-slider', get_template_directory_uri() .'/js/slider.js', array( 'anderson-lite-flexslider' ), '2.6.0' );
 
 	endif;
 	

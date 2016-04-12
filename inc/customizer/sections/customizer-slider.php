@@ -104,7 +104,7 @@ function anderson_customize_register_slider_settings( $wp_customize ) {
     );
 
 	$wp_customize->add_setting( 'anderson_theme_options[slider_animation]', array(
-        'default'           => 'horizontal',
+        'default'           => 'slide',
 		'type'           	=> 'option',
         'transport'         => 'refresh',
         'sanitize_callback' => 'anderson_sanitize_slider_animation'
@@ -118,12 +118,32 @@ function anderson_customize_register_slider_settings( $wp_customize ) {
 		'priority' => 9,
 		'active_callback' => 'anderson_slider_activated_callback',
         'choices'  => array(
-            'horizontal' => esc_html__( 'Slide Effect', 'anderson-lite' ),
+            'slide' => esc_html__( 'Slide Effect', 'anderson-lite' ),
             'fade' => esc_html__( 'Fade Effect', 'anderson-lite' )
 			)
 		)
 	);
 	
+	// Add Setting and Control for Slider Speed
+	$wp_customize->add_setting( 'anderson_theme_options[slider_speed]', array(
+        'default'           => 7000,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'absint'
+		)
+	);
+    $wp_customize->add_control( 'anderson_theme_options[slider_speed]', array(
+        'label'    => esc_html__( 'Slider Speed (in ms)', 'anderson-lite' ),
+        'section'  => 'anderson_section_slider',
+        'settings' => 'anderson_theme_options[slider_speed]',
+        'type'     => 'number',
+		'active_callback' => 'anderson_slider_activated_callback',
+		'priority' => 10,
+		'input_attrs' => array(
+			'min'   => 1000,
+			'step'  => 100,
+		),
+		)
+	);
+	
 }
-
-?>

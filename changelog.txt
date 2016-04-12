@@ -5,6 +5,7 @@ Anderson Lite Changelog
 Version 1.3.4
 -----------------------------------
 [updated] flexlider to version 2.6.0
+[added] slider speed setting to Customizer
 
 Version 1.3.3
 -----------------------------------

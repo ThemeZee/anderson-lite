@@ -8,9 +8,9 @@
  */
 
 // Passing Variables to Featured Post Slider Slider ( js/slider.js)
-add_action('wp_enqueue_scripts', 'anderson_custom_slider_params');
+add_action( 'wp_enqueue_scripts', 'anderson_custom_slider_params' );
 
-if ( ! function_exists( 'anderson_custom_slider_params' ) ):
+if ( ! function_exists( 'anderson_custom_slider_params' ) ) :
 
 function anderson_custom_slider_params() { 
 	
@@ -21,9 +21,10 @@ function anderson_custom_slider_params() {
 	$params = array();
 	
 	// Define Slider Animation
-	if( isset($theme_options['slider_animation']) ) :
-		$params['animation'] = esc_attr($theme_options['slider_animation']);
-	endif;
+	$params['animation'] = $theme_options['slider_animation'];
+	
+	// Define Slider Speed
+	$params['speed'] = $theme_options['slider_speed'];
 	
 	// Passing Parameters to Javascript
 	wp_localize_script( 'anderson-lite-post-slider', 'anderson_slider_params', $params );
@@ -35,9 +36,9 @@ endif;
 
 
 // Passing Variables to jQuery responsiveMenu ( js/navigation.js)
-add_action('wp_enqueue_scripts', 'anderson_custom_navigation_params');
+add_action( 'wp_enqueue_scripts', 'anderson_custom_navigation_params' );
 
-if ( ! function_exists( 'anderson_custom_navigation_params' ) ):
+if ( ! function_exists( 'anderson_custom_navigation_params' ) ) :
 
 function anderson_custom_navigation_params() { 
 	
@@ -54,6 +55,3 @@ function anderson_custom_navigation_params() {
 }
 
 endif;
-
-
-?>
