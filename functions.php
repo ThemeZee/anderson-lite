@@ -171,8 +171,8 @@ function anderson_register_sidebars() {
 		'description' => esc_html__( 'Appears on Magazine Homepage template only. You can use the Category Posts widgets here.', 'anderson-lite' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s clearfix">',
 		'after_widget' => '</div>',
-		'before_title' => '<h2 class="widgettitle"><span>',
-		'after_title' => '</span></h2>',
+		'before_title' => '<h3 class="widgettitle"><span>',
+		'after_title' => '</span></h3>',
 	));
 	
 }
