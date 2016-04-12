@@ -32,7 +32,8 @@
 
 			<div id="logo">
 
-				<?php do_action('anderson_site_title'); ?>
+				<?php anderson_site_logo(); ?>
+				<?php anderson_site_title(); ?>
 				
 				<?php // Display Tagline on header if activated
 				if ( isset($theme_options['header_tagline']) and $theme_options['header_tagline'] == true ) : ?>			
