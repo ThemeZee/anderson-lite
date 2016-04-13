@@ -103,8 +103,8 @@ function anderson_setup() {
 
 	// Set up the WordPress core custom logo feature
 	add_theme_support( 'custom-logo', apply_filters( 'anderson_custom_logo_args', array(
-		'height' => 50,
-		'width' => 350,
+		'height' => 60,
+		'width' => 300,
 		'flex-height' => true,
 		'flex-width' => true,
 	) ) );
@@ -157,7 +157,7 @@ function anderson_register_sidebars() {
 	register_sidebar( array(
 		'name' => esc_html__( 'Sidebar', 'anderson-lite' ),
 		'id' => 'sidebar',
-		'description' => esc_html__( 'Appears on posts and pages except Magazine Homepage and Fullwidth template.', 'anderson-lite' ),
+		'description' => esc_html__( 'Appears on posts and pages except the full width template.', 'anderson-lite' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widgettitle"><span>',

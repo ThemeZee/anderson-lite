@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Everything\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2016-01-19 16:28+0100\n"
-"PO-Revision-Date: 2016-01-19 16:28+0100\n"
+"POT-Creation-Date: 2016-04-13 09:44+0100\n"
+"PO-Revision-Date: 2016-04-13 09:46+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -40,9 +40,9 @@ msgid "% comments"
 msgstr "% Kommentare"
 
 #: content-excerpt.php:14 content-search.php:8 content.php:13
-#: inc/widgets/widget-category-posts-boxed.php:139
-#: inc/widgets/widget-category-posts-columns.php:171
-#: inc/widgets/widget-category-posts-grid.php:173
+#: inc/widgets/widget-category-posts-boxed.php:131
+#: inc/widgets/widget-category-posts-columns.php:159
+#: inc/widgets/widget-category-posts-grid.php:165
 msgid "&raquo; Read more"
 msgstr "&raquo; Weiterlesen"
 
@@ -59,38 +59,35 @@ msgstr ""
 "hinzu. Die Slideshow zeigt alle Beiträge, die mit diesem Schlagwort getaggt "
 "sind."
 
-#: functions.php:115
+#: functions.php:123
 msgid "Main Navigation"
 msgstr "Hauptnavigation"
 
-#: functions.php:116
+#: functions.php:124
 msgid "Top Navigation"
 msgstr "Obere Navigation"
 
-#: functions.php:117
+#: functions.php:125
 msgid "Footer Navigation"
 msgstr "Footer Navigation"
 
-#: functions.php:120
+#: functions.php:128
 msgid "Social Icons"
 msgstr "Social Icons"
 
-#: functions.php:150 sidebar.php:14
+#: functions.php:158 sidebar.php:14
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#: functions.php:152
-msgid ""
-"Appears on posts and pages except Magazine Homepage and Fullwidth template."
-msgstr ""
-"Erscheint auf allen Beiträgen und Seiten mit Ausnahme der Magazine Homepage "
-"und Fullwidth Templates."
+#: functions.php:160
+msgid "Appears on posts and pages except the full width template."
+msgstr "Erscheint auf allen Beiträgen und Seiten außer dem Fullwidth Template."
 
-#: functions.php:161
+#: functions.php:169
 msgid "Magazine Homepage"
 msgstr "Magazin Startseite"
 
-#: functions.php:163
+#: functions.php:171
 msgid ""
 "Appears on Magazine Homepage template only. You can use the Category Posts "
 "widgets here."
@@ -157,31 +154,31 @@ msgstr "Zeige hervorgehobene Beiträge in der Liste der letzten Beiträge."
 msgid "Number of Posts"
 msgstr "Anzahl der Beiträge"
 
-#: inc/template-tags.php:134
+#: inc/template-tags.php:165
 #, php-format
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr "Veröffentlicht am %s"
 
-#: inc/template-tags.php:150 inc/widgets/widget-category-posts-boxed.php:216
-#: inc/widgets/widget-category-posts-columns.php:240
-#: inc/widgets/widget-category-posts-grid.php:239
+#: inc/template-tags.php:181 inc/widgets/widget-category-posts-boxed.php:204
+#: inc/widgets/widget-category-posts-columns.php:224
+#: inc/widgets/widget-category-posts-grid.php:227
 #, php-format
 msgid "View all posts by %s"
 msgstr "Alle Beiträge von %s ansehen"
 
-#: inc/template-tags.php:154
+#: inc/template-tags.php:185
 #, php-format
 msgctxt "post author"
 msgid "by %s"
 msgstr "von %s"
 
-#: inc/template-tags.php:328
+#: inc/template-tags.php:359
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr "Erstellt mit %1$s und %2$s."
 
-#: inc/template-tags.php:362
+#: inc/template-tags.php:393
 msgid ""
 "Please go to Appearance &#8594; Menus and create a new custom menu with "
 "custom links to all your social networks. Then click on \"Manage Locations\" "
@@ -191,19 +188,19 @@ msgstr ""
 "all deinen sozialen Netzwerken. Klicke danach auf den Tab 'Positionen "
 "verwalten' und weise deinem erstelltes Menü die \"Social Icons\" Position zu."
 
-#: inc/template-tags.php:379
+#: inc/template-tags.php:410
 msgid "Pingback:"
 msgstr "Pingback:"
 
-#: inc/template-tags.php:380 inc/template-tags.php:400
+#: inc/template-tags.php:411 inc/template-tags.php:431
 msgid "(Edit)"
 msgstr "(Bearbeiten)"
 
-#: inc/template-tags.php:395
+#: inc/template-tags.php:426
 msgid "Your comment is awaiting moderation."
 msgstr "Dein Kommentar wird überprüft."
 
-#: inc/template-tags.php:399
+#: inc/template-tags.php:430
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s am %2$s"
@@ -217,15 +214,15 @@ msgstr "Willkommen bei %1$s %2$s"
 msgid "Theme Info"
 msgstr "Theme Info"
 
-#: inc/theme-info.php:44 inc/customizer/customizer.php:111
+#: inc/theme-info.php:44 inc/customizer/customizer.php:128
 msgid "Theme Links"
 msgstr "Theme Links"
 
-#: inc/theme-info.php:45 inc/customizer/customizer.php:112
+#: inc/theme-info.php:45 inc/customizer/customizer.php:129
 msgid "https://themezee.com/themes/anderson/"
 msgstr "https://themezee.com/de/themes/anderson/"
 
-#: inc/theme-info.php:45 inc/customizer/customizer.php:113
+#: inc/theme-info.php:45 inc/customizer/customizer.php:130
 msgid "Theme Page"
 msgstr "Theme Seite"
 
@@ -238,16 +235,16 @@ msgid "Theme Demo"
 msgstr "Theme Demo"
 
 #: inc/theme-info.php:48 inc/theme-info.php:69
-#: inc/customizer/customizer.php:114
+#: inc/customizer/customizer.php:131
 msgid "https://themezee.com/docs/anderson-documentation/"
 msgstr "https://themezee.com/de/docs/anderson-dokumentation/"
 
 #: inc/theme-info.php:48 inc/theme-info.php:63
-#: inc/customizer/customizer.php:115
+#: inc/customizer/customizer.php:132
 msgid "Theme Documentation"
 msgstr "Theme Dokumentation"
 
-#: inc/theme-info.php:49 inc/customizer/customizer.php:117
+#: inc/theme-info.php:49 inc/customizer/customizer.php:134
 msgid "Rate this theme"
 msgstr "Theme bewerten"
 
@@ -327,19 +324,23 @@ msgid "Background"
 msgstr "Hintergrund"
 
 #: inc/customizer/customizer.php:49
+msgid "Display Site Title"
+msgstr "Zeige Titel der Website"
+
+#: inc/customizer/customizer.php:66
 msgid "Display Tagline below site title."
 msgstr "Zeige den Untertitel unter dem Seitentitel."
 
-#: inc/customizer/customizer.php:66
+#: inc/customizer/customizer.php:83
 msgid "Header Image Link"
 msgstr "Header-Bild Link"
 
-#: inc/customizer/customizer.php:83
+#: inc/customizer/customizer.php:100
 msgid "Hide header image on front page"
 msgstr "Verstecke Header-Bild auf der Startseite"
 
-#: inc/customizer/frontend/custom-slider.php:48
 #: inc/customizer/frontend/custom-slider.php:49
+#: inc/customizer/frontend/custom-slider.php:50
 msgid "Menu"
 msgstr "Menü"
 
@@ -520,6 +521,10 @@ msgstr "Slide Effekt"
 msgid "Fade Effect"
 msgstr "Fade Effekt"
 
+#: inc/customizer/sections/customizer-slider.php:136
+msgid "Slider Speed (in ms)"
+msgstr "Slider Geschwindigkeit (in ms)"
+
 #: inc/customizer/sections/customizer-upgrade.php:14
 msgid "More Features"
 msgstr "Mehr Features"
@@ -537,50 +542,50 @@ msgstr ""
 msgid "Category Posts: Boxed (%s)"
 msgstr "Kategorie Beiträge: Box (%s)"
 
-#: inc/widgets/widget-category-posts-boxed.php:272
-#: inc/widgets/widget-category-posts-columns.php:296
-#: inc/widgets/widget-category-posts-grid.php:295
-#: inc/widgets/widget-category-posts-horizontal.php:173
+#: inc/widgets/widget-category-posts-boxed.php:249
+#: inc/widgets/widget-category-posts-columns.php:269
+#: inc/widgets/widget-category-posts-grid.php:272
+#: inc/widgets/widget-category-posts-horizontal.php:158
 msgid "View all posts"
 msgstr "Alle Beiträge ansehen"
 
-#: inc/widgets/widget-category-posts-boxed.php:284
-#: inc/widgets/widget-category-posts-columns.php:308
-#: inc/widgets/widget-category-posts-grid.php:307
-#: inc/widgets/widget-category-posts-horizontal.php:185
+#: inc/widgets/widget-category-posts-boxed.php:261
+#: inc/widgets/widget-category-posts-columns.php:281
+#: inc/widgets/widget-category-posts-grid.php:284
+#: inc/widgets/widget-category-posts-horizontal.php:170
 #, php-format
 msgid "View all posts from category %s"
 msgstr "Alle Beiträge in der Kategorie %s ansehen"
 
-#: inc/widgets/widget-category-posts-boxed.php:325
-#: inc/widgets/widget-category-posts-grid.php:350
-#: inc/widgets/widget-category-posts-horizontal.php:241
+#: inc/widgets/widget-category-posts-boxed.php:301
+#: inc/widgets/widget-category-posts-grid.php:326
+#: inc/widgets/widget-category-posts-horizontal.php:225
 msgid "Title:"
 msgstr "Titel:"
 
-#: inc/widgets/widget-category-posts-boxed.php:331
-#: inc/widgets/widget-category-posts-grid.php:356
-#: inc/widgets/widget-category-posts-horizontal.php:247
+#: inc/widgets/widget-category-posts-boxed.php:307
+#: inc/widgets/widget-category-posts-grid.php:332
+#: inc/widgets/widget-category-posts-horizontal.php:231
 msgid "Category:"
 msgstr "Kategorie:"
 
-#: inc/widgets/widget-category-posts-boxed.php:334
-#: inc/widgets/widget-category-posts-columns.php:362
-#: inc/widgets/widget-category-posts-columns.php:383
-#: inc/widgets/widget-category-posts-grid.php:359
-#: inc/widgets/widget-category-posts-horizontal.php:250
+#: inc/widgets/widget-category-posts-boxed.php:310
+#: inc/widgets/widget-category-posts-columns.php:334
+#: inc/widgets/widget-category-posts-columns.php:355
+#: inc/widgets/widget-category-posts-grid.php:335
+#: inc/widgets/widget-category-posts-horizontal.php:234
 msgid "All Categories"
 msgstr "Alle Kategorien"
 
-#: inc/widgets/widget-category-posts-boxed.php:348
-#: inc/widgets/widget-category-posts-grid.php:387
-#: inc/widgets/widget-category-posts-horizontal.php:264
+#: inc/widgets/widget-category-posts-boxed.php:324
+#: inc/widgets/widget-category-posts-grid.php:363
+#: inc/widgets/widget-category-posts-horizontal.php:248
 msgid "Link Widget Title to Category Archive page"
 msgstr "Verlinke den Widget Titel zur Kategorie Archiv Seite"
 
-#: inc/widgets/widget-category-posts-boxed.php:355
-#: inc/widgets/widget-category-posts-columns.php:417
-#: inc/widgets/widget-category-posts-grid.php:394
+#: inc/widgets/widget-category-posts-boxed.php:331
+#: inc/widgets/widget-category-posts-columns.php:389
+#: inc/widgets/widget-category-posts-grid.php:370
 msgid "Display post date and author"
 msgstr "Zeige Beitragsdatum und Autor"
 
@@ -597,32 +602,32 @@ msgstr ""
 msgid "Category Posts: 2 Columns (%s)"
 msgstr "Kategorie Beiträge: 2 Spalten (%s)"
 
-#: inc/widgets/widget-category-posts-columns.php:353
+#: inc/widgets/widget-category-posts-columns.php:325
 msgid "Left Category Title:"
 msgstr "Titel der linken Kategorie:"
 
-#: inc/widgets/widget-category-posts-columns.php:359
+#: inc/widgets/widget-category-posts-columns.php:331
 msgid "Left Category:"
 msgstr "Linke Kategorie:"
 
-#: inc/widgets/widget-category-posts-columns.php:374
+#: inc/widgets/widget-category-posts-columns.php:346
 msgid "Right Category Title:"
 msgstr "Titel der rechten Kategorie:"
 
-#: inc/widgets/widget-category-posts-columns.php:380
+#: inc/widgets/widget-category-posts-columns.php:352
 msgid "Right Category:"
 msgstr "Rechte Kategorie:"
 
-#: inc/widgets/widget-category-posts-columns.php:395
-#: inc/widgets/widget-category-posts-grid.php:371
+#: inc/widgets/widget-category-posts-columns.php:367
+#: inc/widgets/widget-category-posts-grid.php:347
 msgid "Number of posts:"
 msgstr "Anzahl der Beiträge:"
 
-#: inc/widgets/widget-category-posts-columns.php:403
+#: inc/widgets/widget-category-posts-columns.php:375
 msgid "Highlight first post (big image + excerpt)"
 msgstr "Ersten Beitrag hervorheben (großes Bild + Textauszug)"
 
-#: inc/widgets/widget-category-posts-columns.php:410
+#: inc/widgets/widget-category-posts-columns.php:382
 msgid "Link Category Titles to Category Archive pages"
 msgstr "Verlinke die Kategorie Titel zu den Kategorie Archiv Seiten"
 
@@ -639,11 +644,11 @@ msgstr ""
 msgid "Category Posts: Grid (%s)"
 msgstr "Kategorie Beiträge: Raster (%s)"
 
-#: inc/widgets/widget-category-posts-grid.php:373
+#: inc/widgets/widget-category-posts-grid.php:349
 msgid "Please chose an even number (2, 4, 6, 8)."
 msgstr "Bitte wähle eine gerade Anzahl (2, 4, 6, 8)."
 
-#: inc/widgets/widget-category-posts-grid.php:380
+#: inc/widgets/widget-category-posts-grid.php:356
 msgid "Display as small posts grid with thumbnails"
 msgstr "Zeige Beiträge in kleinem Raster mit Thumbnails"
 
@@ -738,9 +743,6 @@ msgstr "Kategorie Beiträge: Horizontal (%s)"
 
 #~ msgid "Latest Posts"
 #~ msgstr "Letzte Beiträge"
-
-#~ msgid "Display Category Titles"
-#~ msgstr "Zeige Kategorien als Titel"
 
 #~ msgid ""
 #~ "Displays a single post from a selected category. Please use this widget "
@@ -1090,10 +1092,6 @@ msgstr "Kategorie Beiträge: Horizontal (%s)"
 #~ msgctxt "color setting"
 #~ msgid "Post Area (secondary)"
 #~ msgstr "Content Bereich (sekundär)"
-
-#~ msgctxt "color setting"
-#~ msgid "Slider (primary)"
-#~ msgstr "Slider (primär)"
 
 #~ msgctxt "color setting"
 #~ msgid "Slider (secondary)"
