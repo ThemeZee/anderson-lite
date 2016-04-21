@@ -7,14 +7,21 @@ add_action('wp_enqueue_scripts', 'anderson_enqueue_scripts');
 
 function anderson_enqueue_scripts() {
 
+	// Get Theme Version
+	$theme_version = wp_get_theme()->get( 'Version' );
+	
 	// Register and Enqueue Stylesheet
-	wp_enqueue_style( 'anderson-lite-stylesheet', get_stylesheet_uri() );
+	wp_enqueue_style( 'anderson-lite-stylesheet', get_stylesheet_uri(), array(), $theme_version );
 	
 	// Register Genericons
-	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/css/genericons/genericons.css' );
+	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/css/genericons/genericons.css', array(), '3.4.1' );
+	
+	// Register and Enqueue HTML5shiv to support HTML5 elements in older IE versions
+	wp_enqueue_script( 'anderson-lite-html5shiv', get_template_directory_uri() . '/js/html5shiv.min.js', array(), '3.7.3' );
+	wp_script_add_data( 'anderson-lite-html5shiv', 'conditional', 'lt IE 9' );
 
 	// Register and enqueue navigation.js
-	wp_enqueue_script( 'anderson-lite-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery') );
+	wp_enqueue_script( 'anderson-lite-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20160421' );
 	
 	// Get Theme Options from Database
 	$theme_options = anderson_theme_options();
@@ -26,7 +33,7 @@ function anderson_enqueue_scripts() {
 		wp_enqueue_style( 'anderson-lite-flexslider', get_template_directory_uri() . '/css/flexslider.css');
 
 		// FlexSlider JS
-		wp_enqueue_script( 'anderson-lite-flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array('jquery'), '2.6.0' );
+		wp_enqueue_script( 'anderson-lite-flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array( 'jquery' ), '2.6.0' );
 
 		// Register and enqueue slider.js
 		wp_enqueue_script( 'anderson-lite-post-slider', get_template_directory_uri() .'/js/slider.js', array( 'anderson-lite-flexslider' ), '2.6.0' );
@@ -39,7 +46,7 @@ function anderson_enqueue_scripts() {
 	}
 
 	// Register and Enqueue Font
-	wp_enqueue_style('anderson-lite-default-fonts', anderson_fonts_url(), array(), null );
+	wp_enqueue_style( 'anderson-lite-default-fonts', anderson_fonts_url(), array(), null );
 
 }
 
