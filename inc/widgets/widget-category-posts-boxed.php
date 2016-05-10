@@ -8,7 +8,8 @@ class Anderson_Category_Posts_Boxed_Widget extends WP_Widget {
 		// Setup Widget
 		$widget_ops = array(
 			'classname' => 'anderson_category_posts_boxed', 
-			'description' => esc_html__( 'Displays your posts from a selected category in a boxed layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'anderson-lite' )
+			'description' => esc_html__( 'Displays your posts from a selected category in a boxed layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'anderson-lite' ),
+			'customize_selective_refresh' => true,
 		);
 		parent::__construct('anderson_category_posts_boxed', sprintf( esc_html__( 'Category Posts: Boxed (%s)', 'anderson-lite' ), 'Anderson' ), $widget_ops);
 		
