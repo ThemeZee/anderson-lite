@@ -17,8 +17,8 @@ function anderson_enqueue_scripts() {
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/css/genericons/genericons.css', array(), '3.4.1' );
 	
 	// Register and Enqueue HTML5shiv to support HTML5 elements in older IE versions
-	wp_enqueue_script( 'anderson-lite-html5shiv', get_template_directory_uri() . '/js/html5shiv.min.js', array(), '3.7.3' );
-	wp_script_add_data( 'anderson-lite-html5shiv', 'conditional', 'lt IE 9' );
+	wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/js/html5shiv.min.js', array(), '3.7.3' );
+	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
 
 	// Register and enqueue navigation.js
 	wp_enqueue_script( 'anderson-lite-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20160421' );
@@ -33,10 +33,10 @@ function anderson_enqueue_scripts() {
 		wp_enqueue_style( 'anderson-lite-flexslider', get_template_directory_uri() . '/css/flexslider.css');
 
 		// FlexSlider JS
-		wp_enqueue_script( 'anderson-lite-flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array( 'jquery' ), '2.6.0' );
+		wp_enqueue_script( 'flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array( 'jquery' ), '2.6.0' );
 
 		// Register and enqueue slider.js
-		wp_enqueue_script( 'anderson-lite-post-slider', get_template_directory_uri() .'/js/slider.js', array( 'anderson-lite-flexslider' ), '2.6.0' );
+		wp_enqueue_script( 'anderson-lite-post-slider', get_template_directory_uri() .'/js/slider.js', array( 'flexslider' ), '2.6.0' );
 
 	endif;
 	
