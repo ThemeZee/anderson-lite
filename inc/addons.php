@@ -13,19 +13,20 @@ function anderson_theme_addons_setup() {
 
 	// Add Theme Support for Anderson Pro Plugin
 	add_theme_support( 'anderson-pro' );
-	
+
 	// Add Theme Support for ThemeZee Plugins
 	add_theme_support( 'themezee-widget-bundle' );
 	add_theme_support( 'themezee-breadcrumbs' );
 	add_theme_support( 'themezee-related-posts' );
-	
+	add_theme_support( 'themezee-mega-menu', array( 'primary' ) );
+
 	// Add Support for Infinite Scroll
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'content',
 		'footer_widgets' => array( 'footer-left', 'footer-center-left', 'footer-center-right', 'footer-right' ),
 		'render'    => 'anderson_infinite_scroll_render',
 	) );
-	
+
 }
 
 
@@ -41,20 +42,20 @@ function anderson_theme_addons_scripts() {
 		or is_active_widget('TZWB_Social_Icons_Widget', false, 'tzwb-social-icons')
 		or is_active_widget('TZWB_Tabbed_Content_Widget', false, 'tzwb-tabbed-content')
 	) {
-	
+
 		// Enqueue Widget Bundle Stylesheet
 		wp_enqueue_style( 'themezee-widget-bundle', get_template_directory_uri() . '/css/themezee-widget-bundle.css', array(), '20160421' );
 
 	}
-	
+
 	// Load Related Posts stylesheet only on single posts
 	if( is_singular( 'post' ) ) {
-	
+
 		// Enqueue Related Post Stylesheet
 		wp_enqueue_style( 'themezee-related-posts', get_template_directory_uri() . '/css/themezee-related-posts.css', array(), '20160421' );
 
 	}
-	
+
 }
 
 
@@ -65,7 +66,7 @@ function anderson_theme_addons_image_sizes() {
 
 	// Add Widget Bundle Thumbnail
 	add_image_size( 'tzwb-thumbnail', 85, 65, true );
-	
+
 	// Add Related Posts Thumbnail
 	add_image_size( 'themezee-related-posts', 520, 300, true );
 
@@ -79,10 +80,10 @@ function anderson_infinite_scroll_render() {
 
 	// Get Theme Options from Database
 	$theme_options = anderson_theme_options();
-	
+
 	while ( have_posts() ) {
 		the_post();
 		get_template_part( 'content', $theme_options['posts_length'] );
 	}
-	
+
 } // anderson_infinite_scroll_render()

@@ -17,9 +17,9 @@
 ?>
 
 <div id="wrapper" class="hfeed">
-	
+
 	<div id="header-wrap">
-	
+
 		<div id="topheader" class="container clearfix">
 			<?php locate_template('/inc/top-navigation.php', true); ?>
 		</div>
@@ -30,37 +30,38 @@
 
 				<?php anderson_site_logo(); ?>
 				<?php anderson_site_title(); ?>
-				
+
 				<?php // Display Tagline on header if activated
-				if ( isset($theme_options['header_tagline']) and $theme_options['header_tagline'] == true ) : ?>			
+				if ( isset($theme_options['header_tagline']) and $theme_options['header_tagline'] == true ) : ?>
 					<h3 class="site-description"><?php echo bloginfo('description'); ?></h3>
 				<?php endif; ?>
-			
+
 			</div>
-			
+
 			<?php // Display Header Banner Ad
 				anderson_display_header_banner(); ?>
 
 		</header>
-	
+
 	</div>
-	
+
 	<div id="navigation-wrap">
-	
+
 		<nav id="mainnav" class="container clearfix" role="navigation">
-			<?php 
+			<?php
 			// Display Main Navigation
 			wp_nav_menu( array(
-				'theme_location' => 'primary', 
-				'container' => false, 
-				'menu_id' => 'mainnav-menu', 
-				'echo' => true, 
+				'theme_location' => 'primary',
+				'container' => false,
+				'menu_id' => 'mainnav-menu',
+				'menu_class' => 'main-navigation-menu',
+				'echo' => true,
 				'fallback_cb' => 'anderson_default_menu')
 			);
 			?>
 		</nav>
-		
+
 	</div>
-	
+
 	<?php // Display Custom Header Image
-		anderson_display_custom_header(); ?>	
+		anderson_display_custom_header(); ?>
