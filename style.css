@@ -5,7 +5,7 @@ Description: A clean and elegant magazine theme suitable for any kind of content
 Version: 1.3.6
 Author: ThemeZee
 Author URI: https://themezee.com
-Tags: two-columns, light, green, custom-background, custom-header, custom-menu, editor-style, blog, entertainment, news, holiday, food-and-drink, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, silver, white, gray
+Tags: two-columns, light, green, custom-background, custom-header, custom-menu, editor-style, blog, news, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, silver, white, gray
 Text Domain: anderson-lite
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -263,6 +263,9 @@ input, textarea, select {
 }
 #topnav-menu li.current_page_item a, #topnav-menu li.current-menu-item a {
 	text-decoration: underline;
+}
+#topnav-menu li .sub-menu {
+	display: none !important;
 }
 
 /* Navigation Menu
@@ -1697,10 +1700,13 @@ embed, iframe, object, video {
 		top: 0;
 		left: 0;
 	}
-	.main-navigation-menu li:hover ul ul, .main-navigation-menu li:hover ul ul ul, .main-navigation-menu li:hover ul ul ul ul,
-	.main-navigation-menu li:hover ul, .main-navigation-menu li li:hover ul, .main-navigation-menu li li li:hover ul, .main-navigation-menu li li li li:hover ul
-	{
-		display: inline;
+	.main-navigation-menu ul,
+	.mega-menu-item .mega-menu-content,
+	.mega-menu-item .mega-menu-content .mega-menu-widget {
+		position: static;
+		display: block;
+		left: auto;
+		top: auto;
 	}
 
 	#mainnav {
@@ -1759,6 +1765,7 @@ embed, iframe, object, video {
 	}
 	.main-navigation-menu ul {
 		float: left;
+		color: #222;
 		background: #fbfbfb;
 		width: 100%;
 	}
@@ -1835,6 +1842,22 @@ embed, iframe, object, video {
 	}
 	.main-navigation-menu ul .submenu-dropdown-toggle:before {
 		font-size: 14px;
+	}
+
+	/* Mega Menu Styling */
+	.mega-menu-item .mega-menu-content {
+		border-bottom: 1px solid #ddd;
+	}
+
+	.mega-menu-item .mega-menu-two-columns > li,
+	.mega-menu-item .mega-menu-three-columns > li,
+	.mega-menu-item .mega-menu-five-columns > li {
+		width: 100%;
+	}
+
+	.mega-menu-item .mega-menu-four-columns > li,
+	.mega-menu-item .mega-menu-six-columns > li {
+		width: 50%;
 	}
 
 	/* Category Post Widgets */
@@ -1926,6 +1949,12 @@ embed, iframe, object, video {
 	.post-categories a {
 		margin: 0 1px 1px 0;
 		font-size: 0.8em;
+	}
+
+	/* Mega Menu Styling */
+	.mega-menu-item .mega-menu-four-columns > li,
+	.mega-menu-item .mega-menu-six-columns > li {
+		width: 100%;
 	}
 
 	/* Category Post Widgets */
