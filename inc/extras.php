@@ -5,10 +5,10 @@
  * @package Anderson Lite
  */
 
- 
+
 // Add Default Menu Fallback Function
 function anderson_default_menu() {
-	echo '<ul id="mainnav-menu" class="menu">'. wp_list_pages('title_li=&echo=0') .'</ul>';
+	echo '<ul id="mainnav-menu" class="main-navigation-menu menu">'. wp_list_pages('title_li=&echo=0') .'</ul>';
 }
 
 
@@ -34,7 +34,7 @@ function anderson_excerpt_length($length) {
 // Change Excerpt More
 add_filter('excerpt_more', 'anderson_excerpt_more');
 function anderson_excerpt_more($more) {
-    
+
 	// Get Theme Options from Database
 	$theme_options = anderson_theme_options();
 
