@@ -26,6 +26,9 @@ For more information about Anderson Lite please go to https://themezee.com/theme
 
 == Changelog ==
 
+= 1.3.9 =
+* fixed dropdown menus on mobile navigation menus
+
 = 1.3.8 =
 * fixed styling of main navigation menu with default pages
 
