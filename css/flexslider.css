@@ -85,7 +85,7 @@ html[xmlns] .zeeslides {display: block;}
 }
 #post-slider .zeeslide .post-content .entry {
 	margin: 0;
-} 
+}
 #post-slider .zeeslide .post-content .entry p {
 	margin: 0.3em 0;
 }
@@ -107,7 +107,7 @@ html[xmlns] .zeeslides {display: block;}
 	height: 40px;
 	background: #dd2727;
 	text-align: left;
-	color #fff;
+	color: #fff;
 	font-size: 0;
 	cursor: pointer;
 	z-index: 10;
