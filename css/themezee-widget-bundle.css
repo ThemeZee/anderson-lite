@@ -16,9 +16,9 @@
 
 /* Clearing Floats */
 .tzwb-clearfix:before, 
-.tzwb-clearfix:after {  
-	content: " ";
+.tzwb-clearfix:after {
 	display: table;  
+	content: " ";  
 }  
 
 .tzwb-clearfix:after {  
@@ -47,10 +47,10 @@
 }
 
 .tzwb-posts-list li {
-	list-style: none;
+	overflow: auto;
 	margin: 0 0 1em 0;
 	padding: 0;
-	overflow: auto;
+	list-style: none;
 }
 
 .tzwb-posts-list .tzwb-excerpt p {
@@ -85,9 +85,9 @@
 }
 
 .tzwb-comments-list li {
-	list-style: none;
-	margin: 0 0 1em 0;
 	overflow: auto;
+	margin: 0 0 1em 0;
+	list-style: none;
 }
 
 .tzwb-comments-list .avatar {
@@ -102,8 +102,8 @@
 .tzwb-comments-list .tzwb-comment-date {
 	margin: 0.2em 0 0;
 	padding: 0;
-	font-size: 0.85em;
 	color: #888;
+	font-size: 0.85em;
 }
 
 
@@ -111,35 +111,35 @@
 # Tabbed Content Widget
 ---------------------------------------------------------------- */
 .tzwb-tabbed-content .tzwb-tabnavi-wrap {
+	overflow: auto;
 	margin: 0;
 	padding: 0;
-	overflow: auto;
 	list-style: none;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi {
+	position: relative;
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	list-style-position: outside;
-	position: relative;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li {
-	float: left;
-	list-style: none;
 	position: relative;
+	float: left;
 	margin: 0;
 	padding: 0;
+	list-style: none;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a {
 	display: block;
 	margin: 0 1px 1px 0;
 	padding: 0.3em 0.7em;
-	font-size: 0.9em;
-	text-decoration: none;
 	background: #222;
+	text-decoration: none;
+	font-size: 0.9em;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:link, 
@@ -154,19 +154,19 @@
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a.current-tab {
-	text-decoration: none;
 	background: #dd2727;
+	text-decoration: none;
 }
 
 .tzwb-tabbed-content .tzwb-tabcontent {
-	padding: 0;
 	margin: 1em 0 0 0;
+	padding: 0;
 }
 
 .tzwb-tabbed-content .tzwb-tabcontent li.tzwb-has-thumbnail {
-	list-style: none;
-	margin: 0 0 0.5em 0;
 	overflow: auto;
+	margin: 0 0 0.5em 0;
+	list-style: none;
 }
 
 .tzwb-tabbed-content .tzwb-tabcontent  li.tzwb-has-thumbnail .wp-post-image {
@@ -177,9 +177,9 @@
 }
 
 .tzwb-tabbed-content .tzwb-tabcontent .tzwb-comments-list li.tzwb-has-avatar {
-	list-style: none;
-	margin: 0 0 0.3em 0;
 	overflow: auto;
+	margin: 0 0 0.3em 0;
+	list-style: none;
 }
 
 .tzwb-tabbed-content .tzwb-tabcontent .tzwb-comments-list li.tzwb-has-avatar .avatar {
@@ -190,8 +190,8 @@
 .tzwb-tabbed-content .tzwb-tabcontent ul li .tzwb-entry-meta {
 	margin: 0.1em 0;
 	padding: 0;
-	font-size: 0.8em;
 	color: #777;
+	font-size: 0.8em;
 }
 
 
@@ -199,8 +199,8 @@
 # Social Icons Widget
 ---------------------------------------------------------------- */
 .tzwb-social-icons .tzwb-social-icons-menu {
-	list-style-type: none;
 	list-style-position: outside;
+	list-style-type: none;
 	line-height: 1em;
 }
 
@@ -214,22 +214,22 @@
 	position: relative;
 	display: inline-block;
 	padding: 0.8em;
-	color: #fff;
 	background: #222;
+	color: #fff;
 	text-decoration: none;
 	line-height: 1em;
 }
 
 .tzwb-social-icons .tzwb-social-icons-menu li a:before {
-	color: #fff;
 	display: inline-block;
+	color: #fff;
+	vertical-align: top;
+	text-decoration: inherit;
+	font-size: 16px;
+	font-family: 'Genericons';
+	line-height: 1em;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font-size: 16px;
-	line-height: 1em;
-	font-family: 'Genericons';
-	text-decoration: inherit;
-	vertical-align: top;
 }
 
 /* Add Genericons */
@@ -267,8 +267,8 @@
 .tzwb-social-icons-menu li a[href*="mailto:"]:before{ content: '\f410'; }
 
 .tzwb-social-icons-menu li a:hover {
-	text-decoration: none;
 	background-color: #dd2727;
+	text-decoration: none;
 }
 
 .tzwb-social-icons-menu li a .screen-reader-text {

@@ -21,11 +21,11 @@
 *********************************/
 .zeeflexslider {margin: 0; padding: 0;}
 .zeeflexslider .zeeslides > li {display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
-.zeeflexslider .zeeslides img {width: 100%; display: block;}
+.zeeflexslider .zeeslides img { display: block;width: 100%;}
 .zeeflex-pauseplay span {text-transform: capitalize;}
 
 /* Clearfix for the .zeeslides element */
-.zeeslides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+.zeeslides:after { display: block; visibility: hidden; clear: both; height: 0;content: "."; line-height: 0;}
 html[xmlns] .zeeslides {display: block;}
 * html .zeeslides {height: 1%;}
 
@@ -34,25 +34,23 @@ html[xmlns] .zeeslides {display: block;}
  * include js that eliminates this class on page load */
 .no-js .zeeslides > li:first-child {display: block;}
 
-.zeeflex-viewport {max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;}
+.zeeflex-viewport {max-height: 2000px; -webkit-transition: all 1s ease; transition: all 1s ease;}
 .loading .zeeflex-viewport {max-height: 300px;}
 
 /*  ThemeZee Slider Layout
 *****************************************/
 #post-slider-container {
-	background: #fff;
 	margin-bottom: 2em;
+	background: #fff;
 }
 #post-slider-wrap {
 	position: relative;
 }
 #post-slider {
 	position: relative;
-	zoom: 1;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	padding-right: 1px;
+	zoom: 1;
 }
 #post-slider  .zeeslides {
 	zoom: 1;
@@ -64,21 +62,21 @@ html[xmlns] .zeeslides {display: block;}
 #post-slider .zeeslide .wp-post-image {
 	margin: 0;
 	max-width: 860px;
-	width: 100%;
 	max-height: 430px;
+	width: 100%;
 	height: auto;
 	vertical-align: top;
 }
 #post-slider .zeeslide .slide-content {
 	position: absolute;
+	right: 1em;
 	bottom: 1em;
 	left: 1em;
-	right: 1em;
 	max-width: 75%;
 }
 #post-slider .zeeslide .post-content {
-	background: #fff;
 	padding: 0.2em 0.8em 0.4em;
+	background: #fff;
 }
 #post-slider .zeeslide .post-content .entry-meta {
 	margin: 0.6em 0 0;
@@ -94,35 +92,35 @@ html[xmlns] .zeeslides {display: block;}
 }
 /* Direction Nav */
 .post-slider-controls .zeeflex-direction-nav {
-	*height: 0;
 	position: absolute;
 	top: 1em;
 	right: 1em;
+	*height: 0;
 }
 .post-slider-controls .zeeflex-direction-nav a {
-	display: block;
 	position: absolute;
+	z-index: 10;
+	display: block;
 	margin-left: -82px;
 	width: 40px;
 	height: 40px;
 	background: #dd2727;
-	text-align: left;
 	color: #fff;
+	text-align: left;
 	font-size: 0;
 	cursor: pointer;
-	z-index: 10;
 }
 .post-slider-controls .zeeflex-direction-nav a:hover {
 	text-decoration: none;
 }
 .post-slider-controls .zeeflex-direction-nav a:before {
-	margin: 0.35em;
-	-webkit-font-smoothing: antialiased;
 	display: inline-block;
-	font: normal 24px/1 Genericons;
-	text-decoration: inherit;
-	vertical-align: text-bottom;
+	margin: 0.35em;
 	color: #fff;
+	vertical-align: text-bottom;
+	text-decoration: inherit;
+	font: normal 24px/1 Genericons;
+	-webkit-font-smoothing: antialiased;
 }
 .post-slider-controls .zeeflex-direction-nav a.zeeflex-next:before {
 	content: '\f431';
@@ -150,24 +148,24 @@ html[xmlns] .zeeslides {display: block;}
 	margin-bottom: 12px;
 }
 .post-slider-controls .zeeflex-control-nav {
-	width: 100%;
 	position: absolute;
-	margin: 1px 0 0;
 	display: table;
+	margin: 1px 0 0;
+	width: 100%;
 }
 .post-slider-controls .zeeflex-control-nav li {
+	display: table-cell;
+	*display: inline;
 	padding: 0 1px 1px 0;
 	background: #fff;
-	display: table-cell;
 	zoom: 1;
-	*display: inline;
 }
 .post-slider-controls .zeeflex-control-paging li a {
-	height: 12px;
 	display: block;
+	height: 12px;
 	background: #333;
-	cursor: pointer;
 	text-indent: -9999px;
+	cursor: pointer;
 }
 .post-slider-controls .zeeflex-control-paging li a.zeeflex-active {
 	background: #dd2727;

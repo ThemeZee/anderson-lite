@@ -26,6 +26,9 @@ For more information about Anderson Lite please go to https://themezee.com/theme
 
 == Changelog ==
 
+= 1.4.0 =
+* added Right-to-Left language support
+
 = 1.3.9 =
 * fixed dropdown menus on mobile navigation menus
 
