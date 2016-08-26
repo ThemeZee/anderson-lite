@@ -33,6 +33,8 @@ body {
 
 #topnav-menu li{
 	float: right;
+	display: block;
+	width: 100%;
 }
 
 .main-navigation-menu {
@@ -41,6 +43,8 @@ body {
 
 .main-navigation-menu li {
 	float: right;
+	display: block;
+	width: 100%;
 }
 
 .main-navigation-menu li ul ul {
