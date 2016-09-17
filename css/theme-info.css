@@ -1,19 +1,15 @@
 /*
- * jQuery FlexSlider v2.0
- * http://www.woothemes.com/flexslider/
+ * Theme Info CSS
  *
- * Copyright 2012 WooThemes
- * Free to use under the GPLv2 license.
- * http://www.gnu.org/licenses/gpl-2.0.html
+ * CSS Stylesheet for Theme Info page on Appearance -> Theme Info
  *
- * Contributing author: Tyler Smith (@mbmufffin)
+ * @package Anderson Lite
  */
 
-
 .theme-info-wrap {
-    position: relative;
-    margin: 25px 40px 0 20px;
-    max-width: 1050px;
+	position: relative;
+	margin: 25px 40px 0 20px;
+	max-width: 1050px;
 }
 .theme-info-wrap img {
 	max-width: 100%;
@@ -21,14 +17,14 @@
 
 /* Clearing Floats */
 .theme-info-wrap .clearfix:before, .theme-info-wrap .clearfix:after {
-	display: table;  
-	content: " ";  
-}  
-.theme-info-wrap .clearfix:after {  
+	display: table;
+	content: " ";
+}
+.theme-info-wrap .clearfix:after {
 	clear: both;
-}  
+}
 .theme-info-wrap .clearfix {
-    *zoom: 1; /* For IE 6/7 only */  
+	*zoom: 1; /* For IE 6/7 only */
 }
 
 /* Columns */
@@ -52,30 +48,30 @@
 
 /* Font Styles */
 .theme-info-wrap h3 {
-    margin: 1em 0 0.6em;
-    font-size: 1.8em;
-    line-height: 1.5em;
+	margin: 1em 0 0.6em;
+	font-size: 1.8em;
+	line-height: 1.5em;
 }
 .theme-info-wrap h4 {
-    margin: 0.2em 0;
-    font-size: 1.4em;
+	margin: 0.2em 0;
+	font-size: 1.4em;
 }
 
 /* Theme Info Header */
 .theme-info-wrap h1 {
-    margin: 0.2em 0 0 0;
-    color: #333333;
-    font-weight: 400;
-    font-size: 3.0em;
-    line-height: 1.2em;
+	margin: 0.2em 0 0 0;
+	color: #333333;
+	font-weight: 400;
+	font-size: 3.0em;
+	line-height: 1.2em;
 }
 .theme-info-wrap .theme-description {
-    margin: 1em 0;
-    min-height: 60px;
-    color: #777777;
+	margin: 1em 0;
+	min-height: 60px;
+	color: #777777;
 	font-weight: 400;
-    font-size: 1.4em;
-    line-height: 1.6em;
+	font-size: 1.4em;
+	line-height: 1.6em;
 }
 
 /* Important Links */
@@ -116,18 +112,25 @@
 
 /* Getting Started */
 #getting-started {
-	margin: 1em 0;
+	margin: 2em 0;
 }
 #getting-started .section {
-	margin: 0.5em 0 2.5em;
+	margin: 2em 0 4em;
 }
 #getting-started .section .about {
 	color: #777777;
-    font-size: 1.2em;
-    line-height: 1.6em;
+	font-size: 1.2em;
+	line-height: 1.6em;
 }
-#getting-started img {
-	margin-top: 1em;
+
+/* More Features */
+#more-features .section {
+	margin: 1em 0 3em;
+}
+#more-features .section .about {
+	color: #777777;
+	font-size: 1.2em;
+	line-height: 1.6em;
 }
 
 /* Theme Author */
@@ -136,6 +139,6 @@
 }
 #theme-author p {
 	color: #777777;
-    font-size: 1.2em;
-    line-height: 1.6em;
+	font-size: 1.2em;
+	line-height: 1.6em;
 }

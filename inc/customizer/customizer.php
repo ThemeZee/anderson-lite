@@ -157,7 +157,7 @@ function anderson_customize_theme_links() {
 			</p>
 
 			<p>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/anderson/reviews/?filter=5', 'anderson-lite' ) ); ?>" target="_blank">
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/anderson-lite/reviews/?filter=5', 'anderson-lite' ) ); ?>" target="_blank">
 					<?php esc_html_e( 'Rate this theme', 'anderson-lite' ); ?>
 				</a>
 			</p>
