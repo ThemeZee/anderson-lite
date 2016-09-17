@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Anderson Lite\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2016-04-13 09:44+0100\n"
-"PO-Revision-Date: 2016-04-13 09:44+0100\n"
+"POT-Creation-Date: 2016-09-17 11:28+0100\n"
+"PO-Revision-Date: 2016-09-17 11:28+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: en_US\n"
@@ -44,9 +44,9 @@ msgid "% comments"
 msgstr ""
 
 #: content-excerpt.php:14 content-search.php:8 content.php:13
-#: inc/widgets/widget-category-posts-boxed.php:131
-#: inc/widgets/widget-category-posts-columns.php:159
-#: inc/widgets/widget-category-posts-grid.php:165
+#: inc/widgets/widget-category-posts-boxed.php:132
+#: inc/widgets/widget-category-posts-columns.php:160
+#: inc/widgets/widget-category-posts-grid.php:166
 msgid "&raquo; Read more"
 msgstr ""
 
@@ -58,35 +58,35 @@ msgid ""
 "posts which are tagged with that keyword."
 msgstr ""
 
-#: functions.php:123
+#: functions.php:130
 msgid "Main Navigation"
 msgstr ""
 
-#: functions.php:124
+#: functions.php:131
 msgid "Top Navigation"
 msgstr ""
 
-#: functions.php:125
+#: functions.php:132
 msgid "Footer Navigation"
 msgstr ""
 
-#: functions.php:128
+#: functions.php:135
 msgid "Social Icons"
 msgstr ""
 
-#: functions.php:158 sidebar.php:14
+#: functions.php:168 sidebar.php:14
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:160
+#: functions.php:170
 msgid "Appears on posts and pages except the full width template."
 msgstr ""
 
-#: functions.php:169
+#: functions.php:179
 msgid "Magazine Homepage"
 msgstr ""
 
-#: functions.php:171
+#: functions.php:181
 msgid ""
 "Appears on Magazine Homepage template only. You can use the Category Posts "
 "widgets here."
@@ -150,9 +150,9 @@ msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
-#: inc/template-tags.php:181 inc/widgets/widget-category-posts-boxed.php:204
-#: inc/widgets/widget-category-posts-columns.php:224
-#: inc/widgets/widget-category-posts-grid.php:227
+#: inc/template-tags.php:181 inc/widgets/widget-category-posts-boxed.php:205
+#: inc/widgets/widget-category-posts-columns.php:225
+#: inc/widgets/widget-category-posts-grid.php:228
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
@@ -192,70 +192,71 @@ msgstr ""
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: inc/theme-info.php:18 inc/theme-info.php:38
+#: inc/theme-info.php:19 inc/theme-info.php:40
 #, php-format
 msgid "Welcome to %1$s %2$s"
 msgstr ""
 
-#: inc/theme-info.php:19
+#: inc/theme-info.php:20
 msgid "Theme Info"
 msgstr ""
 
-#: inc/theme-info.php:44 inc/customizer/customizer.php:128
+#: inc/theme-info.php:46 inc/customizer/customizer.php:139
 msgid "Theme Links"
 msgstr ""
 
-#: inc/theme-info.php:45 inc/customizer/customizer.php:129
+#: inc/theme-info.php:47 inc/customizer/customizer.php:142
 msgid "https://themezee.com/themes/anderson/"
 msgstr ""
 
-#: inc/theme-info.php:45 inc/customizer/customizer.php:130
+#: inc/theme-info.php:47 inc/customizer/customizer.php:143
 msgid "Theme Page"
 msgstr ""
 
-#: inc/theme-info.php:46
-msgid "Changelog"
-msgstr ""
-
-#: inc/theme-info.php:47
+#: inc/theme-info.php:48 inc/customizer/customizer.php:149
 msgid "Theme Demo"
 msgstr ""
 
-#: inc/theme-info.php:48 inc/theme-info.php:69
-#: inc/customizer/customizer.php:131
+#: inc/theme-info.php:49 inc/theme-info.php:70
+#: inc/customizer/customizer.php:154
 msgid "https://themezee.com/docs/anderson-documentation/"
 msgstr ""
 
-#: inc/theme-info.php:48 inc/theme-info.php:63
-#: inc/customizer/customizer.php:132
+#: inc/theme-info.php:49 inc/theme-info.php:64
+#: inc/customizer/customizer.php:155
 msgid "Theme Documentation"
 msgstr ""
 
-#: inc/theme-info.php:49 inc/customizer/customizer.php:134
+#: inc/theme-info.php:50 inc/theme-info.php:152
+#: inc/customizer/customizer.php:160
+msgid "https://wordpress.org/support/theme/anderson/reviews/?filter=5"
+msgstr ""
+
+#: inc/theme-info.php:50 inc/customizer/customizer.php:161
 msgid "Rate this theme"
 msgstr ""
 
-#: inc/theme-info.php:56
+#: inc/theme-info.php:57
 #, php-format
 msgid "Getting Started with %s"
 msgstr ""
 
-#: inc/theme-info.php:66
+#: inc/theme-info.php:67
 msgid ""
 "You need help to setup and configure this theme? We got you covered with an "
 "extensive theme documentation on our website."
 msgstr ""
 
-#: inc/theme-info.php:70
+#: inc/theme-info.php:71
 #, php-format
 msgid "View %s Documentation"
 msgstr ""
 
-#: inc/theme-info.php:76 inc/customizer/customizer.php:28
+#: inc/theme-info.php:77 inc/customizer/customizer.php:28
 msgid "Theme Options"
 msgstr ""
 
-#: inc/theme-info.php:79
+#: inc/theme-info.php:80
 #, php-format
 msgid ""
 "%s makes use of the Customizer for all theme settings. Click on \"Customize "
@@ -266,36 +267,58 @@ msgstr ""
 msgid "Customize Theme"
 msgstr ""
 
-#: inc/theme-info.php:89 inc/customizer/functions/custom-controls.php:42
-msgid "Pro Version"
+#: inc/theme-info.php:103
+msgid "Get more features"
 msgstr ""
 
-#: inc/theme-info.php:92 inc/customizer/functions/custom-controls.php:45
+#: inc/theme-info.php:110 inc/customizer/functions/custom-controls.php:42
+msgid "Pro Version Add-on"
+msgstr ""
+
+#: inc/theme-info.php:113 inc/customizer/functions/custom-controls.php:45
 #, php-format
 msgid ""
-"Purchase the Pro Version of %s to get additional features and advanced "
+"Purchase the %s Pro Add-on and get additional features and advanced "
 "customization options."
 msgstr ""
 
-#: inc/theme-info.php:95 inc/customizer/functions/custom-controls.php:49
+#: inc/theme-info.php:116 inc/customizer/functions/custom-controls.php:49
 msgid "https://themezee.com/addons/anderson-pro/"
 msgstr ""
 
-#: inc/theme-info.php:96 inc/customizer/functions/custom-controls.php:50
+#: inc/theme-info.php:117 inc/customizer/functions/custom-controls.php:50
 #, php-format
 msgid "Learn more about %s Pro"
 msgstr ""
 
-#: inc/theme-info.php:117
+#: inc/theme-info.php:127 inc/customizer/functions/custom-controls.php:58
+msgid "Recommended Plugins"
+msgstr ""
+
+#: inc/theme-info.php:130 inc/customizer/functions/custom-controls.php:61
+msgid ""
+"Extend the functionality of your WordPress website with our free and easy to "
+"use plugins."
+msgstr ""
+
+#: inc/theme-info.php:134 inc/customizer/functions/custom-controls.php:66
+msgid "Install Plugins"
+msgstr ""
+
+#: inc/theme-info.php:149
 #, php-format
 msgid "%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)"
 msgstr ""
 
-#: inc/theme-info.php:119
+#: inc/theme-info.php:151
 msgid "https://themezee.com/"
 msgstr ""
 
-#: inc/theme-info.php:120
+#: inc/theme-info.php:152
+msgid "Review Anderson"
+msgstr ""
+
+#: inc/theme-info.php:152
 msgid "rate it"
 msgstr ""
 
@@ -322,28 +345,6 @@ msgstr ""
 #: inc/customizer/frontend/custom-slider.php:49
 #: inc/customizer/frontend/custom-slider.php:50
 msgid "Menu"
-msgstr ""
-
-#: inc/customizer/functions/custom-controls.php:58
-msgid "ThemeZee Plugins"
-msgstr ""
-
-#: inc/customizer/functions/custom-controls.php:61
-msgid ""
-"Extend the functionality of your WordPress website with our customized "
-"plugins."
-msgstr ""
-
-#: inc/customizer/functions/custom-controls.php:65
-msgid "https://themezee.com/plugins/"
-msgstr ""
-
-#: inc/customizer/functions/custom-controls.php:66
-msgid "Browse Plugins"
-msgstr ""
-
-#: inc/customizer/functions/custom-controls.php:69
-msgid "Install now"
 msgstr ""
 
 #: inc/customizer/sections/customizer-general.php:14
@@ -509,55 +510,55 @@ msgid ""
 "this widget ONLY in the Magazine Homepage widget area."
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:13
+#: inc/widgets/widget-category-posts-boxed.php:14
 #, php-format
 msgid "Category Posts: Boxed (%s)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:249
-#: inc/widgets/widget-category-posts-columns.php:269
-#: inc/widgets/widget-category-posts-grid.php:272
-#: inc/widgets/widget-category-posts-horizontal.php:158
+#: inc/widgets/widget-category-posts-boxed.php:250
+#: inc/widgets/widget-category-posts-columns.php:270
+#: inc/widgets/widget-category-posts-grid.php:273
+#: inc/widgets/widget-category-posts-horizontal.php:159
 msgid "View all posts"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:261
-#: inc/widgets/widget-category-posts-columns.php:281
-#: inc/widgets/widget-category-posts-grid.php:284
-#: inc/widgets/widget-category-posts-horizontal.php:170
+#: inc/widgets/widget-category-posts-boxed.php:262
+#: inc/widgets/widget-category-posts-columns.php:282
+#: inc/widgets/widget-category-posts-grid.php:285
+#: inc/widgets/widget-category-posts-horizontal.php:171
 #, php-format
 msgid "View all posts from category %s"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:301
-#: inc/widgets/widget-category-posts-grid.php:326
-#: inc/widgets/widget-category-posts-horizontal.php:225
+#: inc/widgets/widget-category-posts-boxed.php:302
+#: inc/widgets/widget-category-posts-grid.php:327
+#: inc/widgets/widget-category-posts-horizontal.php:226
 msgid "Title:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:307
-#: inc/widgets/widget-category-posts-grid.php:332
-#: inc/widgets/widget-category-posts-horizontal.php:231
+#: inc/widgets/widget-category-posts-boxed.php:308
+#: inc/widgets/widget-category-posts-grid.php:333
+#: inc/widgets/widget-category-posts-horizontal.php:232
 msgid "Category:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:310
-#: inc/widgets/widget-category-posts-columns.php:334
-#: inc/widgets/widget-category-posts-columns.php:355
-#: inc/widgets/widget-category-posts-grid.php:335
-#: inc/widgets/widget-category-posts-horizontal.php:234
+#: inc/widgets/widget-category-posts-boxed.php:311
+#: inc/widgets/widget-category-posts-columns.php:335
+#: inc/widgets/widget-category-posts-columns.php:356
+#: inc/widgets/widget-category-posts-grid.php:336
+#: inc/widgets/widget-category-posts-horizontal.php:235
 msgid "All Categories"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:324
-#: inc/widgets/widget-category-posts-grid.php:363
-#: inc/widgets/widget-category-posts-horizontal.php:248
+#: inc/widgets/widget-category-posts-boxed.php:325
+#: inc/widgets/widget-category-posts-grid.php:364
+#: inc/widgets/widget-category-posts-horizontal.php:249
 msgid "Link Widget Title to Category Archive page"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:331
-#: inc/widgets/widget-category-posts-columns.php:389
-#: inc/widgets/widget-category-posts-grid.php:370
+#: inc/widgets/widget-category-posts-boxed.php:332
+#: inc/widgets/widget-category-posts-columns.php:390
+#: inc/widgets/widget-category-posts-grid.php:371
 msgid "Display post date and author"
 msgstr ""
 
@@ -567,37 +568,37 @@ msgid ""
 "ONLY in the Magazine Homepage widget area."
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:13
+#: inc/widgets/widget-category-posts-columns.php:14
 #, php-format
 msgid "Category Posts: 2 Columns (%s)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:325
+#: inc/widgets/widget-category-posts-columns.php:326
 msgid "Left Category Title:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:331
+#: inc/widgets/widget-category-posts-columns.php:332
 msgid "Left Category:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:346
+#: inc/widgets/widget-category-posts-columns.php:347
 msgid "Right Category Title:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:352
+#: inc/widgets/widget-category-posts-columns.php:353
 msgid "Right Category:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:367
-#: inc/widgets/widget-category-posts-grid.php:347
+#: inc/widgets/widget-category-posts-columns.php:368
+#: inc/widgets/widget-category-posts-grid.php:348
 msgid "Number of posts:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:375
+#: inc/widgets/widget-category-posts-columns.php:376
 msgid "Highlight first post (big image + excerpt)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:382
+#: inc/widgets/widget-category-posts-columns.php:383
 msgid "Link Category Titles to Category Archive pages"
 msgstr ""
 
@@ -607,16 +608,16 @@ msgid ""
 "this widget ONLY in the Magazine Homepage widget area."
 msgstr ""
 
-#: inc/widgets/widget-category-posts-grid.php:13
+#: inc/widgets/widget-category-posts-grid.php:14
 #, php-format
 msgid "Category Posts: Grid (%s)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-grid.php:349
+#: inc/widgets/widget-category-posts-grid.php:350
 msgid "Please chose an even number (2, 4, 6, 8)."
 msgstr ""
 
-#: inc/widgets/widget-category-posts-grid.php:356
+#: inc/widgets/widget-category-posts-grid.php:357
 msgid "Display as small posts grid with thumbnails"
 msgstr ""
 
@@ -626,7 +627,7 @@ msgid ""
 "Please use this widget ONLY in the Magazine Homepage widget area."
 msgstr ""
 
-#: inc/widgets/widget-category-posts-horizontal.php:13
+#: inc/widgets/widget-category-posts-horizontal.php:14
 #, php-format
 msgid "Category Posts: Horizontal (%s)"
 msgstr ""

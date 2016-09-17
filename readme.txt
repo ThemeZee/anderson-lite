@@ -26,6 +26,10 @@ For more information about Anderson Lite please go to https://themezee.com/theme
 
 == Changelog ==
 
+= 1.4.1 =
+* fixed mobile menus on RTL language sites
+* moved Theme Links to Theme Options panel dropdown
+
 = 1.4.0 =
 * added Right-to-Left language support
 
