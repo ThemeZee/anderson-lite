@@ -45,7 +45,7 @@ function anderson_theme_info_page() {
 		<div class="important-links clearfix">
 			<p><strong><?php esc_html_e( 'Theme Links', 'anderson-lite' ); ?>:</strong>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/anderson/', 'anderson-lite' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=anderson&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'anderson-lite' ); ?></a>
-				<a href="http://preview.themezee.com/anderson/?utm_source=theme-info&utm_medium=textlink&utm_campaign=anderson&utm_content=demo" target="_blank"><?php esc_html_e( 'Theme Demo', 'anderson-lite' ); ?></a>
+				<a href="http://preview.themezee.com/?demo=anderson&utm_source=theme-info&utm_medium=textlink&utm_campaign=anderson&utm_content=demo" target="_blank"><?php esc_html_e( 'Theme Demo', 'anderson-lite' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/anderson-documentation/', 'anderson-lite' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=anderson&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'anderson-lite' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/anderson-lite/reviews/?filter=5', 'anderson-lite' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'anderson-lite' ); ?></a>
 			</p>
@@ -80,7 +80,7 @@ function anderson_theme_info_page() {
 							<?php printf( esc_html__( '%s makes use of the Customizer for all theme settings. Click on "Customize Theme" to open the Customizer now.', 'anderson-lite' ), $theme->get( 'Name' ) ); ?>
 						</p>
 						<p>
-							<a href="<?php echo admin_url( 'customize.php' ); ?>" class="button button-primary"><?php esc_html_e( 'Customize Theme', 'anderson-lite' ); ?></a>
+							<a href="<?php echo wp_customize_url(); ?>" class="button button-primary"><?php esc_html_e( 'Customize Theme', 'anderson-lite' ); ?></a>
 						</p>
 					</div>
 
@@ -130,7 +130,7 @@ function anderson_theme_info_page() {
 							<?php esc_html_e( 'Extend the functionality of your WordPress website with our free and easy to use plugins.', 'anderson-lite' ); ?>
 						</p>
 						<p>
-							<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-secondary">
+							<a href="<?php echo esc_url( admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ) ); ?>" class="button button-secondary">
 								<?php esc_html_e( 'Install Plugins', 'anderson-lite' ); ?>
 							</a>
 						</p>
@@ -172,7 +172,7 @@ function anderson_theme_info_page_css( $hook ) {
 	}
 
 	// Embed theme info css style.
-	wp_enqueue_style( 'anderson-lite-theme-info-css', get_template_directory_uri() .'/css/theme-info.css' );
+	wp_enqueue_style( 'anderson-lite-theme-info-css', get_template_directory_uri() . '/css/theme-info.css' );
 
 }
 add_action( 'admin_enqueue_scripts', 'anderson_theme_info_page_css' );

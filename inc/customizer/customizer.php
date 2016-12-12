@@ -122,7 +122,7 @@ add_action( 'customize_controls_print_styles', 'anderson_customize_preview_css' 
 
 function anderson_customize_preview_css() {
 
-	wp_enqueue_style( 'anderson-lite-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20160915' );
+	wp_enqueue_style( 'anderson-lite-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20161214' );
 
 }
 
@@ -145,7 +145,7 @@ function anderson_customize_theme_links() {
 			</p>
 
 			<p>
-				<a href="http://preview.themezee.com/anderson/?utm_source=theme-info&utm_medium=textlink&utm_campaign=anderson&utm_content=demo" target="_blank">
+				<a href="http://preview.themezee.com/?demo=anderson&utm_source=theme-info&utm_medium=textlink&utm_campaign=anderson&utm_content=demo" target="_blank">
 					<?php esc_html_e( 'Theme Demo', 'anderson-lite' ); ?>
 				</a>
 			</p>
