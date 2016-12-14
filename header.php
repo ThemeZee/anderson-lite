@@ -12,16 +12,12 @@
 
 <body <?php body_class(); ?>>
 
-<?php // Get Theme Options from Database
-	$theme_options = anderson_theme_options();
-?>
-
 <div id="wrapper" class="hfeed">
 
 	<div id="header-wrap">
 
 		<div id="topheader" class="container clearfix">
-			<?php locate_template('/inc/top-navigation.php', true); ?>
+			<?php locate_template( '/inc/top-navigation.php', true ); ?>
 		</div>
 
 		<header id="header" class="container clearfix" role="banner">
@@ -30,11 +26,7 @@
 
 				<?php anderson_site_logo(); ?>
 				<?php anderson_site_title(); ?>
-
-				<?php // Display Tagline on header if activated
-				if ( isset($theme_options['header_tagline']) and $theme_options['header_tagline'] == true ) : ?>
-					<h3 class="site-description"><?php echo bloginfo('description'); ?></h3>
-				<?php endif; ?>
+				<?php anderson_site_description(); ?>
 
 			</div>
 
@@ -56,8 +48,8 @@
 				'menu_id' => 'mainnav-menu',
 				'menu_class' => 'main-navigation-menu',
 				'echo' => true,
-				'fallback_cb' => 'anderson_default_menu')
-			);
+				'fallback_cb' => 'anderson_default_menu',
+			) );
 			?>
 		</nav>
 
