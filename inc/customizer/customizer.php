@@ -171,7 +171,7 @@ function anderson_customize_theme_links() {
 			</p>
 
 			<p>
-				<a href="http://preview.themezee.com/?demo=anderson&utm_source=theme-info&utm_medium=textlink&utm_campaign=anderson&utm_content=demo" target="_blank">
+				<a href="http://preview.themezee.com/?demo=anderson&utm_source=customizer&utm_campaign=anderson" target="_blank">
 					<?php esc_html_e( 'Theme Demo', 'anderson-lite' ); ?>
 				</a>
 			</p>
