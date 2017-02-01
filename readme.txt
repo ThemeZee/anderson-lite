@@ -26,6 +26,9 @@ For more information about Anderson Lite please go to https://themezee.com/theme
 
 == Changelog ==
 
+= 1.4.3 =
+* added Magazine Homepage widgets to blog index
+
 = 1.4.2 =
 * added editor shortcuts and instant live preview for site title and tagline in Customizer
 * changed demo links in Customizer and Theme Info
