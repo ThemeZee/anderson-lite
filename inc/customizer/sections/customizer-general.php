@@ -13,10 +13,10 @@ function anderson_customize_register_general_settings( $wp_customize ) {
 	$wp_customize->add_section( 'anderson_section_general', array(
         'title'    => esc_html__( 'General Settings', 'anderson-lite' ),
         'priority' => 10,
-		'panel' => 'anderson_panel_options' 
+		'panel' => 'anderson_panel_options'
 		)
 	);
-	
+
 	// Add Settings and Controls for Theme Layout
 	$wp_customize->add_setting( 'anderson_theme_options[layout]', array(
         'default'           => 'right-sidebar',
@@ -37,7 +37,7 @@ function anderson_customize_register_general_settings( $wp_customize ) {
 			)
 		)
 	);
-	
+
 	// Add Image Grayscale Headline
     $wp_customize->add_setting( 'anderson_theme_options[grayscale_filter_headline]', array(
         'default'           => '',
@@ -70,42 +70,7 @@ function anderson_customize_register_general_settings( $wp_customize ) {
         'priority' => 3
         )
     );
-	
-	// Add Default Fonts Header
-	$wp_customize->add_setting( 'anderson_theme_options[default_fonts]', array(
-        'default'           => '',
-		'type'           	=> 'option',
-        'transport'         => 'refresh',
-        'sanitize_callback' => 'esc_attr'
-        )
-    );
-    $wp_customize->add_control( new Anderson_Customize_Header_Control(
-        $wp_customize, 'anderson_control_default_fonts', array(
-            'label' => esc_html__( 'Default Fonts', 'anderson-lite' ),
-            'section' => 'anderson_section_general',
-            'settings' => 'anderson_theme_options[default_fonts]',
-            'priority' => 4
-            )
-        )
-    );
-	
-	// Add Settings and Controls for Deactivate Google Font setting
-	$wp_customize->add_setting( 'anderson_theme_options[deactivate_google_fonts]', array(
-        'default'           => false,
-		'type'           	=> 'option',
-        'transport'         => 'refresh',
-        'sanitize_callback' => 'anderson_sanitize_checkbox'
-		)
-	);
-    $wp_customize->add_control( 'anderson_control_deactivate_google_fonts', array(
-        'label'    => esc_html__( 'Deactivate Google Fonts in case your language is not compatible.', 'anderson-lite' ),
-        'section'  => 'anderson_section_general',
-        'settings' => 'anderson_theme_options[deactivate_google_fonts]',
-        'type'     => 'checkbox',
-		'priority' => 5
-		)
-	);
-	
+
 }
 
 ?>
