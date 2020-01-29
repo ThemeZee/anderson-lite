@@ -26,6 +26,9 @@ For more information about Anderson Lite please go to https://themezee.com/theme
 
 == Changelog ==
 
+= 1.6.3 =
+* added Skip-to-Content link for improved accessibility
+
 = 1.6.2 =
 * fixed missing slider tag bug in WordPress Block Editor
 
